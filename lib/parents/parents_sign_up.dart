@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
-import 'package:kinderjoy_2/parents/parent_login_screen.dart';
+import 'package:kinder_joy_1/parents/parent_login_screen.dart';
 import '../api_connection/api_connection.dart';
 import 'parentsModel/parents.dart';
 //

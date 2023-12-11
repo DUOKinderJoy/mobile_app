@@ -37,6 +37,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
   provider:
+  get: ^4.6.6
+  http: ^1.1.2
+  fluttertoast: ^8.2.4
+  shared_preferences: ^2.2.2
+  font_awesome_flutter: ^10.6.0
 
 dev_dependencies:
   flutter_test:

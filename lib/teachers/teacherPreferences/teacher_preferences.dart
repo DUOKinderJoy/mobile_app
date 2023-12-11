@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:kinderjoy_2/teachers/model/teacher.dart';
+import 'package:kinder_joy_1/teachers/model/teacher.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class RememberTeacherPres

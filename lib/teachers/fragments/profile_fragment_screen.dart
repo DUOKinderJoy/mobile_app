@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
-import 'package:kinderjoy_2/authentication/roles_op.dart';
-import 'package:kinderjoy_2/teachers/teacherPreferences/current_user.dart';
-import 'package:kinderjoy_2/teachers/teacherPreferences/teacher_preferences.dart';
+import 'package:kinder_joy_1/authentication/roles_op.dart';
+import 'package:kinder_joy_1/teachers/teacherPreferences/current_user.dart';
+import 'package:kinder_joy_1/teachers/teacherPreferences/teacher_preferences.dart';
 import 'package:http/http.dart' as http;
 import '../../api_connection/api_connection.dart';
 

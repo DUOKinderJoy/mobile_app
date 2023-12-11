@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:kinderjoy_2/parents/parentsFragments/dashboard_of_parents_fragments.dart';
-import 'package:kinderjoy_2/parents/parentsModel/parents.dart';
-import 'package:kinderjoy_2/parents/parentsPreferences/parents_preferences.dart';
-import 'package:kinderjoy_2/parents/parents_sign_up.dart';
+import 'package:kinder_joy_1/parents/parentsFragments/dashboard_of_parents_fragments.dart';
+import 'package:kinder_joy_1/parents/parentsModel/parents.dart';
+import 'package:kinder_joy_1/parents/parentsPreferences/parents_preferences.dart';
+import 'package:kinder_joy_1/parents/parents_sign_up.dart';
 import '../api_connection/api_connection.dart';
 
 class ParentLoginPage extends StatefulWidget

@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:kinderjoy_2/parents/parentsPreferences/parents_preferences.dart';
+import 'package:kinder_joy_1/parents/parentsPreferences/parents_preferences.dart';
 
-import 'package:kinderjoy_2/parents/parentsModel/parents.dart';
+import 'package:kinder_joy_1/parents/parentsModel/parents.dart';
 
 class CurrentParents extends GetxController
 {

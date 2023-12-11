@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kinderjoy_2/authentication/login_screen.dart';
+import 'package:kinder_joy_1/authentication/login_screen.dart';
 
 import '../parents/parent_login_screen.dart';
 import '../parents/parents_sign_up.dart';
@@ -16,8 +16,8 @@ class RolesOp extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(
-                  "assets/background.jpg",
+                image:  NetworkImage(
+                  "https://i.pinimg.com/564x/16/9a/88/169a88947fe29fb44d8f24d8d31b82ee.jpg",
                 ),
                 fit: BoxFit.cover,
               ),
@@ -27,6 +27,11 @@ class RolesOp extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Padding(
+                    padding: const EdgeInsets.only(
+                        left: 175.0, right: 175.0, top: 200, bottom: 0),
+                    child: Image.asset('lib/images/kindergarten.png'),
+                  ),
                 const Text(
                   'KinderJoy',
                   style: TextStyle(

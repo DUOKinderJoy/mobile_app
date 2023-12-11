@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:kinderjoy_2/teachers/teacherPreferences/teacher_preferences.dart';
+import 'package:kinder_joy_1/teachers/teacherPreferences/teacher_preferences.dart';
 
 import '../model/teacher.dart';
 

@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:kinderjoy_2/teachers/fragments/dashboard_of_fragments.dart';
-import 'package:kinderjoy_2/teachers/teacherPreferences/teacher_preferences.dart';
-import 'package:kinderjoy_2/teachers/teacher_sign_up.dart';
+import 'package:kinder_joy_1/teachers/fragments/dashboard_of_fragments.dart';
+import 'package:kinder_joy_1/teachers/teacherPreferences/teacher_preferences.dart';
+import 'package:kinder_joy_1/teachers/teacher_sign_up.dart';
 
 import '../api_connection/api_connection.dart';
 import '../teachers/model/teacher.dart';

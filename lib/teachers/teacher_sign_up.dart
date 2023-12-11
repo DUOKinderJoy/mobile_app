@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:kinderjoy_2/authentication/login_screen.dart';
+import 'package:kinder_joy_1/authentication/login_screen.dart';
 import 'package:http/http.dart' as http;
 import '../api_connection/api_connection.dart';
 import 'model/teacher.dart';

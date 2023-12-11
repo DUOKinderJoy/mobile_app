@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:kinderjoy_2/teachers/fragments/home_fragment_screen.dart';
-import 'package:kinderjoy_2/teachers/fragments/order_fragment_screen.dart';
-import 'package:kinderjoy_2/teachers/fragments/profile_fragment_screen.dart';
-import 'package:kinderjoy_2/teachers/teacherPreferences/current_user.dart';
+import 'package:kinder_joy_1/teachers/fragments/home_fragment_screen.dart';
+import 'package:kinder_joy_1/teachers/fragments/order_fragment_screen.dart';
+import 'package:kinder_joy_1/teachers/fragments/profile_fragment_screen.dart';
+import 'package:kinder_joy_1/teachers/teacherPreferences/current_user.dart';
 
 class DashboardOfFragments extends StatelessWidget{
   // DashboardOfFragments({super.key});
