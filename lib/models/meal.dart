@@ -4,6 +4,7 @@ class Meal {
   String price = '';
   String description = '';
   String day = ' ';
+  bool isSelected;
 
   Meal({
     required this.imagePath,
@@ -11,6 +12,7 @@ class Meal {
     required this.price,
     required this.description,
     required this.day,
+    required this.isSelected,
   });
 
   String get _name => name;

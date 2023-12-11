@@ -11,6 +11,7 @@ class Cart extends ChangeNotifier {
       description:
           "Rice, sliced chicken, sesame oil, thinly sliced spring onion, fried shallots",
       day: "Monday",
+      isSelected: false,
     ),
 
     //fried mee hoon
@@ -21,6 +22,7 @@ class Cart extends ChangeNotifier {
       description:
           "Rice vermicelli, egg, luncheon meat, soy sauce, garlic, and seasonings",
       day: "Monday",
+      isSelected: false,
     ),
 
     //fried rice
@@ -31,6 +33,7 @@ class Cart extends ChangeNotifier {
       description:
           "Cooked rice, spring onion, eggs, shrimp, soy sauce, and seasonings",
       day: "Monday",
+      isSelected: false,
     ),
 
     //bagel
@@ -40,6 +43,7 @@ class Cart extends ChangeNotifier {
       price: "6.50",
       description: "Bagel, ham and cheese",
       day: "Tuesday",
+      isSelected: false,
     ),
 
     // bibimbap
@@ -49,6 +53,7 @@ class Cart extends ChangeNotifier {
       price: "7.00",
       description: "Rice, vegetable, mushroom, chicken",
       day: "Tuesday",
+      isSelected: false,
     ),
 
     //fruit sandwich
@@ -58,6 +63,7 @@ class Cart extends ChangeNotifier {
       price: "5.50",
       description: "Bread, cream cheese, strawberry",
       day: "Tuesday",
+      isSelected: false,
     ),
 
     //big breakfast
@@ -67,6 +73,7 @@ class Cart extends ChangeNotifier {
       price: "6.50",
       description: "Bread, tomato slice, egg, strawberry, beef sausage",
       day: "Wednesday",
+      isSelected: false,
     ),
 
     // onigiri
@@ -76,6 +83,7 @@ class Cart extends ChangeNotifier {
       price: "5.50",
       description: "Seedweed, rice, tuna",
       day: "Wednesday",
+      isSelected: false,
     ),
 
     // aglio olio
@@ -85,6 +93,7 @@ class Cart extends ChangeNotifier {
       price: "6.50",
       description: "Pasta, shrimp, chilli flakes, garlic",
       day: "Wednesday",
+      isSelected: false,
     ),
 
     // criossant
@@ -94,6 +103,7 @@ class Cart extends ChangeNotifier {
       price: "6.90",
       description: "Croissant, ham, cheese",
       day: "Thursday",
+      isSelected: false,
     ),
 
     //oatmeal
@@ -103,6 +113,7 @@ class Cart extends ChangeNotifier {
       price: "7.50",
       description: "Oat, milk, walnut, blueberries",
       day: "Thursday",
+      isSelected: false,
     ),
 
     //pancake
@@ -112,6 +123,7 @@ class Cart extends ChangeNotifier {
       price: "6.50",
       description: "Pancake, honey, raspberries, blueberries",
       day: "Thursday",
+      isSelected: false,
     ),
 
     //sandwich
@@ -121,6 +133,7 @@ class Cart extends ChangeNotifier {
       price: "5.50",
       description: "Bread, ham, cheese, sliced tomato",
       day: "Friday",
+      isSelected: false,
     ),
 
     //spaghetti
@@ -130,6 +143,7 @@ class Cart extends ChangeNotifier {
       price: "7.50",
       description: "Pasta, tomato sauce, shrimp, mushroom",
       day: "Friday",
+      isSelected: false,
     ),
 
     //keuytiao
@@ -140,6 +154,7 @@ class Cart extends ChangeNotifier {
       description:
           "Flat rice noodles, bean sprouts, chives, eggs, garlic, and soy sauce ",
       day: "Friday",
+      isSelected: false,
     ),
   ];
 
