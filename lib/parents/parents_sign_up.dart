@@ -110,8 +110,8 @@ class _ParentSignUpPageState extends State<ParentSignUpPage>
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(
-                  "assets/background.jpg",
+                image:  NetworkImage(
+                  "https://i.pinimg.com/564x/16/9a/88/169a88947fe29fb44d8f24d8d31b82ee.jpg",
                 ),
                 fit: BoxFit.cover,
               ),

@@ -69,9 +69,9 @@
     },
     {
       "name": "flutter_lints",
-      "rootUri": "file:///C:/Users/qiyan/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.3",
+      "rootUri": "file:///C:/Users/qiyan/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-3.0.1",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "flutter_test",
@@ -141,7 +141,7 @@
     },
     {
       "name": "lints",
-      "rootUri": "file:///C:/Users/qiyan/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.1.1",
+      "rootUri": "file:///C:/Users/qiyan/AppData/Local/Pub/Cache/hosted/pub.dev/lints-3.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -339,7 +339,7 @@
     },
     {
       "name": "win32",
-      "rootUri": "file:///C:/Users/qiyan/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.1.0",
+      "rootUri": "file:///C:/Users/qiyan/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.1.1",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
@@ -353,10 +353,10 @@
       "name": "kinder_joy_1",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "3.1"
+      "languageVersion": "3.3"
     }
   ],
-  "generated": "2023-12-11T15:00:48.128419Z",
+  "generated": "2023-12-12T05:09:17.443625Z",
   "generator": "pub",
   "generatorVersion": "3.3.0-107.0.dev"
 }
