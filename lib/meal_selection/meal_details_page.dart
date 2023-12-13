@@ -24,6 +24,9 @@ class _MealDetailsPageState extends State<MealDetailsPage> {
     //quantity
     int quantityCount = 0;
 
+    //mark the selected meal as selected wehre the condition is true
+    widget.meal.isSelected = true;
+
     //add to cart method
     void addToCart() {
       //get access to cart
@@ -43,17 +46,19 @@ class _MealDetailsPageState extends State<MealDetailsPage> {
             style: GoogleFonts.ovo(fontSize: 20),
           ),
           actions: [
-            //okay button
-            IconButton(
+            // TextButton
+            TextButton(
               onPressed: () {
-                //pop once to remove dialog box
+                // pop once to remove dialog box
                 Navigator.pop(context);
-
-                //pop to Day screen
-                Navigator.pop(context);
-                Navigator.pop(context);
+                // Navigator.pop(context);
+                // Navigator.pop(context);
               },
-              icon: Icon(Icons.done),
+              child: const Text(
+                'Done',
+                style: TextStyle(
+                    color: Colors.black), // You can customize the color
+              ),
             )
           ],
         ),
