@@ -1,6 +1,6 @@
 class API
 {
-  static const hostConnect = "http://10.211.100.247/api_kinderjoy";
+  static const hostConnect = "http://192.168.0.109/api_kinderjoy";
   static const hostConnectTeacher = "$hostConnect/teacher";
 
   //signUp teacher
