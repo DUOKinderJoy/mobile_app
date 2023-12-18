@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
@@ -7,7 +6,6 @@ import 'package:http/http.dart' as http;
 import 'package:kinder_joy_1/teachers/fragments/dashboard_of_fragments.dart';
 import 'package:kinder_joy_1/teachers/teacherPreferences/teacher_preferences.dart';
 import 'package:kinder_joy_1/teachers/teacher_sign_up.dart';
-
 import '../api_connection/api_connection.dart';
 import '../teachers/model/teacher.dart';
 
@@ -135,7 +133,9 @@ class _LoginPageState extends State<LoginPage>
                                 labelText: 'Name',
                               ),
                             ),
+
                             const SizedBox(height: 18),
+
                             TextFormField(
                               controller: noController,
                               validator: (val) => val == "" ? "Please write your contact No" : null,
@@ -158,7 +158,9 @@ class _LoginPageState extends State<LoginPage>
                                 labelText: 'Contact No (0XX -XXXX XXXX)',
                               ),
                             ),
+
                             const SizedBox(height: 18),
+
                           Material(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(30),
