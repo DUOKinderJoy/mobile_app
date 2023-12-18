@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:kinder_joy_1/parents/parentsFragments/parents_home_fragment_screen.dart';
 import 'package:kinder_joy_1/parents/parentsFragments/parents_order_fragment_screen.dart';
 import 'package:kinder_joy_1/parents/parentsFragments/parents_profile_fragment_screen.dart';
+import 'package:kinder_joy_1/parents/parentsFragments/parents_study_fee_fragment_screen.dart';
 import 'package:kinder_joy_1/parents/parentsPreferences/current_parents.dart';
 
 class ParentsDashboardOfFragments extends StatelessWidget{
@@ -14,8 +15,10 @@ class ParentsDashboardOfFragments extends StatelessWidget{
   List<Widget> _fragmentsScreens =
   [
     ParentsHomeFragementScreen(),
-    ParentsOrderFragementScreen(),
+    MealHomePage(),
+    StudyFeeYearList(),
     ParentsProfileFragementScreen(),
+
   ];
 
   List _navigationButtonProperties =
@@ -28,7 +31,12 @@ class ParentsDashboardOfFragments extends StatelessWidget{
     {
       "active_icon": FontAwesomeIcons.boxOpen,
       "non_active_icon": FontAwesomeIcons.box,
-      "label": "Orders",
+      "label": "Meals",
+    },
+    {
+      "active_icon": Icons.person,
+      "non_active_icon": Icons.person_outlined,
+      "label": "Study Fee",
     },
     {
       "active_icon": Icons.person,
@@ -67,7 +75,7 @@ class ParentsDashboardOfFragments extends StatelessWidget{
               showUnselectedLabels: true, //select or not all showing
               selectedItemColor: Colors.blue, //showing diff cokir
               unselectedItemColor: Colors.pink,
-              items: List.generate(3, (index)
+              items: List.generate(4, (index)
               {
                 var navBtnProperty = _navigationButtonProperties[index];
                 return BottomNavigationBarItem

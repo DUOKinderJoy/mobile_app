@@ -25,13 +25,13 @@ class RolesOp extends StatelessWidget {
           ),
           Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                    padding: const EdgeInsets.only(
-                        left: 175.0, right: 175.0, top: 200, bottom: 0),
-                    child: Image.asset('lib/images/kindergarten.png'),
-                  ),
+                  padding: const EdgeInsets.only(
+                      left: 175.0, right: 175.0, top: 200, bottom: 0),
+                  child: Image.asset('lib/images/kindergarten.png'),
+                ),
                 const Text(
                   'KinderJoy',
                   style: TextStyle(

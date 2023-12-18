@@ -34,7 +34,7 @@ class _DashboardState extends State<Dashboard> {
               tileColor: Color.fromARGB(255, 222, 134, 163),
               onTap: () {
                 MaterialPageRoute route =
-                    MaterialPageRoute(builder: (context) => Dashboard());
+                MaterialPageRoute(builder: (context) => Dashboard());
                 Navigator.push(context, route);
               },
             ),
@@ -64,7 +64,7 @@ class _DashboardState extends State<Dashboard> {
               ),
               onTap: () {
                 MaterialPageRoute route =
-                    MaterialPageRoute(builder: (context) => MealHomePage());
+                MaterialPageRoute(builder: (context) => MealHomePage());
                 Navigator.push(context, route);
               },
             ),
@@ -86,7 +86,7 @@ class _DashboardState extends State<Dashboard> {
           ],
         ),
       ),
-      
+
       body: Stack(
         children: [
           //background image
