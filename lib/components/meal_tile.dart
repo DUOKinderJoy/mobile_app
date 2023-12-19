@@ -28,43 +28,47 @@ class MealTile extends StatefulWidget {
 class _MealTileState extends State<MealTile> {
   @override
   Widget build(BuildContext context) {
-    //add to cart method
-    void addToCart() {
-      addMealToCart() async
-      //but i dun need to use controller in this case
-      {
-        Meal mealModel = Meal(
-          id: widget.meal.id,
-          imagePath: widget.meal.imagePath,
-          name: widget.meal.name,
-          price: widget.meal.price,
-          description: widget.meal.description,
-          day: widget.meal.day,
-          isSelected: widget.meal.isSelected,
+    // add to cart resource
+    addMealToCart() async
+    //but i dun need to use controller in this case
+    {
+      Meal mealModel = Meal(
+        id: widget.meal.id,
+        imagePath: widget.meal.imagePath,
+        name: widget.meal.name,
+        price: widget.meal.price,
+        description: widget.meal.description,
+        day: widget.meal.day,
+        isSelected: widget.meal.isSelected,
+      );
+
+      try {
+        var res = await http.post(
+          Uri.parse(API.createMeal),
+          body: mealModel.toJson(),
         );
 
-        try {
-          var res = await http.post(
-            Uri.parse(API.createMeal),
-            body: mealModel.toJson(),
-          );
-
-          if (res.statusCode == 200) {
-            var resBodyOfMeal = jsonDecode(res.body);
-            if (resBodyOfMeal['success'] == true) {
-              Fluttertoast.showToast(msg: "Added to Cart");
-            } else {
-              Fluttertoast.showToast(msg: "Error Occured, try again.");
-            }
+        if (res.statusCode == 200) {
+          var resBodyOfMeal = jsonDecode(res.body);
+          if (resBodyOfMeal['success'] == true) {
+            Fluttertoast.showToast(msg: "Added to Cart");
+          } else {
+            Fluttertoast.showToast(msg: "Error Occured, try again.");
           }
-        } catch (e) {
-          // print(e.toString());
-          Fluttertoast.showToast(msg: "Successfully added to Cart");
         }
+      } catch (e) {
+        // print(e.toString());
+        Fluttertoast.showToast(msg: "Successfully added to Cart");
       }
+    }
 
+    //add to cart method
+    void addToCart() {
       //get access to cart
       final cart = context.read<Cart>();
+
+      //mark the selected meal as selected where the condition is true
+      widget.meal.isSelected = true;
 
       //add to cart
       cart.addToCart(widget.meal, 1);

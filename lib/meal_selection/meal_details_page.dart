@@ -62,13 +62,13 @@ class _MealDetailsPageState extends State<MealDetailsPage> {
     //quantity
     int quantityCount = 0;
 
-    //mark the selected meal as selected wehre the condition is true
-    widget.meal.isSelected = true;
-
     //add to cart method
     void addToCart() {
       //get access to cart
       final cart = context.read<Cart>();
+
+    //mark the selected meal as selected where the condition is true
+    widget.meal.isSelected = true;
 
       //add to cart
       cart.addToCart(widget.meal, 1);
