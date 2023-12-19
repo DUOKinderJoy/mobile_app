@@ -6,12 +6,46 @@ import 'package:kinder_joy_1/meal_selection/menu_page_2.dart';
 import 'package:kinder_joy_1/meal_selection/menu_page_3.dart';
 import 'package:kinder_joy_1/meal_selection/menu_page_4.dart';
 import 'package:kinder_joy_1/meal_selection/menu_page_5.dart';
+import 'package:kinder_joy_1/models/cart.dart';
+import 'package:provider/provider.dart';
 
 class MealHomePage extends StatelessWidget {
   const MealHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    //get the menu from cart
+    final cart = context.read<Cart>(); //?must use provider
+    final mealMenu = cart.mealMenu;
+
+    void popUpMessage(String text) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          content: Text(
+            "You have selected your child's meal on "+text,
+            style: GoogleFonts.ovo(fontSize: 20),
+          ),
+          actions: [
+            // TextButton
+            TextButton(
+              onPressed: () {
+                // pop once to remove dialog box
+                Navigator.pop(context);
+                // Navigator.pop(context);
+                // Navigator.pop(context);
+              },
+              child: const Text(
+                'Done',
+                style: TextStyle(
+                    color: Colors.black), // You can customize the color
+              ),
+            )
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(""),
@@ -68,45 +102,95 @@ class MealHomePage extends StatelessWidget {
               DayButton(
                   text: "Monday",
                   onTap: () {
-                    MaterialPageRoute route =
-                        MaterialPageRoute(builder: (context) => MenuPage_1());
-                    Navigator.push(context, route);
+                    if (!mealMenu[0].isSelected &&
+                        !mealMenu[1].isSelected &&
+                        !mealMenu[2].isSelected) {
+                      MaterialPageRoute route =
+                      MaterialPageRoute(builder: (context) => MenuPage_1());
+                      Navigator.push(context, route);
+                      mealMenu[0].isSelected = true;
+                      return;
+                    }
+
+                    if (mealMenu[0].isSelected) {
+                      popUpMessage("Monday");
+                    }
                   }),
 
               //Tuesday
               DayButton(
                   text: "Tuesday",
                   onTap: () {
-                    MaterialPageRoute route =
-                        MaterialPageRoute(builder: (context) => MenuPage_2());
-                    Navigator.push(context, route);
+                    if (!mealMenu[3].isSelected &&
+                        !mealMenu[4].isSelected &&
+                        !mealMenu[5].isSelected) {
+                      MaterialPageRoute route =
+                      MaterialPageRoute(builder: (context) => MenuPage_2());
+                      Navigator.push(context, route);
+                      mealMenu[3].isSelected = true;
+                      return;
+                    }
+
+                    if (mealMenu[3].isSelected) {
+                      popUpMessage("Tuesday");
+                    }
                   }),
 
               //Wednesday
               DayButton(
                   text: "Wednesday",
                   onTap: () {
-                    MaterialPageRoute route =
-                        MaterialPageRoute(builder: (context) => MenuPage_3());
-                    Navigator.push(context, route);
+                    if (!mealMenu[6].isSelected &&
+                        !mealMenu[7].isSelected &&
+                        !mealMenu[8].isSelected) {
+                      MaterialPageRoute route =
+                      MaterialPageRoute(builder: (context) => MenuPage_3());
+                      Navigator.push(context, route);
+                      mealMenu[6].isSelected = true;
+                      return;
+                    }
+
+                    if (mealMenu[6].isSelected) {
+                      popUpMessage("Wednesday");
+                    }
                   }),
 
               //Thursday
               DayButton(
                   text: "Thursday",
                   onTap: () {
-                    MaterialPageRoute route =
-                        MaterialPageRoute(builder: (context) => MenuPage_4());
-                    Navigator.push(context, route);
+                    if (!mealMenu[9].isSelected &&
+                        !mealMenu[10].isSelected &&
+                        !mealMenu[11].isSelected) {
+                      MaterialPageRoute route =
+                      MaterialPageRoute(builder: (context) => MenuPage_4());
+                      Navigator.push(context, route);
+                      mealMenu[9].isSelected = true;
+                      return;
+                    }
+
+                    if (mealMenu[9].isSelected) {
+                      popUpMessage("Thursday");
+                    }
                   }),
 
               //Friday
               DayButton(
                   text: "Friday",
                   onTap: () {
-                    MaterialPageRoute route =
-                        MaterialPageRoute(builder: (context) => MenuPage_5());
-                    Navigator.push(context, route);
+                    if (!mealMenu[12].isSelected &&
+                        !mealMenu[13].isSelected &&
+                        !mealMenu[14].isSelected) {
+                      MaterialPageRoute route =
+                      MaterialPageRoute(builder: (context) => MenuPage_5());
+                      Navigator.push(context, route);
+                      mealMenu[12].isSelected = true;
+                      return;
+                    }
+
+                    if (mealMenu[12].isSelected) {
+                      popUpMessage("Friday");
+                    }
                   }),
             ],
           ),
