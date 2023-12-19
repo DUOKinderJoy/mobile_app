@@ -5,6 +5,7 @@ class Cart extends ChangeNotifier {
   final List<Meal> _mealMenu = [
     //chicken porridge
     Meal(
+      id: "M001",
       imagePath: "lib/images/chicken_porridge.png",
       name: "Chicken Porridge",
       price: "4.90",
@@ -16,6 +17,7 @@ class Cart extends ChangeNotifier {
 
     //fried mee hoon
     Meal(
+      id: "M002",
       imagePath: "lib/images/fried_mee_hoon.png",
       name: "Fried Mee Hoon",
       price: "5.50",
@@ -27,6 +29,7 @@ class Cart extends ChangeNotifier {
 
     //fried rice
     Meal(
+      id: "M003",
       imagePath: "lib/images/fried_rice.png",
       name: "Fried Rice",
       price: "5.50",
@@ -38,6 +41,7 @@ class Cart extends ChangeNotifier {
 
     //bagel
     Meal(
+      id: "M004",
       imagePath: "lib/images/bagel.png",
       name: "Bagel",
       price: "6.50",
@@ -48,6 +52,7 @@ class Cart extends ChangeNotifier {
 
     // bibimbap
     Meal(
+      id: "M005",
       imagePath: "lib/images/bibimbap.png",
       name: "Bibimbap",
       price: "7.00",
@@ -58,6 +63,7 @@ class Cart extends ChangeNotifier {
 
     //fruit sandwich
     Meal(
+      id: "M006",
       imagePath: "lib/images/fruit_sandwich.png",
       name: "Fruit sandwich",
       price: "5.50",
@@ -68,6 +74,7 @@ class Cart extends ChangeNotifier {
 
     //big breakfast
     Meal(
+      id: "M007",
       imagePath: "lib/images/big breakfast.png",
       name: "Big breakfast",
       price: "6.50",
@@ -78,6 +85,7 @@ class Cart extends ChangeNotifier {
 
     // onigiri
     Meal(
+      id: "M008",
       imagePath: "lib/images/onigiri.png",
       name: "Onigiri",
       price: "5.50",
@@ -88,6 +96,7 @@ class Cart extends ChangeNotifier {
 
     // aglio olio
     Meal(
+      id: "M009",
       imagePath: "lib/images/aglio_olio.png",
       name: "Aglio Olio",
       price: "6.50",
@@ -98,6 +107,7 @@ class Cart extends ChangeNotifier {
 
     // criossant
     Meal(
+      id: "M010",
       imagePath: "lib/images/croissant.png",
       name: "Croissant",
       price: "6.90",
@@ -108,6 +118,7 @@ class Cart extends ChangeNotifier {
 
     //oatmeal
     Meal(
+      id: "M011",
       imagePath: "lib/images/oatmeal.png",
       name: "Oatmeal",
       price: "7.50",
@@ -118,6 +129,7 @@ class Cart extends ChangeNotifier {
 
     //pancake
     Meal(
+      id: "M012",
       imagePath: "lib/images/pancake.png",
       name: "Pancake",
       price: "6.50",
@@ -128,6 +140,7 @@ class Cart extends ChangeNotifier {
 
     //sandwich
     Meal(
+      id: "M012",
       imagePath: "lib/images/sandwich.png",
       name: "Sandwich",
       price: "5.50",
@@ -138,6 +151,7 @@ class Cart extends ChangeNotifier {
 
     //spaghetti
     Meal(
+      id: "M013",
       imagePath: "lib/images/spaghetti.png",
       name: "Spaghetti",
       price: "7.50",
@@ -148,6 +162,7 @@ class Cart extends ChangeNotifier {
 
     //keuytiao
     Meal(
+      id: "M0014",      
       imagePath: "lib/images/kuey_tiao.png",
       name: "Fried Kuey Tiao",
       price: "6.50",

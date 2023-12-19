@@ -8,6 +8,10 @@ import 'package:provider/provider.dart';
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
 
+  addMealToCart() async{
+    
+  }
+
   @override
   Widget build(BuildContext context) {
     // return Scaffold();
@@ -22,22 +26,6 @@ class CartPage extends StatelessWidget {
           backgroundColor: const Color.fromARGB(255, 255, 255, 255),
           foregroundColor: const Color.fromARGB(255, 222, 134, 163),
         ),
-
-        // body: Stack(
-        //   children: [
-        //     //background image
-        //     Container(
-        //       decoration: const BoxDecoration(
-        //         image: DecorationImage(
-        //           image: NetworkImage(
-        //             "https://i.pinimg.com/564x/16/9a/88/169a88947fe29fb44d8f24d8d31b82ee.jpg",
-        //           ),
-        //           fit: BoxFit.cover,
-        //         ),
-        //       ),
-        //     ),
-        //   ],
-        // ),
 
         body: Stack(
           children: [

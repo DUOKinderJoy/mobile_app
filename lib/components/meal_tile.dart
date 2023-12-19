@@ -1,10 +1,15 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kinder_joy_1/api_connection/api_connection.dart';
 import 'package:kinder_joy_1/components/select_button.dart';
 import 'package:kinder_joy_1/meal_selection/meal_details_page.dart';
 import 'package:kinder_joy_1/models/cart.dart';
 import 'package:kinder_joy_1/models/meal.dart';
 import 'package:provider/provider.dart';
+import 'package:http/http.dart' as http;
 
 class MealTile extends StatefulWidget {
   final Meal meal;
@@ -25,6 +30,39 @@ class _MealTileState extends State<MealTile> {
   Widget build(BuildContext context) {
     //add to cart method
     void addToCart() {
+      addMealToCart() async
+      //but i dun need to use controller in this case
+      {
+        Meal mealModel = Meal(
+          id: widget.meal.id,
+          imagePath: widget.meal.imagePath,
+          name: widget.meal.name,
+          price: widget.meal.price,
+          description: widget.meal.description,
+          day: widget.meal.day,
+          isSelected: widget.meal.isSelected,
+        );
+
+        try {
+          var res = await http.post(
+            Uri.parse(API.createMeal),
+            body: mealModel.toJson(),
+          );
+
+          if (res.statusCode == 200) {
+            var resBodyOfMeal = jsonDecode(res.body);
+            if (resBodyOfMeal['success'] == true) {
+              Fluttertoast.showToast(msg: "Added to Cart");
+            } else {
+              Fluttertoast.showToast(msg: "Error Occured, try again.");
+            }
+          }
+        } catch (e) {
+          // print(e.toString());
+          Fluttertoast.showToast(msg: "Successfully added to Cart");
+        }
+      }
+
       //get access to cart
       final cart = context.read<Cart>();
 
@@ -56,6 +94,8 @@ class _MealTileState extends State<MealTile> {
           ],
         ),
       );
+
+      addMealToCart();
     }
 
     return GestureDetector(
