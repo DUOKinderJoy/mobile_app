@@ -8,10 +8,6 @@ import 'package:provider/provider.dart';
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
 
-  addMealToCart() async{
-    
-  }
-
   @override
   Widget build(BuildContext context) {
     // return Scaffold();

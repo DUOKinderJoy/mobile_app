@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 // import 'package:kinder_joy_1/meal_selection/meal_home_page.dart';
-import 'package:kinder_joy_1/parents/parentsFragments/meal_home_page.dart';
+import 'package:kinder_joy_1/meal_selection/meal_home_page.dart';
 import 'package:kinder_joy_1/parents/parentsFragments/parents_home_fragment_screen.dart';
 import 'package:kinder_joy_1/parents/parentsFragments/parents_order_fragment_screen.dart';
 import 'package:kinder_joy_1/parents/parentsFragments/parents_profile_fragment_screen.dart';
