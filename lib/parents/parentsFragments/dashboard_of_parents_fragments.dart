@@ -1,27 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+// import 'package:kinder_joy_1/meal_selection/meal_home_page.dart';
+import 'package:kinder_joy_1/meal_selection/meal_week_page.dart';
 import 'package:kinder_joy_1/parents/parentsFragments/parents_home_fragment_screen.dart';
-import 'package:kinder_joy_1/parents/parentsFragments/parents_order_fragment_screen.dart';
+// import 'package:kinder_joy_1/parents/parentsFragments/parents_order_fragment_screen.dart';
 import 'package:kinder_joy_1/parents/parentsFragments/parents_profile_fragment_screen.dart';
-import 'package:kinder_joy_1/parents/parentsFragments/parents_study_fee_fragment_screen.dart';
 import 'package:kinder_joy_1/parents/parentsPreferences/current_parents.dart';
 
-class ParentsDashboardOfFragments extends StatelessWidget{
+class ParentsDashboardOfFragments extends StatefulWidget{
+  @override
+  State<ParentsDashboardOfFragments> createState() => _ParentsDashboardOfFragmentsState();
+}
+
+class _ParentsDashboardOfFragmentsState extends State<ParentsDashboardOfFragments> {
   // DashboardOfFragments({super.key});
+  final CurrentParents _rememberCurrentParents = Get.put(CurrentParents());
 
-  CurrentParents _rememberCurrentParents = Get.put(CurrentParents());
-
-  List<Widget> _fragmentsScreens =
+  final List<Widget> _fragmentsScreens =
   [
     ParentsHomeFragementScreen(),
-    MealHomePage(),
-    StudyFeeYearList(),
+    const MealWeekPage(),
     ParentsProfileFragementScreen(),
-
   ];
 
-  List _navigationButtonProperties =
+  final List _navigationButtonProperties =
   [
     {
       "active_icon": Icons.home,
@@ -45,7 +48,7 @@ class ParentsDashboardOfFragments extends StatelessWidget{
     },
   ];
 
-  RxInt _indexnumber = 0.obs;
+  final RxInt _indexnumber = 0.obs;
 
   @override
   Widget build(BuildContext context){
@@ -80,7 +83,7 @@ class ParentsDashboardOfFragments extends StatelessWidget{
                 var navBtnProperty = _navigationButtonProperties[index];
                 return BottomNavigationBarItem
                   (
-                  backgroundColor: Colors.black,
+                  backgroundColor: Colors.white,
                   icon: Icon(navBtnProperty["non_active_icon"]),
                   activeIcon: Icon(navBtnProperty["active_icon"]),
                   label: navBtnProperty["label"],

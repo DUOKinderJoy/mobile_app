@@ -1,0 +1,806 @@
+-- Merging decision tree log ---
+application
+INJECTED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml:2:5-32:19
+MERGED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:9:5-26:19
+MERGED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:9:5-26:19
+MERGED from [com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:9:5-16:19
+MERGED from [com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:9:5-16:19
+MERGED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:22:5-53:19
+MERGED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:22:5-53:19
+MERGED from [com.stripe:payments-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\f23ca426e7f4e3c07ba5b1ec7ec2756f\transformed\jetified-payments-ui-core-20.15.4\AndroidManifest.xml:9:5-14:19
+MERGED from [com.stripe:payments-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\f23ca426e7f4e3c07ba5b1ec7ec2756f\transformed\jetified-payments-ui-core-20.15.4\AndroidManifest.xml:9:5-14:19
+MERGED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:16:5-90:19
+MERGED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:16:5-90:19
+MERGED from [com.stripe:stripe-3ds2-android:6.1.5] C:\Users\leero\.gradle\caches\transforms-3\4e05ac12f97782b2ca812fd1e459e8f8\transformed\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:9:5-14:19
+MERGED from [com.stripe:stripe-3ds2-android:6.1.5] C:\Users\leero\.gradle\caches\transforms-3\4e05ac12f97782b2ca812fd1e459e8f8\transformed\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:9:5-14:19
+MERGED from [com.google.android.material:material:1.6.0] C:\Users\leero\.gradle\caches\transforms-3\9dc6bf533ed41d001e9ba5eabe9ca3b0\transformed\material-1.6.0\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.6.0] C:\Users\leero\.gradle\caches\transforms-3\9dc6bf533ed41d001e9ba5eabe9ca3b0\transformed\material-1.6.0\AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\leero\.gradle\caches\transforms-3\a42fc1e7a9647bbe89dec55430c2615d\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\leero\.gradle\caches\transforms-3\a42fc1e7a9647bbe89dec55430c2615d\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:mavericks:2.7.0] C:\Users\leero\.gradle\caches\transforms-3\856db7c12a6e876a27f0771dff5b08fe\transformed\jetified-mavericks-2.7.0\AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:mavericks:2.7.0] C:\Users\leero\.gradle\caches\transforms-3\856db7c12a6e876a27f0771dff5b08fe\transformed\jetified-mavericks-2.7.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\leero\.gradle\caches\transforms-3\c1c2a43b1ad12d948674764cc5a5ea0f\transformed\jetified-glide-4.12.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\leero\.gradle\caches\transforms-3\c1c2a43b1ad12d948674764cc5a5ea0f\transformed\jetified-glide-4.12.0\AndroidManifest.xml:10:5-20
+MERGED from [com.google.android.gms:play-services-identity:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\e794e945117aea9bc4ab31b74206c25c\transformed\jetified-play-services-identity-18.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-identity:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\e794e945117aea9bc4ab31b74206c25c\transformed\jetified-play-services-identity-18.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\07ce4be41ea2bdb67a70843d86dadbbf\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\07ce4be41ea2bdb67a70843d86dadbbf\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\ee0958809ecb646747ade867e89b0448\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\ee0958809ecb646747ade867e89b0448\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\leero\.gradle\caches\transforms-3\d1ca8ed768e964ef553882ba9de8b47c\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\leero\.gradle\caches\transforms-3\d1ca8ed768e964ef553882ba9de8b47c\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:24:5-48:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:24:5-48:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\leero\.gradle\caches\transforms-3\4963183721c7ca0ce3a938dd2b186308\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\leero\.gradle\caches\transforms-3\4963183721c7ca0ce3a938dd2b186308\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\6c3b7a3432cd99b1b7ffc728a4629b88\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\6c3b7a3432cd99b1b7ffc728a4629b88\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\leero\.gradle\caches\transforms-3\9b12990594b6ef1616c0ad095eb85ec6\transformed\jetified-gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\leero\.gradle\caches\transforms-3\9b12990594b6ef1616c0ad095eb85ec6\transformed\jetified-gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\87b2ae983714ee2f18bf7ed65b55f543\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\87b2ae983714ee2f18bf7ed65b55f543\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.android.instantapps:instantapps:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\c9dda40cf78a0b7125750c51fbacb037\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:9:5-13:19
+MERGED from [com.google.android.instantapps:instantapps:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\c9dda40cf78a0b7125750c51fbacb037\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:9:5-13:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+	android:name
+		INJECTED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml
+manifest
+ADDED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml:1:1-33:12
+INJECTED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml:1:1-33:12
+INJECTED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml:1:1-33:12
+INJECTED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml:1:1-33:12
+MERGED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml:1:1-33:12
+MERGED from [:shared_preferences_android] C:\GitHub\mobile_app_last\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:fluttertoast] C:\GitHub\mobile_app_last\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:path_provider_android] C:\GitHub\mobile_app_last\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:stripe_android] C:\GitHub\mobile_app_last\build\stripe_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [com.stripe:stripe-android:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\3c2ca6ae4913e1092cdd80ac9e0dff9a\transformed\jetified-stripe-android-20.15.4\AndroidManifest.xml:2:1-9:12
+MERGED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:2:1-28:12
+MERGED from [com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:2:1-18:12
+MERGED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:2:1-55:12
+MERGED from [com.stripe:payments-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\f23ca426e7f4e3c07ba5b1ec7ec2756f\transformed\jetified-payments-ui-core-20.15.4\AndroidManifest.xml:2:1-16:12
+MERGED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:2:1-92:12
+MERGED from [com.stripe:payments-model:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\83cf1b9348d64aded3aa5f9f31fedac4\transformed\jetified-payments-model-20.15.4\AndroidManifest.xml:2:1-9:12
+MERGED from [com.stripe:stripe-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\409d41dd337db0d3fa2f153cd86d06fd\transformed\jetified-stripe-ui-core-20.15.4\AndroidManifest.xml:2:1-9:12
+MERGED from [com.stripe:stripe-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\ab82e44eae2ec8620d668d11601ef9a4\transformed\jetified-stripe-core-20.15.4\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.accompanist:accompanist-navigation-animation:0.27.0] C:\Users\leero\.gradle\caches\transforms-3\b7d40ef75476cd41b7cff00cced7f84a\transformed\jetified-accompanist-navigation-animation-0.27.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-compose:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\6bbff339d4bb2696045511f6ed2e1404\transformed\jetified-navigation-compose-2.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-compose:1.6.1] C:\Users\leero\.gradle\caches\transforms-3\31f0dc245ceef7841c90ce979dd47039\transformed\jetified-activity-compose-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-viewbinding:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\845db761af0b36e03cad9b83b8b24aac\transformed\jetified-ui-viewbinding-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] C:\Users\leero\.gradle\caches\transforms-3\d3fbdcf146772953f97ce27c62acd3ec\transformed\jetified-constraintlayout-compose-1.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.material:material:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\0c0a19e9e173e4e444ef6ef99e8936c4\transformed\jetified-material-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.accompanist:accompanist-flowlayout:0.27.0] C:\Users\leero\.gradle\caches\transforms-3\d7bc7e053b8cb80fdf8066abd23c281e\transformed\jetified-accompanist-flowlayout-0.27.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.material:material-ripple:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\4b7456653341cd7f0c38d9d018f4ebdb\transformed\jetified-material-ripple-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.foundation:foundation:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\6029612e17f8627ff8d2f8f929109faf\transformed\jetified-foundation-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-icons-core:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\b24bdeebc46cd48e5b0af6c648d923ff\transformed\jetified-material-icons-core-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-livedata:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\3be28c8e3b9b27b651f431e2efedf782\transformed\jetified-runtime-livedata-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.animation:animation:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\b89fb6011c91e6387beac7e406c0c125\transformed\jetified-animation-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.foundation:foundation-layout:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\b7bd2749de29e6351e044f028ebd7f5f\transformed\jetified-foundation-layout-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\000f7aa913f54d4ccef11a1136c83c0f\transformed\jetified-lifecycle-viewmodel-compose-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.animation:animation-core:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\75310288702b61167d394bf9cb35e4c7\transformed\jetified-animation-core-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\5a0fad18a580a65412cff106cfb5ff9f\transformed\jetified-ui-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.stripe:stripe-3ds2-android:6.1.5] C:\Users\leero\.gradle\caches\transforms-3\4e05ac12f97782b2ca812fd1e459e8f8\transformed\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:2:1-16:12
+MERGED from [androidx.fragment:fragment-ktx:1.5.3] C:\Users\leero\.gradle\caches\transforms-3\c78d1a0fba6a183bee6b36881a1a43ac\transformed\jetified-fragment-ktx-1.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.6.0] C:\Users\leero\.gradle\caches\transforms-3\9dc6bf533ed41d001e9ba5eabe9ca3b0\transformed\material-1.6.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\leero\.gradle\caches\transforms-3\a42fc1e7a9647bbe89dec55430c2615d\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.airbnb.android:mavericks:2.7.0] C:\Users\leero\.gradle\caches\transforms-3\856db7c12a6e876a27f0771dff5b08fe\transformed\jetified-mavericks-2.7.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\leero\.gradle\caches\transforms-3\ffdb3ad5c495e1f9b116f51984ab3519\transformed\jetified-appcompat-resources-1.5.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\leero\.gradle\caches\transforms-3\e5be9602fb858223c7dcedd1d4cd58fb\transformed\appcompat-1.5.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\leero\.gradle\caches\transforms-3\c1c2a43b1ad12d948674764cc5a5ea0f\transformed\jetified-glide-4.12.0\AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\6f62b3549f755a09fcc3239dac96540c\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\99f990cafb00d3e40b10adf1e162c1c4\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-wallet:19.1.0] C:\Users\leero\.gradle\caches\transforms-3\8ac407734e09572f64c7d965f6a66e77\transformed\jetified-play-services-wallet-19.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-identity:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\e794e945117aea9bc4ab31b74206c25c\transformed\jetified-play-services-identity-18.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\07ce4be41ea2bdb67a70843d86dadbbf\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\96615036bc18d0590c9d7704c27c289a\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\d1b5cd2d88fbbdd2ea93d3b5d99580ab\transformed\jetified-lifecycle-livedata-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-text:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\cb3932de8c81772fee67fa514067a59e\transformed\jetified-ui-text-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\ee0958809ecb646747ade867e89b0448\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\leero\.gradle\caches\transforms-3\d1ca8ed768e964ef553882ba9de8b47c\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.5.3] C:\Users\leero\.gradle\caches\transforms-3\034637e92cc0a52c17d821a1f848f39e\transformed\fragment-1.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.1] C:\Users\leero\.gradle\caches\transforms-3\4781624ce1609b700673a98ff64554bf\transformed\jetified-activity-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\f57e70762397a0d534d9fcb70734a346\transformed\navigation-runtime-ktx-2.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\ab77f4db185c3dcf107945d76642361d\transformed\navigation-runtime-2.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.6.1] C:\Users\leero\.gradle\caches\transforms-3\cd713418882afa8b13de1862e2f48b30\transformed\jetified-activity-ktx-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\94bd3dc51836b74bead2a7c2b558d26c\transformed\navigation-common-ktx-2.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\5181f39ab84243bf1febf9963a2cccfa\transformed\navigation-common-2.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\efa7665042e4ebeec3987269223040bf\transformed\jetified-lifecycle-viewmodel-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\5b1c5d9f970ddb819710f262d001a96d\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\575724d205138ce9be036d1156f388b3\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\61c5c08acfcc74534b7c444ac549aac0\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\1c88c1c284ea42c4e2bf0641b483d373\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\c46b614e112775b993419afcacd0a52f\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\f69982c8af32d9d0d9dafe18e83b3766\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\e49948f9be6f16d28b6ded0e15c033ac\transformed\jetified-lifecycle-runtime-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-tooling-preview:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\4c6439b61d2d3fe48330f5415ca826c5\transformed\jetified-ui-tooling-preview-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\7289cbafbf07dc4ed68a317dbdc9c351\transformed\jetified-runtime-saveable-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-graphics:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\ae154c544a7c4bcb0628d297f07b0ffd\transformed\jetified-ui-graphics-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-unit:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\8a87e5c62bb22ea80f0ce2265532a882\transformed\jetified-ui-unit-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-geometry:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\11c1965341e7217bfc1955e5a367acb2\transformed\jetified-ui-geometry-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\3b0ea4fb9e86bc01f7c03b763885e901\transformed\jetified-runtime-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\leero\.gradle\caches\transforms-3\4172c4d09ae6c1e328798c8c0efc74b8\transformed\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\a648298f2796fcfb8950d634e64c6ded\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:17:1-50:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\leero\.gradle\caches\transforms-3\4963183721c7ca0ce3a938dd2b186308\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\6c3b7a3432cd99b1b7ffc728a4629b88\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\db276043bdf800f6f97b79d44c1b236d\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\leero\.gradle\caches\transforms-3\9b12990594b6ef1616c0ad095eb85ec6\transformed\jetified-gifdecoder-4.12.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\757b0ff6332fd8cc41e52f94743d38af\transformed\exifinterface-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\leero\.gradle\caches\transforms-3\8e6e269204cc094306fb2040aac00608\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\ae56f4b9f68d41ca980eb2b7cdae62c0\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\9eb0c6971b6c3c35ab31bd2af6867c36\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\37c682b0fe66161096e24ab1fe55f545\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\9b87ca0b0ae89f17a2aa39244b139aaa\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\faaec3d03c9e560c78e4ef68424f7478\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\b95f2367f0572e776589348273bc7ed9\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\e8cd14c1f04d5f23a6096a43c9d6813e\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\leero\.gradle\caches\transforms-3\1a32d95a913e9731016ec3e4ea5f69f0\transformed\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.databinding:viewbinding:7.3.1] C:\Users\leero\.gradle\caches\transforms-3\15fa13cb3ccb1e836fed25a58bf27ef6\transformed\jetified-viewbinding-7.3.1\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\6af3a159ead8eb9ffae42ed06c2b9b92\transformed\jetified-customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\c03b9738b7db848ddb83cd5a7c413b55\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\ab0893fd3284ffb9dda691e6ef1caf94\transformed\jetified-autofill-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\ad22e1b78c062d2ded93144774d9aa81\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\22df5fae6a898cefcffcbb9c9b6d5284\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\8d32ffd4d62546e1917642a102960fa0\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\4c66a6af0bd2ad0a8f82bb7ce83f8e5a\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\800efae8c0198ff6b3c36ef92552d5c9\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\422254a6aee4e936d7e2c7747fdad7c2\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\7ee5945d2eddb33e59d2ea4d942ad7f1\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\8016da3ca9f1599573822e55de516c67\transformed\jetified-savedstate-ktx-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\42dbf46836f4fbea5377a8307b81c1e6\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\5279be2b8d316cd58db0f15145a646ec\transformed\lifecycle-livedata-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\72f880e2399f4bf2e68e6b3127c6f94b\transformed\jetified-lifecycle-livedata-core-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\c834c1c8cc0dea642c212465537d6a54\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.security:security-crypto:1.1.0-alpha03] C:\Users\leero\.gradle\caches\transforms-3\a5c5b6468e5e193b928309c9237bc81b\transformed\jetified-security-crypto-1.1.0-alpha03\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\87b2ae983714ee2f18bf7ed65b55f543\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\83104c5d9e9017716bdf52aa81e39266\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\e284b82ebf1838085d6ae4bcd0669c2d\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\1de4281ab38868e66d3efd8b7de1a5d9\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\6a641e868b8d01824dbd73ec3a0b4abd\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\leero\.gradle\caches\transforms-3\cef3b78ceaac6eacc247954d998aa58a\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-util:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\10d402ad05ac3385d20e694ad460856e\transformed\jetified-ui-util-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\d68a5df622e8fceda97e3c12385104cb\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.instantapps:instantapps:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\c9dda40cf78a0b7125750c51fbacb037\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:2:1-15:12
+MERGED from [androidx.test.espresso:espresso-idling-resource:3.4.0] C:\Users\leero\.gradle\caches\transforms-3\e7c5cb7796561447fb3e36c8bb7f6958\transformed\espresso-idling-resource-3.4.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+	package
+		INJECTED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml:1:1-33:12
+		INJECTED from C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml:1:1-33:12
+		INJECTED from C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml:1:1-33:12
+		INJECTED from C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml
+MERGED from [:shared_preferences_android] C:\GitHub\mobile_app_last\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] C:\GitHub\mobile_app_last\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:fluttertoast] C:\GitHub\mobile_app_last\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:fluttertoast] C:\GitHub\mobile_app_last\build\fluttertoast\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] C:\GitHub\mobile_app_last\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] C:\GitHub\mobile_app_last\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:stripe_android] C:\GitHub\mobile_app_last\build\stripe_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:stripe_android] C:\GitHub\mobile_app_last\build\stripe_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-android:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\3c2ca6ae4913e1092cdd80ac9e0dff9a\transformed\jetified-stripe-android-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-android:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\3c2ca6ae4913e1092cdd80ac9e0dff9a\transformed\jetified-stripe-android-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:payments-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\f23ca426e7f4e3c07ba5b1ec7ec2756f\transformed\jetified-payments-ui-core-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:payments-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\f23ca426e7f4e3c07ba5b1ec7ec2756f\transformed\jetified-payments-ui-core-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:payments-model:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\83cf1b9348d64aded3aa5f9f31fedac4\transformed\jetified-payments-model-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:payments-model:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\83cf1b9348d64aded3aa5f9f31fedac4\transformed\jetified-payments-model-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\409d41dd337db0d3fa2f153cd86d06fd\transformed\jetified-stripe-ui-core-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\409d41dd337db0d3fa2f153cd86d06fd\transformed\jetified-stripe-ui-core-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\ab82e44eae2ec8620d668d11601ef9a4\transformed\jetified-stripe-core-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\ab82e44eae2ec8620d668d11601ef9a4\transformed\jetified-stripe-core-20.15.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.accompanist:accompanist-navigation-animation:0.27.0] C:\Users\leero\.gradle\caches\transforms-3\b7d40ef75476cd41b7cff00cced7f84a\transformed\jetified-accompanist-navigation-animation-0.27.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-navigation-animation:0.27.0] C:\Users\leero\.gradle\caches\transforms-3\b7d40ef75476cd41b7cff00cced7f84a\transformed\jetified-accompanist-navigation-animation-0.27.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-compose:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\6bbff339d4bb2696045511f6ed2e1404\transformed\jetified-navigation-compose-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-compose:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\6bbff339d4bb2696045511f6ed2e1404\transformed\jetified-navigation-compose-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-compose:1.6.1] C:\Users\leero\.gradle\caches\transforms-3\31f0dc245ceef7841c90ce979dd47039\transformed\jetified-activity-compose-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.6.1] C:\Users\leero\.gradle\caches\transforms-3\31f0dc245ceef7841c90ce979dd47039\transformed\jetified-activity-compose-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-viewbinding:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\845db761af0b36e03cad9b83b8b24aac\transformed\jetified-ui-viewbinding-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-viewbinding:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\845db761af0b36e03cad9b83b8b24aac\transformed\jetified-ui-viewbinding-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] C:\Users\leero\.gradle\caches\transforms-3\d3fbdcf146772953f97ce27c62acd3ec\transformed\jetified-constraintlayout-compose-1.0.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] C:\Users\leero\.gradle\caches\transforms-3\d3fbdcf146772953f97ce27c62acd3ec\transformed\jetified-constraintlayout-compose-1.0.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\0c0a19e9e173e4e444ef6ef99e8936c4\transformed\jetified-material-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\0c0a19e9e173e4e444ef6ef99e8936c4\transformed\jetified-material-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.accompanist:accompanist-flowlayout:0.27.0] C:\Users\leero\.gradle\caches\transforms-3\d7bc7e053b8cb80fdf8066abd23c281e\transformed\jetified-accompanist-flowlayout-0.27.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-flowlayout:0.27.0] C:\Users\leero\.gradle\caches\transforms-3\d7bc7e053b8cb80fdf8066abd23c281e\transformed\jetified-accompanist-flowlayout-0.27.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material-ripple:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\4b7456653341cd7f0c38d9d018f4ebdb\transformed\jetified-material-ripple-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-ripple:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\4b7456653341cd7f0c38d9d018f4ebdb\transformed\jetified-material-ripple-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.foundation:foundation:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\6029612e17f8627ff8d2f8f929109faf\transformed\jetified-foundation-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.foundation:foundation:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\6029612e17f8627ff8d2f8f929109faf\transformed\jetified-foundation-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-icons-core:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\b24bdeebc46cd48e5b0af6c648d923ff\transformed\jetified-material-icons-core-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-icons-core:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\b24bdeebc46cd48e5b0af6c648d923ff\transformed\jetified-material-icons-core-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-livedata:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\3be28c8e3b9b27b651f431e2efedf782\transformed\jetified-runtime-livedata-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-livedata:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\3be28c8e3b9b27b651f431e2efedf782\transformed\jetified-runtime-livedata-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.animation:animation:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\b89fb6011c91e6387beac7e406c0c125\transformed\jetified-animation-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.animation:animation:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\b89fb6011c91e6387beac7e406c0c125\transformed\jetified-animation-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.foundation:foundation-layout:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\b7bd2749de29e6351e044f028ebd7f5f\transformed\jetified-foundation-layout-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.foundation:foundation-layout:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\b7bd2749de29e6351e044f028ebd7f5f\transformed\jetified-foundation-layout-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\000f7aa913f54d4ccef11a1136c83c0f\transformed\jetified-lifecycle-viewmodel-compose-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\000f7aa913f54d4ccef11a1136c83c0f\transformed\jetified-lifecycle-viewmodel-compose-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.animation:animation-core:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\75310288702b61167d394bf9cb35e4c7\transformed\jetified-animation-core-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.animation:animation-core:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\75310288702b61167d394bf9cb35e4c7\transformed\jetified-animation-core-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\5a0fad18a580a65412cff106cfb5ff9f\transformed\jetified-ui-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\5a0fad18a580a65412cff106cfb5ff9f\transformed\jetified-ui-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.stripe:stripe-3ds2-android:6.1.5] C:\Users\leero\.gradle\caches\transforms-3\4e05ac12f97782b2ca812fd1e459e8f8\transformed\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-3ds2-android:6.1.5] C:\Users\leero\.gradle\caches\transforms-3\4e05ac12f97782b2ca812fd1e459e8f8\transformed\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.fragment:fragment-ktx:1.5.3] C:\Users\leero\.gradle\caches\transforms-3\c78d1a0fba6a183bee6b36881a1a43ac\transformed\jetified-fragment-ktx-1.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.5.3] C:\Users\leero\.gradle\caches\transforms-3\c78d1a0fba6a183bee6b36881a1a43ac\transformed\jetified-fragment-ktx-1.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.6.0] C:\Users\leero\.gradle\caches\transforms-3\9dc6bf533ed41d001e9ba5eabe9ca3b0\transformed\material-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.6.0] C:\Users\leero\.gradle\caches\transforms-3\9dc6bf533ed41d001e9ba5eabe9ca3b0\transformed\material-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\leero\.gradle\caches\transforms-3\a42fc1e7a9647bbe89dec55430c2615d\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\leero\.gradle\caches\transforms-3\a42fc1e7a9647bbe89dec55430c2615d\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:mavericks:2.7.0] C:\Users\leero\.gradle\caches\transforms-3\856db7c12a6e876a27f0771dff5b08fe\transformed\jetified-mavericks-2.7.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:mavericks:2.7.0] C:\Users\leero\.gradle\caches\transforms-3\856db7c12a6e876a27f0771dff5b08fe\transformed\jetified-mavericks-2.7.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\leero\.gradle\caches\transforms-3\ffdb3ad5c495e1f9b116f51984ab3519\transformed\jetified-appcompat-resources-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\leero\.gradle\caches\transforms-3\ffdb3ad5c495e1f9b116f51984ab3519\transformed\jetified-appcompat-resources-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\leero\.gradle\caches\transforms-3\e5be9602fb858223c7dcedd1d4cd58fb\transformed\appcompat-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\leero\.gradle\caches\transforms-3\e5be9602fb858223c7dcedd1d4cd58fb\transformed\appcompat-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\leero\.gradle\caches\transforms-3\c1c2a43b1ad12d948674764cc5a5ea0f\transformed\jetified-glide-4.12.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\leero\.gradle\caches\transforms-3\c1c2a43b1ad12d948674764cc5a5ea0f\transformed\jetified-glide-4.12.0\AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\6f62b3549f755a09fcc3239dac96540c\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\6f62b3549f755a09fcc3239dac96540c\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\99f990cafb00d3e40b10adf1e162c1c4\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\99f990cafb00d3e40b10adf1e162c1c4\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-wallet:19.1.0] C:\Users\leero\.gradle\caches\transforms-3\8ac407734e09572f64c7d965f6a66e77\transformed\jetified-play-services-wallet-19.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wallet:19.1.0] C:\Users\leero\.gradle\caches\transforms-3\8ac407734e09572f64c7d965f6a66e77\transformed\jetified-play-services-wallet-19.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\e794e945117aea9bc4ab31b74206c25c\transformed\jetified-play-services-identity-18.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\e794e945117aea9bc4ab31b74206c25c\transformed\jetified-play-services-identity-18.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\07ce4be41ea2bdb67a70843d86dadbbf\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\07ce4be41ea2bdb67a70843d86dadbbf\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\96615036bc18d0590c9d7704c27c289a\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\96615036bc18d0590c9d7704c27c289a\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\d1b5cd2d88fbbdd2ea93d3b5d99580ab\transformed\jetified-lifecycle-livedata-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\d1b5cd2d88fbbdd2ea93d3b5d99580ab\transformed\jetified-lifecycle-livedata-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-text:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\cb3932de8c81772fee67fa514067a59e\transformed\jetified-ui-text-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-text:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\cb3932de8c81772fee67fa514067a59e\transformed\jetified-ui-text-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\ee0958809ecb646747ade867e89b0448\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\ee0958809ecb646747ade867e89b0448\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\leero\.gradle\caches\transforms-3\d1ca8ed768e964ef553882ba9de8b47c\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\leero\.gradle\caches\transforms-3\d1ca8ed768e964ef553882ba9de8b47c\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.5.3] C:\Users\leero\.gradle\caches\transforms-3\034637e92cc0a52c17d821a1f848f39e\transformed\fragment-1.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.3] C:\Users\leero\.gradle\caches\transforms-3\034637e92cc0a52c17d821a1f848f39e\transformed\fragment-1.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.1] C:\Users\leero\.gradle\caches\transforms-3\4781624ce1609b700673a98ff64554bf\transformed\jetified-activity-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.1] C:\Users\leero\.gradle\caches\transforms-3\4781624ce1609b700673a98ff64554bf\transformed\jetified-activity-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\f57e70762397a0d534d9fcb70734a346\transformed\navigation-runtime-ktx-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\f57e70762397a0d534d9fcb70734a346\transformed\navigation-runtime-ktx-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\ab77f4db185c3dcf107945d76642361d\transformed\navigation-runtime-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\ab77f4db185c3dcf107945d76642361d\transformed\navigation-runtime-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.6.1] C:\Users\leero\.gradle\caches\transforms-3\cd713418882afa8b13de1862e2f48b30\transformed\jetified-activity-ktx-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.6.1] C:\Users\leero\.gradle\caches\transforms-3\cd713418882afa8b13de1862e2f48b30\transformed\jetified-activity-ktx-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\94bd3dc51836b74bead2a7c2b558d26c\transformed\navigation-common-ktx-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\94bd3dc51836b74bead2a7c2b558d26c\transformed\navigation-common-ktx-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\5181f39ab84243bf1febf9963a2cccfa\transformed\navigation-common-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.3] C:\Users\leero\.gradle\caches\transforms-3\5181f39ab84243bf1febf9963a2cccfa\transformed\navigation-common-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\efa7665042e4ebeec3987269223040bf\transformed\jetified-lifecycle-viewmodel-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\efa7665042e4ebeec3987269223040bf\transformed\jetified-lifecycle-viewmodel-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\5b1c5d9f970ddb819710f262d001a96d\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\5b1c5d9f970ddb819710f262d001a96d\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\575724d205138ce9be036d1156f388b3\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\575724d205138ce9be036d1156f388b3\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\61c5c08acfcc74534b7c444ac549aac0\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\61c5c08acfcc74534b7c444ac549aac0\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\1c88c1c284ea42c4e2bf0641b483d373\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\1c88c1c284ea42c4e2bf0641b483d373\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\c46b614e112775b993419afcacd0a52f\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\c46b614e112775b993419afcacd0a52f\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\f69982c8af32d9d0d9dafe18e83b3766\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\f69982c8af32d9d0d9dafe18e83b3766\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\e49948f9be6f16d28b6ded0e15c033ac\transformed\jetified-lifecycle-runtime-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\e49948f9be6f16d28b6ded0e15c033ac\transformed\jetified-lifecycle-runtime-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-tooling-preview:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\4c6439b61d2d3fe48330f5415ca826c5\transformed\jetified-ui-tooling-preview-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\4c6439b61d2d3fe48330f5415ca826c5\transformed\jetified-ui-tooling-preview-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\7289cbafbf07dc4ed68a317dbdc9c351\transformed\jetified-runtime-saveable-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\7289cbafbf07dc4ed68a317dbdc9c351\transformed\jetified-runtime-saveable-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\ae154c544a7c4bcb0628d297f07b0ffd\transformed\jetified-ui-graphics-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\ae154c544a7c4bcb0628d297f07b0ffd\transformed\jetified-ui-graphics-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-unit:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\8a87e5c62bb22ea80f0ce2265532a882\transformed\jetified-ui-unit-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-unit:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\8a87e5c62bb22ea80f0ce2265532a882\transformed\jetified-ui-unit-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-geometry:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\11c1965341e7217bfc1955e5a367acb2\transformed\jetified-ui-geometry-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-geometry:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\11c1965341e7217bfc1955e5a367acb2\transformed\jetified-ui-geometry-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\3b0ea4fb9e86bc01f7c03b763885e901\transformed\jetified-runtime-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\3b0ea4fb9e86bc01f7c03b763885e901\transformed\jetified-runtime-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\leero\.gradle\caches\transforms-3\4172c4d09ae6c1e328798c8c0efc74b8\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\leero\.gradle\caches\transforms-3\4172c4d09ae6c1e328798c8c0efc74b8\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\a648298f2796fcfb8950d634e64c6ded\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\a648298f2796fcfb8950d634e64c6ded\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:21:5-22:38
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:21:5-22:38
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\leero\.gradle\caches\transforms-3\4963183721c7ca0ce3a938dd2b186308\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\leero\.gradle\caches\transforms-3\4963183721c7ca0ce3a938dd2b186308\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\6c3b7a3432cd99b1b7ffc728a4629b88\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\6c3b7a3432cd99b1b7ffc728a4629b88\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\db276043bdf800f6f97b79d44c1b236d\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\db276043bdf800f6f97b79d44c1b236d\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\leero\.gradle\caches\transforms-3\9b12990594b6ef1616c0ad095eb85ec6\transformed\jetified-gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\leero\.gradle\caches\transforms-3\9b12990594b6ef1616c0ad095eb85ec6\transformed\jetified-gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\757b0ff6332fd8cc41e52f94743d38af\transformed\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\757b0ff6332fd8cc41e52f94743d38af\transformed\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\leero\.gradle\caches\transforms-3\8e6e269204cc094306fb2040aac00608\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\leero\.gradle\caches\transforms-3\8e6e269204cc094306fb2040aac00608\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\ae56f4b9f68d41ca980eb2b7cdae62c0\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\ae56f4b9f68d41ca980eb2b7cdae62c0\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\9eb0c6971b6c3c35ab31bd2af6867c36\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\9eb0c6971b6c3c35ab31bd2af6867c36\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\37c682b0fe66161096e24ab1fe55f545\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\37c682b0fe66161096e24ab1fe55f545\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\9b87ca0b0ae89f17a2aa39244b139aaa\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\9b87ca0b0ae89f17a2aa39244b139aaa\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\faaec3d03c9e560c78e4ef68424f7478\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\faaec3d03c9e560c78e4ef68424f7478\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\b95f2367f0572e776589348273bc7ed9\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\b95f2367f0572e776589348273bc7ed9\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\e8cd14c1f04d5f23a6096a43c9d6813e\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\e8cd14c1f04d5f23a6096a43c9d6813e\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\leero\.gradle\caches\transforms-3\1a32d95a913e9731016ec3e4ea5f69f0\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\leero\.gradle\caches\transforms-3\1a32d95a913e9731016ec3e4ea5f69f0\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:viewbinding:7.3.1] C:\Users\leero\.gradle\caches\transforms-3\15fa13cb3ccb1e836fed25a58bf27ef6\transformed\jetified-viewbinding-7.3.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:viewbinding:7.3.1] C:\Users\leero\.gradle\caches\transforms-3\15fa13cb3ccb1e836fed25a58bf27ef6\transformed\jetified-viewbinding-7.3.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\6af3a159ead8eb9ffae42ed06c2b9b92\transformed\jetified-customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\6af3a159ead8eb9ffae42ed06c2b9b92\transformed\jetified-customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\c03b9738b7db848ddb83cd5a7c413b55\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\c03b9738b7db848ddb83cd5a7c413b55\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\ab0893fd3284ffb9dda691e6ef1caf94\transformed\jetified-autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\ab0893fd3284ffb9dda691e6ef1caf94\transformed\jetified-autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\ad22e1b78c062d2ded93144774d9aa81\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\ad22e1b78c062d2ded93144774d9aa81\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\22df5fae6a898cefcffcbb9c9b6d5284\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\22df5fae6a898cefcffcbb9c9b6d5284\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\8d32ffd4d62546e1917642a102960fa0\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\8d32ffd4d62546e1917642a102960fa0\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\4c66a6af0bd2ad0a8f82bb7ce83f8e5a\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\4c66a6af0bd2ad0a8f82bb7ce83f8e5a\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\800efae8c0198ff6b3c36ef92552d5c9\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\800efae8c0198ff6b3c36ef92552d5c9\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\422254a6aee4e936d7e2c7747fdad7c2\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\422254a6aee4e936d7e2c7747fdad7c2\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\7ee5945d2eddb33e59d2ea4d942ad7f1\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\7ee5945d2eddb33e59d2ea4d942ad7f1\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\8016da3ca9f1599573822e55de516c67\transformed\jetified-savedstate-ktx-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\8016da3ca9f1599573822e55de516c67\transformed\jetified-savedstate-ktx-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\42dbf46836f4fbea5377a8307b81c1e6\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\42dbf46836f4fbea5377a8307b81c1e6\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\5279be2b8d316cd58db0f15145a646ec\transformed\lifecycle-livedata-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\5279be2b8d316cd58db0f15145a646ec\transformed\lifecycle-livedata-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\72f880e2399f4bf2e68e6b3127c6f94b\transformed\jetified-lifecycle-livedata-core-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\72f880e2399f4bf2e68e6b3127c6f94b\transformed\jetified-lifecycle-livedata-core-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\c834c1c8cc0dea642c212465537d6a54\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\leero\.gradle\caches\transforms-3\c834c1c8cc0dea642c212465537d6a54\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.security:security-crypto:1.1.0-alpha03] C:\Users\leero\.gradle\caches\transforms-3\a5c5b6468e5e193b928309c9237bc81b\transformed\jetified-security-crypto-1.1.0-alpha03\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.security:security-crypto:1.1.0-alpha03] C:\Users\leero\.gradle\caches\transforms-3\a5c5b6468e5e193b928309c9237bc81b\transformed\jetified-security-crypto-1.1.0-alpha03\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\87b2ae983714ee2f18bf7ed65b55f543\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\87b2ae983714ee2f18bf7ed65b55f543\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\83104c5d9e9017716bdf52aa81e39266\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\83104c5d9e9017716bdf52aa81e39266\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\e284b82ebf1838085d6ae4bcd0669c2d\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\e284b82ebf1838085d6ae4bcd0669c2d\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\1de4281ab38868e66d3efd8b7de1a5d9\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\1de4281ab38868e66d3efd8b7de1a5d9\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\6a641e868b8d01824dbd73ec3a0b4abd\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\leero\.gradle\caches\transforms-3\6a641e868b8d01824dbd73ec3a0b4abd\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\leero\.gradle\caches\transforms-3\cef3b78ceaac6eacc247954d998aa58a\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\leero\.gradle\caches\transforms-3\cef3b78ceaac6eacc247954d998aa58a\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-util:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\10d402ad05ac3385d20e694ad460856e\transformed\jetified-ui-util-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-util:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\10d402ad05ac3385d20e694ad460856e\transformed\jetified-ui-util-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\d68a5df622e8fceda97e3c12385104cb\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\leero\.gradle\caches\transforms-3\d68a5df622e8fceda97e3c12385104cb\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.instantapps:instantapps:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\c9dda40cf78a0b7125750c51fbacb037\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.instantapps:instantapps:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\c9dda40cf78a0b7125750c51fbacb037\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.test.espresso:espresso-idling-resource:3.4.0] C:\Users\leero\.gradle\caches\transforms-3\e7c5cb7796561447fb3e36c8bb7f6958\transformed\espresso-idling-resource-3.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test.espresso:espresso-idling-resource:3.4.0] C:\Users\leero\.gradle\caches\transforms-3\e7c5cb7796561447fb3e36c8bb7f6958\transformed\espresso-idling-resource-3.4.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\GitHub\mobile_app_last\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml:6:5-66
+MERGED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:9:5-67
+MERGED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:9:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml:6:22-64
+activity#com.stripe.android.paymentsheet.PaymentSheetActivity
+ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:10:9-13:69
+	android:exported
+		ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:13:13-66
+	android:name
+		ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:11:13-80
+activity#com.stripe.android.paymentsheet.PaymentOptionsActivity
+ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:14:9-17:69
+	android:exported
+		ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:16:13-37
+	android:theme
+		ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:17:13-66
+	android:name
+		ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:15:13-82
+activity#com.stripe.android.paymentsheet.addresselement.AddressElementActivity
+ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:18:9-21:69
+	android:exported
+		ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:20:13-37
+	android:theme
+		ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:21:13-66
+	android:name
+		ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:19:13-97
+activity#com.stripe.android.paymentsheet.paymentdatacollection.polling.PollingActivity
+ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:22:9-25:69
+	android:exported
+		ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:24:13-37
+	android:theme
+		ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:23:13-105
+activity#com.stripe.android.link.LinkActivity
+ADDED from [com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:10:9-15:58
+	android:label
+		ADDED from [com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:13:13-41
+	android:windowSoftInputMode
+		ADDED from [com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:15:13-55
+	android:exported
+		ADDED from [com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:14:13-49
+	android:name
+		ADDED from [com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:11:13-64
+queries
+ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:12:5-20:15
+MERGED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:10:5-14:15
+MERGED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:10:5-14:15
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:30:5-34:15
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:30:5-34:15
+intent#action:name:android.intent.action.VIEW+data:scheme:http
+ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:15:9-19:18
+action#android.intent.action.VIEW
+ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:16:13-65
+	android:name
+		ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:16:21-62
+data
+ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:18:13-43
+	android:scheme
+		ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:18:19-40
+activity#com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity
+ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:23:9-42:20
+	android:exported
+		ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:24:13-109
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:link-accounts+data:host:link-accounts+data:path:/${applicationId}/cancel+data:path:/${applicationId}/success+data:scheme:stripe-auth+data:scheme:stripe-auth
+ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:26:13-41:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:link-accounts+data:host:link-accounts+data:path:/com.example.kinder_joy_1/cancel+data:path:/com.example.kinder_joy_1/success+data:scheme:stripe-auth+data:scheme:stripe-auth
+ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:26:13-41:29
+category#android.intent.category.DEFAULT
+ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:29:17-76
+	android:name
+		ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:29:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:30:17-78
+	android:name
+		ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:30:27-75
+activity#com.stripe.android.financialconnections.FinancialConnectionsSheetActivity
+ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:43:9-46:57
+	android:exported
+		ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:45:13-37
+	android:theme
+		ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:46:13-54
+	android:name
+		ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:44:13-101
+provider#com.stripe.android.financialconnections.appinitializer.FinancialConnectionsInitializer
+ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:48:9-52:43
+	android:authorities
+		ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:50:13-77
+	android:multiprocess
+		ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:52:13-40
+	android:exported
+		ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:51:13-37
+	android:name
+		ADDED from [com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:49:13-114
+activity#com.stripe.android.ui.core.cardscan.CardScanActivity
+ADDED from [com.stripe:payments-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\f23ca426e7f4e3c07ba5b1ec7ec2756f\transformed\jetified-payments-ui-core-20.15.4\AndroidManifest.xml:10:9-13:69
+	android:exported
+		ADDED from [com.stripe:payments-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\f23ca426e7f4e3c07ba5b1ec7ec2756f\transformed\jetified-payments-ui-core-20.15.4\AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [com.stripe:payments-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\f23ca426e7f4e3c07ba5b1ec7ec2756f\transformed\jetified-payments-ui-core-20.15.4\AndroidManifest.xml:13:13-66
+	android:name
+		ADDED from [com.stripe:payments-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\f23ca426e7f4e3c07ba5b1ec7ec2756f\transformed\jetified-payments-ui-core-20.15.4\AndroidManifest.xml:11:13-80
+package#com.android.chrome
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:13:9-54
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:13:18-51
+activity#com.stripe.android.view.AddPaymentMethodActivity
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:17:9-20:57
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:19:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:20:13-54
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:18:13-76
+activity#com.stripe.android.view.PaymentMethodsActivity
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:21:9-24:57
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:23:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:24:13-54
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:22:13-74
+activity#com.stripe.android.view.PaymentFlowActivity
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:25:9-28:57
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:27:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:28:13-54
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:26:13-71
+activity#com.stripe.android.view.PaymentAuthWebViewActivity
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:29:9-33:58
+	android:windowSoftInputMode
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:33:13-55
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:31:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:32:13-54
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:30:13-78
+activity#com.stripe.android.view.PaymentRelayActivity
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:34:9-37:61
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:36:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:37:13-58
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:35:13-72
+activity#com.stripe.android.payments.StripeBrowserLauncherActivity
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:43:9-47:61
+	android:launchMode
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:46:13-44
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:45:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:47:13-58
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:44:13-85
+activity#com.stripe.android.payments.StripeBrowserProxyReturnActivity
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:48:9-65:20
+	android:launchMode
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:51:13-44
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:50:13-36
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:52:13-58
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:49:13-88
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:payment_return_url+data:path:/${applicationId}+data:scheme:stripesdk
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:53:13-64:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:payment_return_url+data:path:/com.example.kinder_joy_1+data:scheme:stripesdk
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:53:13-64:29
+activity#com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:66:9-69:57
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:68:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:69:13-54
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:67:13-114
+activity#com.stripe.android.googlepaylauncher.StripeGooglePayActivity
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:70:9-73:66
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:72:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:73:13-63
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:71:13-88
+activity#com.stripe.android.googlepaylauncher.GooglePayLauncherActivity
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:74:9-77:66
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:76:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:77:13-63
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:75:13-90
+activity#com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:78:9-81:66
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:80:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:81:13-63
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:79:13-103
+activity#com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:82:9-85:62
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:84:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:85:13-59
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:83:13-107
+activity#com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity
+ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:86:9-89:61
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:88:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:89:13-58
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:87:13-97
+activity#com.stripe.android.stripe3ds2.views.ChallengeActivity
+ADDED from [com.stripe:stripe-3ds2-android:6.1.5] C:\Users\leero\.gradle\caches\transforms-3\4e05ac12f97782b2ca812fd1e459e8f8\transformed\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:10:9-13:54
+	android:exported
+		ADDED from [com.stripe:stripe-3ds2-android:6.1.5] C:\Users\leero\.gradle\caches\transforms-3\4e05ac12f97782b2ca812fd1e459e8f8\transformed\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [com.stripe:stripe-3ds2-android:6.1.5] C:\Users\leero\.gradle\caches\transforms-3\4e05ac12f97782b2ca812fd1e459e8f8\transformed\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:13:13-51
+	android:name
+		ADDED from [com.stripe:stripe-3ds2-android:6.1.5] C:\Users\leero\.gradle\caches\transforms-3\4e05ac12f97782b2ca812fd1e459e8f8\transformed\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:11:13-81
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:23:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:28:9-32
+package#com.google.android.apps.maps
+ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:33:9-64
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:33:18-61
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:39:9-41:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\07ce4be41ea2bdb67a70843d86dadbbf\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\07ce4be41ea2bdb67a70843d86dadbbf\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\07ce4be41ea2bdb67a70843d86dadbbf\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\07ce4be41ea2bdb67a70843d86dadbbf\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\leero\.gradle\caches\transforms-3\d1ca8ed768e964ef553882ba9de8b47c\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\leero\.gradle\caches\transforms-3\d1ca8ed768e964ef553882ba9de8b47c\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\leero\.gradle\caches\transforms-3\d1ca8ed768e964ef553882ba9de8b47c\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:25:9-33:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:25:9-33:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\leero\.gradle\caches\transforms-3\4963183721c7ca0ce3a938dd2b186308\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\leero\.gradle\caches\transforms-3\4963183721c7ca0ce3a938dd2b186308\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\6c3b7a3432cd99b1b7ffc728a4629b88\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\leero\.gradle\caches\transforms-3\6c3b7a3432cd99b1b7ffc728a4629b88\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:30:13-32:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:32:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:31:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:35:9-47:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:38:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:39:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:40:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:37:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:36:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:41:13-43:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:44:13-46:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:25-82
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\leero\.gradle\caches\transforms-3\4963183721c7ca0ce3a938dd2b186308\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\leero\.gradle\caches\transforms-3\4963183721c7ca0ce3a938dd2b186308\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\leero\.gradle\caches\transforms-3\4963183721c7ca0ce3a938dd2b186308\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+permission#com.example.kinder_joy_1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+uses-permission#com.example.kinder_joy_1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+meta-data#aia-compat-api-min-version
+ADDED from [com.google.android.instantapps:instantapps:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\c9dda40cf78a0b7125750c51fbacb037\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:10:9-12:33
+	android:value
+		ADDED from [com.google.android.instantapps:instantapps:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\c9dda40cf78a0b7125750c51fbacb037\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:12:13-30
+	android:name
+		ADDED from [com.google.android.instantapps:instantapps:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\c9dda40cf78a0b7125750c51fbacb037\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:11:13-54

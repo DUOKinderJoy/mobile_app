@@ -1,7 +1,7 @@
-class API
-{
-  static const hostConnect = "http://192.168.0.109/api_kinderjoy";
+class API {
+  static const hostConnect = "http://192.168.188.29/api_kinderjoy";
   static const hostConnectTeacher = "$hostConnect/teacher";
+  static const hostConnectMeal = "$hostConnect/meal";
 
   //signUp teacher
   static const validateID = "$hostConnect/teacher/validate_teacherID.php";
@@ -14,4 +14,7 @@ class API
   static const signUpParents = "$hostConnect/parents/parents_signup.php";
   static const loginParents = "$hostConnect/parents/parents_login.php";
   static const deleteParents = "$hostConnect/parents/parents_delete.php";
+
+  //add meal to cart
+  static const createMeal = "$hostConnect/meal/create_meal.php";
 }

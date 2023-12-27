@@ -1,0 +1,451 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.kinder_joy_1"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml:6:5-66
+15-->C:\GitHub\mobile_app_last\android\app\src\debug\AndroidManifest.xml:6:22-64
+16    <!-- See https://developer.android.com/training/package-visibility/declaring for more details. -->
+17    <queries>
+17-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:12:5-20:15
+18
+19        <!-- Added to check the default browser that will host the AuthFlow. -->
+20        <intent>
+20-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:15:9-19:18
+21            <action android:name="android.intent.action.VIEW" />
+21-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:16:13-65
+21-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:16:21-62
+22
+23            <data android:scheme="http" />
+23-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:18:13-43
+23-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:18:19-40
+24        </intent>
+25        <!-- Added to check if Chrome is installed for browser-based payment authentication (e.g. 3DS1). -->
+26        <package android:name="com.android.chrome" /> <!-- Needs to be explicitly declared on Android R+ -->
+26-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:13:9-54
+26-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:13:18-51
+27        <package android:name="com.google.android.apps.maps" />
+27-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:33:9-64
+27-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:33:18-61
+28    </queries> <!-- Include required permissions for Google Maps API to run. -->
+29    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+29-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:23:5-79
+29-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:23:22-76
+30
+31    <uses-feature
+31-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:26:5-28:35
+32        android:glEsVersion="0x00020000"
+32-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:27:9-41
+33        android:required="true" />
+33-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:28:9-32
+34
+35    <permission
+35-->[androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+36        android:name="com.example.kinder_joy_1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+36-->[androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+37        android:protectionLevel="signature" />
+37-->[androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+38
+39    <uses-permission android:name="com.example.kinder_joy_1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+39-->[androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+39-->[androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+40
+41    <application
+42        android:name="android.app.Application"
+43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+43-->[androidx.core:core:1.9.0] C:\Users\leero\.gradle\caches\transforms-3\8b9fb7ae0c035dcd0b3209a0f586235b\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+44        android:debuggable="true"
+45        android:icon="@mipmap/ic_launcher"
+46        android:label="kinder_joy_1" >
+47        <activity
+48            android:name="com.example.kinder_joy_1.MainActivity"
+49            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+50            android:exported="true"
+51            android:hardwareAccelerated="true"
+52            android:launchMode="singleTop"
+53            android:theme="@style/LaunchTheme"
+54            android:windowSoftInputMode="adjustResize" >
+55
+56            <!--
+57                 Specifies an Android theme to apply to this Activity as soon as
+58                 the Android process has started. This theme is visible to the user
+59                 while the Flutter UI initializes. After that, this theme continues
+60                 to determine the Window background behind the Flutter UI.
+61            -->
+62            <meta-data
+63                android:name="io.flutter.embedding.android.NormalTheme"
+64                android:resource="@style/NormalTheme" />
+65
+66            <intent-filter>
+67                <action android:name="android.intent.action.MAIN" />
+68
+69                <category android:name="android.intent.category.LAUNCHER" />
+70            </intent-filter>
+71        </activity>
+72        <!--
+73             Don't delete the meta-data below.
+74             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+75        -->
+76        <meta-data
+77            android:name="flutterEmbedding"
+78            android:value="2" />
+79
+80        <activity
+80-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:10:9-13:69
+81            android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
+81-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:11:13-80
+82            android:exported="false"
+82-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:12:13-37
+83            android:theme="@style/StripePaymentSheetDefaultTheme" />
+83-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:13:13-66
+84        <activity
+84-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:14:9-17:69
+85            android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"
+85-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:15:13-82
+86            android:exported="false"
+86-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:16:13-37
+87            android:theme="@style/StripePaymentSheetDefaultTheme" />
+87-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:17:13-66
+88        <activity
+88-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:18:9-21:69
+89            android:name="com.stripe.android.paymentsheet.addresselement.AddressElementActivity"
+89-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:19:13-97
+90            android:exported="false"
+90-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:20:13-37
+91            android:theme="@style/StripePaymentSheetDefaultTheme" />
+91-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:21:13-66
+92        <activity
+92-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:22:9-25:69
+93            android:name="com.stripe.android.paymentsheet.paymentdatacollection.polling.PollingActivity"
+93-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:23:13-105
+94            android:exported="false"
+94-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:24:13-37
+95            android:theme="@style/StripePaymentSheetDefaultTheme" />
+95-->[com.stripe:paymentsheet:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\59398fb6c033c254f7df41a078238895\transformed\jetified-paymentsheet-20.15.4\AndroidManifest.xml:25:13-66
+96        <activity
+96-->[com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:10:9-15:58
+97            android:name="com.stripe.android.link.LinkActivity"
+97-->[com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:11:13-64
+98            android:exported="false"
+98-->[com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:12:13-37
+99            android:label="@string/link"
+99-->[com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:13:13-41
+100            android:theme="@style/LinkBaseTheme"
+100-->[com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:14:13-49
+101            android:windowSoftInputMode="adjustResize" />
+101-->[com.stripe:link:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6c094def3834fa9fec1c86d0e1fe802d\transformed\jetified-link-20.15.4\AndroidManifest.xml:15:13-55
+102        <activity
+102-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:23:9-42:20
+103            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity"
+103-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:24:13-109
+104            android:exported="true" >
+104-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:25:13-36
+105            <intent-filter>
+105-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:26:13-41:29
+106                <action android:name="android.intent.action.VIEW" />
+106-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:16:13-65
+106-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:16:21-62
+107
+108                <category android:name="android.intent.category.DEFAULT" />
+108-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:29:17-76
+108-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:29:27-73
+109                <category android:name="android.intent.category.BROWSABLE" />
+109-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:30:17-78
+109-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:30:27-75
+110
+111                <!-- Accepts success and cancel URIs that begin with "stripe-auth://link-accounts” -->
+112                <data
+112-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:18:13-43
+113                    android:host="link-accounts"
+114                    android:path="/com.example.kinder_joy_1/success"
+115                    android:scheme="stripe-auth" />
+115-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:18:19-40
+116                <data
+116-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:18:13-43
+117                    android:host="link-accounts"
+118                    android:path="/com.example.kinder_joy_1/cancel"
+119                    android:scheme="stripe-auth" />
+119-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:18:19-40
+120            </intent-filter>
+121        </activity>
+122        <activity
+122-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:43:9-46:57
+123            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetActivity"
+123-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:44:13-101
+124            android:exported="false"
+124-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:45:13-37
+125            android:theme="@style/StripeDefaultTheme" />
+125-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:46:13-54
+126
+127        <provider
+127-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:48:9-52:43
+128            android:name="com.stripe.android.financialconnections.appinitializer.FinancialConnectionsInitializer"
+128-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:49:13-114
+129            android:authorities="com.example.kinder_joy_1.financialconnections-init"
+129-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:50:13-77
+130            android:exported="false"
+130-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:51:13-37
+131            android:multiprocess="true" />
+131-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:52:13-40
+132
+133        <activity
+133-->[com.stripe:payments-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\f23ca426e7f4e3c07ba5b1ec7ec2756f\transformed\jetified-payments-ui-core-20.15.4\AndroidManifest.xml:10:9-13:69
+134            android:name="com.stripe.android.ui.core.cardscan.CardScanActivity"
+134-->[com.stripe:payments-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\f23ca426e7f4e3c07ba5b1ec7ec2756f\transformed\jetified-payments-ui-core-20.15.4\AndroidManifest.xml:11:13-80
+135            android:exported="false"
+135-->[com.stripe:payments-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\f23ca426e7f4e3c07ba5b1ec7ec2756f\transformed\jetified-payments-ui-core-20.15.4\AndroidManifest.xml:12:13-37
+136            android:theme="@style/StripePaymentSheetDefaultTheme" />
+136-->[com.stripe:payments-ui-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\f23ca426e7f4e3c07ba5b1ec7ec2756f\transformed\jetified-payments-ui-core-20.15.4\AndroidManifest.xml:13:13-66
+137        <activity
+137-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:17:9-20:57
+138            android:name="com.stripe.android.view.AddPaymentMethodActivity"
+138-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:18:13-76
+139            android:exported="false"
+139-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:19:13-37
+140            android:theme="@style/StripeDefaultTheme" />
+140-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:20:13-54
+141        <activity
+141-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:21:9-24:57
+142            android:name="com.stripe.android.view.PaymentMethodsActivity"
+142-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:22:13-74
+143            android:exported="false"
+143-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:23:13-37
+144            android:theme="@style/StripeDefaultTheme" />
+144-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:24:13-54
+145        <activity
+145-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:25:9-28:57
+146            android:name="com.stripe.android.view.PaymentFlowActivity"
+146-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:26:13-71
+147            android:exported="false"
+147-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:27:13-37
+148            android:theme="@style/StripeDefaultTheme" />
+148-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:28:13-54
+149        <activity
+149-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:29:9-33:58
+150            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
+150-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:30:13-78
+151            android:exported="false"
+151-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:31:13-37
+152            android:theme="@style/StripeDefaultTheme"
+152-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:32:13-54
+153            android:windowSoftInputMode="adjustResize" />
+153-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:33:13-55
+154        <activity
+154-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:34:9-37:61
+155            android:name="com.stripe.android.view.PaymentRelayActivity"
+155-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:35:13-72
+156            android:exported="false"
+156-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:36:13-37
+157            android:theme="@style/StripeTransparentTheme" />
+157-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:37:13-58
+158        <!--
+159        Set android:launchMode="singleTop" so that the StripeBrowserLauncherActivity instance that
+160        launched the browser Activity will also handle the return URL deep link.
+161        -->
+162        <activity
+162-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:43:9-47:61
+163            android:name="com.stripe.android.payments.StripeBrowserLauncherActivity"
+163-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:44:13-85
+164            android:exported="false"
+164-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:45:13-37
+165            android:launchMode="singleTask"
+165-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:46:13-44
+166            android:theme="@style/StripeTransparentTheme" />
+166-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:47:13-58
+167        <activity
+167-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:48:9-65:20
+168            android:name="com.stripe.android.payments.StripeBrowserProxyReturnActivity"
+168-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:49:13-88
+169            android:exported="true"
+169-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:50:13-36
+170            android:launchMode="singleTask"
+170-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:51:13-44
+171            android:theme="@style/StripeTransparentTheme" >
+171-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:52:13-58
+172            <intent-filter>
+172-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:53:13-64:29
+173                <action android:name="android.intent.action.VIEW" />
+173-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:16:13-65
+173-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:16:21-62
+174
+175                <category android:name="android.intent.category.DEFAULT" />
+175-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:29:17-76
+175-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:29:27-73
+176                <category android:name="android.intent.category.BROWSABLE" />
+176-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:30:17-78
+176-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:30:27-75
+177
+178                <!-- Must match `DefaultReturnUrl#value`. -->
+179                <data
+179-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:18:13-43
+180                    android:host="payment_return_url"
+181                    android:path="/com.example.kinder_joy_1"
+182                    android:scheme="stripesdk" />
+182-->[com.stripe:financial-connections:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\d40eebcd132b3f89863aecd1d74d7089\transformed\jetified-financial-connections-20.15.4\AndroidManifest.xml:18:19-40
+183            </intent-filter>
+184        </activity>
+185        <activity
+185-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:66:9-69:57
+186            android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity"
+186-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:67:13-114
+187            android:exported="false"
+187-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:68:13-37
+188            android:theme="@style/StripeDefaultTheme" />
+188-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:69:13-54
+189        <activity
+189-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:70:9-73:66
+190            android:name="com.stripe.android.googlepaylauncher.StripeGooglePayActivity"
+190-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:71:13-88
+191            android:exported="false"
+191-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:72:13-37
+192            android:theme="@style/StripeGooglePayDefaultTheme" />
+192-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:73:13-63
+193        <activity
+193-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:74:9-77:66
+194            android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity"
+194-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:75:13-90
+195            android:exported="false"
+195-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:76:13-37
+196            android:theme="@style/StripeGooglePayDefaultTheme" />
+196-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:77:13-63
+197        <activity
+197-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:78:9-81:66
+198            android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity"
+198-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:79:13-103
+199            android:exported="false"
+199-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:80:13-37
+200            android:theme="@style/StripeGooglePayDefaultTheme" />
+200-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:81:13-63
+201        <activity
+201-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:82:9-85:62
+202            android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity"
+202-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:83:13-107
+203            android:exported="false"
+203-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:84:13-37
+204            android:theme="@style/PayLauncherDefaultTheme" />
+204-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:85:13-59
+205        <activity
+205-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:86:9-89:61
+206            android:name="com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity"
+206-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:87:13-97
+207            android:exported="false"
+207-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:88:13-37
+208            android:theme="@style/StripeTransparentTheme" />
+208-->[com.stripe:payments-core:20.15.4] C:\Users\leero\.gradle\caches\transforms-3\6def462b8e18d0c66e294a05354b780c\transformed\jetified-payments-core-20.15.4\AndroidManifest.xml:89:13-58
+209        <activity
+209-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\leero\.gradle\caches\transforms-3\4e05ac12f97782b2ca812fd1e459e8f8\transformed\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:10:9-13:54
+210            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
+210-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\leero\.gradle\caches\transforms-3\4e05ac12f97782b2ca812fd1e459e8f8\transformed\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:11:13-81
+211            android:exported="false"
+211-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\leero\.gradle\caches\transforms-3\4e05ac12f97782b2ca812fd1e459e8f8\transformed\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:12:13-37
+212            android:theme="@style/Stripe3DS2Theme" /> <!-- Needs to be explicitly declared on P+ -->
+212-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\leero\.gradle\caches\transforms-3\4e05ac12f97782b2ca812fd1e459e8f8\transformed\jetified-stripe-3ds2-android-6.1.5\AndroidManifest.xml:13:13-51
+213        <uses-library
+213-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:39:9-41:40
+214            android:name="org.apache.http.legacy"
+214-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
+215            android:required="false" />
+215-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\leero\.gradle\caches\transforms-3\7ae736a5c8ca1b799ea36fa101866a95\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:41:13-37
+216
+217        <activity
+217-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\07ce4be41ea2bdb67a70843d86dadbbf\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+218            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+218-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\07ce4be41ea2bdb67a70843d86dadbbf\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+219            android:exported="false"
+219-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\07ce4be41ea2bdb67a70843d86dadbbf\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+220            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+220-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\leero\.gradle\caches\transforms-3\07ce4be41ea2bdb67a70843d86dadbbf\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+221
+222        <meta-data
+222-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\leero\.gradle\caches\transforms-3\d1ca8ed768e964ef553882ba9de8b47c\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+223            android:name="com.google.android.gms.version"
+223-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\leero\.gradle\caches\transforms-3\d1ca8ed768e964ef553882ba9de8b47c\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+224            android:value="@integer/google_play_services_version" />
+224-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\leero\.gradle\caches\transforms-3\d1ca8ed768e964ef553882ba9de8b47c\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+225
+226        <uses-library
+226-->[androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+227            android:name="androidx.window.extensions"
+227-->[androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+228            android:required="false" />
+228-->[androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+229        <uses-library
+229-->[androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+230            android:name="androidx.window.sidecar"
+230-->[androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+231            android:required="false" />
+231-->[androidx.window:window:1.0.0-beta04] C:\Users\leero\.gradle\caches\transforms-3\6bdbce6d724577b6a2ebf443348d3e9e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+232
+233        <provider
+233-->[androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+234            android:name="androidx.startup.InitializationProvider"
+234-->[androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+235            android:authorities="com.example.kinder_joy_1.androidx-startup"
+235-->[androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+236            android:exported="false" >
+236-->[androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+237            <meta-data
+237-->[androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+238                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+238-->[androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+239                android:value="androidx.startup" />
+239-->[androidx.emoji2:emoji2:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\6f6db60a7bb15edc92d99047286f89ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+240            <meta-data
+240-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:30:13-32:52
+241                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+241-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:31:17-85
+242                android:value="androidx.startup" />
+242-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:32:17-49
+243            <meta-data
+243-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\leero\.gradle\caches\transforms-3\4963183721c7ca0ce3a938dd2b186308\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+244                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+244-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\leero\.gradle\caches\transforms-3\4963183721c7ca0ce3a938dd2b186308\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+245                android:value="androidx.startup" />
+245-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\leero\.gradle\caches\transforms-3\4963183721c7ca0ce3a938dd2b186308\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+246        </provider>
+247
+248        <receiver
+248-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:35:9-47:20
+249            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+249-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:36:13-76
+250            android:directBootAware="false"
+250-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:37:13-44
+251            android:enabled="true"
+251-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:38:13-35
+252            android:exported="true"
+252-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:39:13-36
+253            android:permission="android.permission.DUMP" >
+253-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:40:13-57
+254            <intent-filter>
+254-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:41:13-43:29
+255                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+255-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:17-91
+255-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:25-88
+256            </intent-filter>
+257            <intent-filter>
+257-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:44:13-46:29
+258                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+258-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:17-85
+258-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\leero\.gradle\caches\transforms-3\f9853559baa2cf41532bb0ae0df9443a\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:25-82
+259            </intent-filter>
+260        </receiver>
+261
+262        <meta-data
+262-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\c9dda40cf78a0b7125750c51fbacb037\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:10:9-12:33
+263            android:name="aia-compat-api-min-version"
+263-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\c9dda40cf78a0b7125750c51fbacb037\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:11:13-54
+264            android:value="1" />
+264-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\leero\.gradle\caches\transforms-3\c9dda40cf78a0b7125750c51fbacb037\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:12:13-30
+265    </application>
+266
+267</manifest>

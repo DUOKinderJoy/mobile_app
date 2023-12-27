@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+// import 'package:kinder_joy_1/meal_selection/meal_home_page.dart';
 import 'package:kinder_joy_1/meal_selection/meal_home_page.dart';
 
 class Dashboard extends StatefulWidget {
@@ -34,7 +35,7 @@ class _DashboardState extends State<Dashboard> {
               tileColor: Color.fromARGB(255, 222, 134, 163),
               onTap: () {
                 MaterialPageRoute route =
-                MaterialPageRoute(builder: (context) => Dashboard());
+                    MaterialPageRoute(builder: (context) => Dashboard());
                 Navigator.push(context, route);
               },
             ),
@@ -64,7 +65,7 @@ class _DashboardState extends State<Dashboard> {
               ),
               onTap: () {
                 MaterialPageRoute route =
-                MaterialPageRoute(builder: (context) => MealHomePage());
+                    MaterialPageRoute(builder: (context) => MealHomePage());
                 Navigator.push(context, route);
               },
             ),
@@ -86,7 +87,7 @@ class _DashboardState extends State<Dashboard> {
           ],
         ),
       ),
-
+      
       body: Stack(
         children: [
           //background image
