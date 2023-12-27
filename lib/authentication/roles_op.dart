@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:kinder_joy_1/authentication/login_screen.dart';
-
 import '../parents/parent_login_screen.dart';
 import '../parents/parents_sign_up.dart';
 import '../teachers/teacher_sign_up.dart';
@@ -29,21 +29,21 @@ class RolesOp extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(
-                      left: 175.0, right: 175.0, top: 200, bottom: 0),
+                      left: 175.0, right: 175.0, top: 325, bottom: 0),
                   child: Image.asset('lib/images/kindergarten.png'),
                 ),
-                const Text(
+                Text(
                   'KinderJoy',
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontWeight: FontWeight.w500,
+                  style: GoogleFonts.ovo(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
                     fontSize: 30,
                   ),
                 ),
-                const Text(
+                Text(
                   'Welcome! What roles are you?',
-                  style: TextStyle(
-                    color: Colors.blue,
+                  style: GoogleFonts.ovo(
+                    color: Colors.black,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
                   ),
@@ -53,7 +53,7 @@ class RolesOp extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('Parents'),
+                  child:  Text('Parents', style: GoogleFonts.ovo(color: Colors.black),),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -66,7 +66,7 @@ class RolesOp extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('Teachers'),
+                  child: Text('Teachers', style: GoogleFonts.ovo(color: Colors.black),),
                   onPressed: () {
                     Navigator.push(
                       context,

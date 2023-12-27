@@ -1,5 +1,5 @@
 # kinder_joy_1
-# mobile app
+
 A new Flutter project.
 
 ## Getting Started
