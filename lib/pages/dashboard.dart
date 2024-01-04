@@ -63,9 +63,9 @@ class _DashboardState extends State<Dashboard> {
                 ),
               ),
               onTap: () {
-                MaterialPageRoute route =
-                MaterialPageRoute(builder: (context) => MealHomePage());
-                Navigator.push(context, route);
+                // MaterialPageRoute route =
+                // // MaterialPageRoute(builder: (context) => MealHomePage());
+                // Navigator.push(context, route);
               },
             ),
 

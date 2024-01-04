@@ -12,7 +12,7 @@ class ParentsDashboardOfFragments extends StatelessWidget{
 
   CurrentParents _rememberCurrentParents = Get.put(CurrentParents());
 
-  List<Widget> _fragmentsScreens =
+  final List<Widget> _fragmentsScreens =
   [
     ParentsHomeFragementScreen(),
     MealHomePage(),
@@ -21,7 +21,7 @@ class ParentsDashboardOfFragments extends StatelessWidget{
 
   ];
 
-  List _navigationButtonProperties =
+  final List _navigationButtonProperties =
   [
     {
       "active_icon": Icons.home,
@@ -45,7 +45,7 @@ class ParentsDashboardOfFragments extends StatelessWidget{
     },
   ];
 
-  RxInt _indexnumber = 0.obs;
+  final RxInt _indexnumber = 0.obs;
 
   @override
   Widget build(BuildContext context){

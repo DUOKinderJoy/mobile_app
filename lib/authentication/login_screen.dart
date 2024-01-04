@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:kinder_joy_1/admin/admin_login.dart';
 import 'package:kinder_joy_1/teachers/fragments/dashboard_of_fragments.dart';
 import 'package:kinder_joy_1/teachers/teacherPreferences/teacher_preferences.dart';
 import 'package:kinder_joy_1/teachers/teacher_sign_up.dart';
@@ -217,10 +218,10 @@ class _LoginPageState extends State<LoginPage>
                                     style: TextStyle(fontSize: 15),
                                   ),
                                   onPressed: () {
-                                    // Navigator.push(
-                                    //   context,
-                                    //   MaterialPageRoute(builder: (context) => const SignUpOp()),
-                                    // );//signup screen
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => AdminLoginPage()),
+                                    );//signup screen
                                   },
                                 ),
                               ],
