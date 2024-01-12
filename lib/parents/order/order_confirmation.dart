@@ -1,7 +1,5 @@
 import 'dart:convert';
 import 'dart:typed_data';
-
-
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
@@ -10,7 +8,6 @@ import 'package:kinder_joy_1/parents/parentsFragments/parents_home_fragment_scre
 import 'package:kinder_joy_1/parents/parentsPreferences/current_parents.dart';
 import 'package:path/path.dart' as path;
 import 'package:http/http.dart' as http;
-
 import '../../api_connection/api_connection.dart';
 import '../../models/order.dart';
 
@@ -39,13 +36,13 @@ class OrderConfirmationScreen extends StatelessWidget
       selectedItems: selectedItemsString,
       totalAmount: totalAmount,
       status: "new",
-      // dateTime: DateTime.now(),
     );
 
     try
     {
       var res = await http.post(
         Uri.parse(API.addOrder),
+        body: order.toJson(),
       );
 
       if (res.statusCode == 200)
