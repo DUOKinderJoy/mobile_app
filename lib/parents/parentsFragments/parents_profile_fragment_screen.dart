@@ -69,86 +69,12 @@ class ParentsProfileFragementScreen extends StatelessWidget
     }
   }
 
-  // DeleteUser() async
-  // {
-  //   var resultResponse = await Get.dialog(
-  //     AlertDialog(
-  //       backgroundColor: Colors.grey,
-  //       title: const Text(
-  //         "Delete account",
-  //         style: TextStyle(
-  //           fontSize: 18,
-  //           fontWeight: FontWeight.bold,
-  //         ),
-  //       ),
-  //       content: const Text(
-  //         "Are you sure?\nYou want to delete account?",
-  //       ),
-  //       actions: [
-  //         TextButton(
-  //             onPressed: ()
-  //             {
-  //               Get.back();
-  //             },
-  //             child: const Text(
-  //               "No",
-  //               style: TextStyle(
-  //                 color: Colors.black,
-  //               ),
-  //             )
-  //         ),
-  //         TextButton(
-  //             onPressed: ()
-  //             {
-  //               Get.back(result: "Delete");
-  //             },
-  //             child: const Text(
-  //               "Yes",
-  //               style: TextStyle(
-  //                 color: Colors.black,
-  //               ),
-  //             )
-  //         ),
-  //
-  //       ],
-  //     ),
-  //   );
-  //
-  //   if(resultResponse == 'Delete')
-  //   {
-  //     try
-  //     {
-  //       var res = await http.post(
-  //         Uri.parse(API.deleteParents),
-  //         body: {
-  //           "parents_no": _currentParents.parents.parents_no,
-  //         },
-  //       );
-  //       if(res.statusCode == 200)   //http 200 = success communicated with server (flutter with API to server)
-  //           {
-  //         Fluttertoast.showToast(msg: "Delete successfully. Directing to home page.");
-  //
-  //         RememberParentsPres.removeParentsInfo()
-  //             .then((value)
-  //         {
-  //           Get.off(RolesOp());
-  //         });
-  //
-  //       }
-  //     }
-  //     catch(errorMsg)
-  //     {
-  //       print("Error::" + errorMsg.toString());
-  //     }
-  //   }
-  // }
-
   Widget parentsInfoItemProfile(IconData iconData, String parentsData)
   {
     return Container(   //reusable code
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: Colors.grey,
+        color: Colors.white,
       ),
       padding: const EdgeInsets.symmetric(
         horizontal: 16,
@@ -175,7 +101,17 @@ class ParentsProfileFragementScreen extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Container(
+        decoration: BoxDecoration(
+        image: DecorationImage(
+        image: NetworkImage(
+        "https://i.pinimg.com/564x/16/9a/88/169a88947fe29fb44d8f24d8d31b82ee.jpg",
+        ),
+      fit: BoxFit.cover, // You can choose other BoxFit options based on your requirements
+      ),
+    ),
+
+    child: ListView(
       padding: const EdgeInsets.all(32),
 
       children: [
@@ -235,39 +171,9 @@ class ParentsProfileFragementScreen extends StatelessWidget
         ),
         const SizedBox(height: 20,),
 
-        // Center(
-        //   child: Material(
-        //     color: Colors.redAccent,
-        //     borderRadius: BorderRadius.circular(8),
-        //     child: InkWell(
-        //       onTap: ()
-        //       {
-        //         DeleteUser();
-        //       },
-        //       borderRadius: BorderRadius.circular(32),
-        //       child: const Padding(
-        //         padding: EdgeInsets.symmetric(
-        //           horizontal: 30,
-        //           vertical: 12,
-        //         ),
-        //         child: Text(
-        //           "Delete account",
-        //           style: TextStyle(
-        //             color: Colors.white,
-        //             fontSize: 16,
-        //           ),
-        //
-        //         ),
-        //       ),
-        //
-        //     ),
-        //   ),
-        //
-        // )
-
 
       ],
-
+    ),
     );
   }
 }

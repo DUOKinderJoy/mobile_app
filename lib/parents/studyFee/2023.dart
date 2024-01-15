@@ -8,6 +8,7 @@ import 'package:kinder_joy_1/parents/parentsPreferences/parents_preferences.dart
 import 'package:http/http.dart' as http;
 import 'package:kinder_joy_1/parents/studyFee/tryStripe.dart';
 import '../../api_connection/api_connection.dart';
+import '../parentsFragments/parents_mealsorder_fragment_screen.dart';
 
 
 class StudyFeeYear2023 extends StatelessWidget
@@ -139,7 +140,7 @@ class StudyFeeYear2023 extends StatelessWidget
                   onPressed: () {
                     // Navigator.push(
                     //   context,
-                    //   MaterialPageRoute(builder: (context) => LoginPage()),
+                    //   MaterialPageRoute(builder: (context) => MealOrderPage()),
                     // );
                     //teacher sign up page
                   },
@@ -152,6 +153,10 @@ class StudyFeeYear2023 extends StatelessWidget
                   ),
                   child: const Text('2023 Sep'),
                   onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MealOrderPage()),
+                    );
                     // Navigator.push(
                     //   context,
                     //   MaterialPageRoute(builder: (context) => LoginPage()),

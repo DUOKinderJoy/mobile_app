@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:kinder_joy_1/admin/admin_login.dart';
 import 'package:kinder_joy_1/parents/parentsFragments/dashboard_of_parents_fragments.dart';
 import 'package:kinder_joy_1/parents/parentsModel/parents.dart';
 import 'package:kinder_joy_1/parents/parentsPreferences/parents_preferences.dart';
@@ -200,29 +201,29 @@ class _ParentLoginPageState extends State<ParentLoginPage>
                                 ],
                               ),
 
-                              const Text(
-                                "Or",
-                                style: TextStyle(fontSize: 16, color: Colors.black),
-                              ),
-                              //admin button
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  const Text('Are you an admin?'),
-                                  TextButton(
-                                    child: const Text(
-                                      'Click here',
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                    onPressed: () {
-                                      // Navigator.push(
-                                      //   context,
-                                      //   MaterialPageRoute(builder: (context) => const SignUpOp()),
-                                      // );//signup screen
-                                    },
-                                  ),
-                                ],
-                              ),
+                              // const Text(
+                              //   "Or",
+                              //   style: TextStyle(fontSize: 16, color: Colors.black),
+                              // ),
+                              // //admin button
+                              // Row(
+                              //   mainAxisAlignment: MainAxisAlignment.center,
+                              //   children: <Widget>[
+                              //     const Text('Are you an admin?'),
+                              //     TextButton(
+                              //       child: const Text(
+                              //         'Click here',
+                              //         style: TextStyle(fontSize: 15),
+                              //       ),
+                              //       onPressed: () {
+                              //         Navigator.push(
+                              //           context,
+                              //           MaterialPageRoute(builder: (context) => AdminLoginPage()),
+                              //         );//signup screen
+                              //       },
+                              //     ),
+                              //   ],
+                              // ),
                             ],
                           )
                       )

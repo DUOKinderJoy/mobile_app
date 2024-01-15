@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kinder_joy_1/admin/admin_login.dart';
 import 'package:kinder_joy_1/authentication/login_screen.dart';
 
 import '../parents/parent_login_screen.dart';
@@ -75,6 +76,20 @@ class RolesOp extends StatelessWidget {
                     //teacher sign up page
                   },
                 ),
+                const SizedBox(height: 20),
+                // ElevatedButton(
+                //   style: ElevatedButton.styleFrom(
+                //     backgroundColor: Colors.white, // Set the button color to white
+                //   ),
+                //   child: const Text('Admin'),
+                //   onPressed: () {
+                //     Navigator.push(
+                //       context,
+                //       MaterialPageRoute(builder: (context) => AdminLoginPage()),
+                //     );
+                //     //teacher sign up page
+                //   },
+                // ),
               ],
             ),
           ),
