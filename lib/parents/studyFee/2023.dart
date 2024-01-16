@@ -2,12 +2,14 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:kinder_joy_1/authentication/roles_op.dart';
 import 'package:kinder_joy_1/parents/parentsPreferences/current_parents.dart';
 import 'package:kinder_joy_1/parents/parentsPreferences/parents_preferences.dart';
 import 'package:http/http.dart' as http;
 import 'package:kinder_joy_1/parents/studyFee/tryStripe.dart';
 import '../../api_connection/api_connection.dart';
+import '../parentsFragments/parents_mealsorder_fragment_screen.dart';
 
 
 class StudyFeeYear2023 extends StatelessWidget
@@ -77,9 +79,9 @@ class StudyFeeYear2023 extends StatelessWidget
                 //     fontSize: 30,
                 //   ),
                 // ),
-                const Text(
+                Text(
                   'Study fee for',
-                  style: TextStyle(
+                  style: GoogleFonts.ovo(
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -87,15 +89,15 @@ class StudyFeeYear2023 extends StatelessWidget
                 ),
                 Text(
                   _currentParents.parents.children_name,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
+                  style: GoogleFonts.ovo(
+                    color: Colors.deepPurple,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
                   ),
                 ),
-                const Text(
-                  'in year of 2023',
-                  style: TextStyle(
+                Text(
+                  'in 2023',
+                  style: GoogleFonts.ovo(
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -106,7 +108,10 @@ class StudyFeeYear2023 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2023 Dec'),
+                  child:  Text(
+                    '2023 Dec',
+                    style: GoogleFonts.ovo(color: Colors.black),
+                  ),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -120,7 +125,8 @@ class StudyFeeYear2023 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2023 Nov'),
+                  child: Text('2023 Nov',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -135,7 +141,44 @@ class StudyFeeYear2023 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2023 Oct'),
+                  child: Text('2023 Oct',
+                      style: GoogleFonts.ovo(color: Colors.black)),
+                  onPressed: () {
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => MealOrderPage()),
+                    // );
+                    //teacher sign up page
+                  },
+                ),
+                const SizedBox(height: 5),
+
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white, // Set the button color to white
+                  ),
+                  child: Text('2023 Sep',
+                      style: GoogleFonts.ovo(color: Colors.black)),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MealOrderPage()),
+                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => LoginPage()),
+                    // );
+                    //teacher sign up page
+                  },
+                ),
+                const SizedBox(height: 5),
+
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white, // Set the button color to white
+                  ),
+                  child: Text('2023 Aug',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -150,7 +193,8 @@ class StudyFeeYear2023 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2023 Sep'),
+                  child: Text('2023 July',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -165,7 +209,8 @@ class StudyFeeYear2023 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2023 Aug'),
+                  child: Text('2023 June',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -180,7 +225,8 @@ class StudyFeeYear2023 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2023 July'),
+                  child: Text('2023 May',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -195,7 +241,8 @@ class StudyFeeYear2023 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2023 June'),
+                  child: Text('2023 Apr',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -210,7 +257,8 @@ class StudyFeeYear2023 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2023 May'),
+                  child: Text('2023 Mar',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -225,7 +273,8 @@ class StudyFeeYear2023 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2023 Apr'),
+                  child: Text('2023 Feb',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -240,37 +289,8 @@ class StudyFeeYear2023 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2023 Mar'),
-                  onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => LoginPage()),
-                    // );
-                    //teacher sign up page
-                  },
-                ),
-                const SizedBox(height: 5),
-
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white, // Set the button color to white
-                  ),
-                  child: const Text('2023 Feb'),
-                  onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => LoginPage()),
-                    // );
-                    //teacher sign up page
-                  },
-                ),
-                const SizedBox(height: 5),
-
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white, // Set the button color to white
-                  ),
-                  child: const Text('2023 Jan'),
+                  child: Text('2023 Jan',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,

@@ -3,32 +3,29 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
+import 'package:kinder_joy_1/admin/admin_login.dart';
 import 'package:kinder_joy_1/parents/parentsFragments/dashboard_of_parents_fragments.dart';
 import 'package:kinder_joy_1/parents/parentsModel/parents.dart';
 import 'package:kinder_joy_1/parents/parentsPreferences/parents_preferences.dart';
 import 'package:kinder_joy_1/parents/parents_sign_up.dart';
 import '../api_connection/api_connection.dart';
 
-class ParentLoginPage extends StatefulWidget
-{
+class ParentLoginPage extends StatefulWidget {
   @override
   State<ParentLoginPage> createState() => _ParentLoginPageState();
 }
 
-class _ParentLoginPageState extends State<ParentLoginPage>
-{
+class _ParentLoginPageState extends State<ParentLoginPage> {
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var formKey = GlobalKey<FormState>();
     var nameController = TextEditingController();
     var noController = TextEditingController();
 
-    loginParentsNow() async
-    {
-      try
-      {
+    loginParentsNow() async {
+      try {
         var res = await http.post(
           Uri.parse(API.loginParents),
           body: {
@@ -36,31 +33,30 @@ class _ParentLoginPageState extends State<ParentLoginPage>
             "parents_no": noController.text.trim(),
           },
         );
-        if(res.statusCode == 200)   //http 200 = success communicated with server (flutter with API to server)
-          {
+        if (res.statusCode ==
+            200) //http 200 = success communicated with server (flutter with API to server)
+        {
           var resBodyOfLogin = jsonDecode(res.body);
-          if(resBodyOfLogin['success'] == true)
-          {
-            Fluttertoast.showToast(msg: "Login successfully. Directing to home page.");
+          if (resBodyOfLogin['success'] == true) {
+            Fluttertoast.showToast(
+                msg: "Login successfully. Directing to home page.");
 
-            Parents parentsInfo = Parents.fromJson(resBodyOfLogin["parentsData"]);
+            Parents parentsInfo =
+                Parents.fromJson(resBodyOfLogin["parentsData"]);
 
             //save parentsInfo to local storage using Shared Preferences
             await RememberParentsPres.storeParentsInfo(parentsInfo);
 
-            Future.delayed(Duration(milliseconds: 2000), ()
-            {
+            Future.delayed(Duration(milliseconds: 2000), () {
               Get.to(ParentsDashboardOfFragments());
             });
-          }
-          else
-          {
-            Fluttertoast.showToast(msg: "Login unsuccessfully, incorrect name / contact no. Try again");
+          } else {
+            Fluttertoast.showToast(
+                msg:
+                    "Login unsuccessfully, incorrect name / contact no. Try again");
           }
         }
-      }
-      catch(errorMsg)
-      {
+      } catch (errorMsg) {
         print("Error::" + errorMsg.toString());
       }
     }
@@ -71,7 +67,7 @@ class _ParentLoginPageState extends State<ParentLoginPage>
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image:  NetworkImage(
+                image: NetworkImage(
                   "https://i.pinimg.com/564x/16/9a/88/169a88947fe29fb44d8f24d8d31b82ee.jpg",
                 ),
                 fit: BoxFit.cover,
@@ -85,21 +81,21 @@ class _ParentLoginPageState extends State<ParentLoginPage>
                 Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
-                  child: const Text(
+                  child: Text(
                     'KinderJoy',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 30,
+                    style: GoogleFonts.ovo(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 35,
                     ),
                   ),
                 ),
                 Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
-                  child: const Text(
+                  child: Text(
                     'Login',
-                    style: TextStyle(fontSize: 20),
+                    style: GoogleFonts.ovo(fontSize: 25),
                   ),
                 ),
                 Container(
@@ -113,45 +109,50 @@ class _ParentLoginPageState extends State<ParentLoginPage>
                               //name
                               TextFormField(
                                 controller: nameController,
-                                validator: (val) => val == "" ? "Please write your full name" : null,
+                                validator: (val) => val == ""
+                                    ? "Please write your full name"
+                                    : null,
                                 decoration: const InputDecoration(
                                   prefixIcon: Icon(
                                     Icons.people,
-                                    color: Colors.blueGrey,
-                                  ) ,
+                                    color: Colors.deepPurple,
+                                  ),
                                   border: OutlineInputBorder(
                                     // borderRadius: BorderRadius.circular(30),
                                     borderSide: BorderSide(
-                                      color:  Colors.white,
+                                      color: Colors.white,
                                     ),
                                   ),
                                   enabledBorder: OutlineInputBorder(
                                     // borderRadius: BorderRadius.circular(30),
                                     borderSide: BorderSide(
-                                      color:  Colors.white,
+                                      color: Colors.white,
                                     ),
                                   ),
-                                  labelText: 'Parents Full Name (JAYDEN NY LEE JIA)',
+                                  labelText:
+                                      'Parents Full Name (JAYDEN NY LEE JIA)',
                                 ),
                               ),
                               const SizedBox(height: 18),
                               TextFormField(
                                 controller: noController,
-                                validator: (val) => val == "" ? "Please write your contact No" : null,
+                                validator: (val) => val == ""
+                                    ? "Please write your contact No"
+                                    : null,
                                 decoration: const InputDecoration(
                                   prefixIcon: Icon(
                                     Icons.phone,
-                                    color: Colors.blueGrey,
-                                  ) ,
+                                    color: Colors.deepPurple,
+                                  ),
                                   border: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                      color:  Colors.white,
+                                      color: Colors.white,
                                     ),
                                   ),
                                   enabledBorder: OutlineInputBorder(
                                     // borderRadius: BorderRadius.circular(30),
                                     borderSide: BorderSide(
-                                      color:  Colors.white,
+                                      color: Colors.white,
                                     ),
                                   ),
                                   labelText: 'Contact No (0XX -XXXX XXXX)',
@@ -162,15 +163,15 @@ class _ParentLoginPageState extends State<ParentLoginPage>
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(30),
                                 child: InkWell(
-                                  onTap: (){
-                                    if(formKey.currentState!.validate())
-                                    {
+                                  onTap: () {
+                                    if (formKey.currentState!.validate()) {
                                       loginParentsNow();
                                     }
                                   },
                                   borderRadius: BorderRadius.circular(30),
                                   child: const Padding(
-                                    padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
+                                    padding:
+                                        EdgeInsets.fromLTRB(25, 10, 25, 10),
                                     child: Text(
                                       "Login",
                                       style: TextStyle(
@@ -188,44 +189,47 @@ class _ParentLoginPageState extends State<ParentLoginPage>
                                   TextButton(
                                     child: const Text(
                                       'Sign up',
-                                      style: TextStyle(fontSize: 15),
+                                      style: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.deepPurple),
                                     ),
                                     onPressed: () {
                                       Navigator.push(
                                         context,
-                                        MaterialPageRoute(builder: (context) => ParentSignUpPage()),
-                                      );//signup screen
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                ParentSignUpPage()),
+                                      ); //signup screen
                                     },
                                   ),
                                 ],
                               ),
 
-                              const Text(
-                                "Or",
-                                style: TextStyle(fontSize: 16, color: Colors.black),
-                              ),
-                              //admin button
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  const Text('Are you an admin?'),
-                                  TextButton(
-                                    child: const Text(
-                                      'Click here',
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                    onPressed: () {
-                                      // Navigator.push(
-                                      //   context,
-                                      //   MaterialPageRoute(builder: (context) => const SignUpOp()),
-                                      // );//signup screen
-                                    },
-                                  ),
-                                ],
-                              ),
+                              // const Text(
+                              //   "Or",
+                              //   style: TextStyle(fontSize: 16, color: Colors.black),
+                              // ),
+                              // //admin button
+                              // Row(
+                              //   mainAxisAlignment: MainAxisAlignment.center,
+                              //   children: <Widget>[
+                              //     const Text('Are you an admin?'),
+                              //     TextButton(
+                              //       child: const Text(
+                              //         'Click here',
+                              //         style: TextStyle(fontSize: 15),
+                              //       ),
+                              //       onPressed: () {
+                              //         Navigator.push(
+                              //           context,
+                              //           MaterialPageRoute(builder: (context) => AdminLoginPage()),
+                              //         );//signup screen
+                              //       },
+                              //     ),
+                              //   ],
+                              // ),
                             ],
-                          )
-                      )
+                          ))
                     ],
                   ),
                 ),

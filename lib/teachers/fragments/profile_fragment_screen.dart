@@ -202,7 +202,7 @@ class ProfileFragementScreen extends StatelessWidget
 
         Center(
           child: Material(
-            color: Colors.redAccent,
+            color: Colors.deepPurple,
             borderRadius: BorderRadius.circular(8),
             child: InkWell(
               onTap: ()

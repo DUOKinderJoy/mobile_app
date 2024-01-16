@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:http/http.dart' as http;
 import 'package:kinder_joy_1/parents/parentsFragments/parents_study_fee_fragment_screen.dart';
+import 'package:kinder_joy_1/parents/studyFee/studyFeeController.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({Key? key}) : super(key: key);
@@ -20,6 +21,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
   Map<String, dynamic>? paymentIntent;
   var clientkey = "sk_test_51OOBkICvnNFxCr3XyEcCUlFExFjaVdsfKTHJjFCyKxn04AivLF45WH6DSnsasOHD4bqFE0glkA8R90VmeN5MokzA00kA6b6y2s"; // Secret Key
+
+  final feeListController = Get.put(StudyFeeController()); //access the methods
+
 
   @override
   Widget build(BuildContext context) {
@@ -218,7 +222,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
     try {
 
       // TODO: Create Payment intent
+      // paymentIntent = await createPaymentIntent('1200', 'MYR');
       paymentIntent = await createPaymentIntent('1200', 'MYR');
+
 
       // TODO: Initialte Payment Sheet
       await Stripe.instance

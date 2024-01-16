@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:kinder_joy_1/authentication/roles_op.dart';
 import 'package:kinder_joy_1/parents/parentsPreferences/current_parents.dart';
 import 'package:kinder_joy_1/parents/parentsPreferences/parents_preferences.dart';
@@ -64,9 +65,9 @@ class StudyFeeYear2022 extends StatelessWidget
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
+                Text(
                   'Study fee for',
-                  style: TextStyle(
+                  style: GoogleFonts.ovo(
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -74,15 +75,15 @@ class StudyFeeYear2022 extends StatelessWidget
                 ),
                 Text(
                   _currentParents.parents.children_name,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
+                  style: GoogleFonts.ovo(
+                    color: Colors.deepPurple,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
                   ),
                 ),
-                const Text(
-                  'in year of 2022',
-                  style: TextStyle(
+                Text(
+                  'in 2022',
+                  style: GoogleFonts.ovo(
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -93,7 +94,8 @@ class StudyFeeYear2022 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2023 Dec'),
+                  child: Text('2022 Dec',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -107,7 +109,8 @@ class StudyFeeYear2022 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2022 Nov'),
+                  child: Text('2022 Nov',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -122,7 +125,8 @@ class StudyFeeYear2022 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2022 Oct'),
+                  child: Text('2022 Oct',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -137,7 +141,8 @@ class StudyFeeYear2022 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2022 Sep'),
+                  child: Text('2022 Sep',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -152,7 +157,8 @@ class StudyFeeYear2022 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2022 Aug'),
+                  child: Text('2022 Aug',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -167,7 +173,8 @@ class StudyFeeYear2022 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2022 July'),
+                  child: Text('2022 July',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -182,7 +189,8 @@ class StudyFeeYear2022 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2022 June'),
+                  child: Text('2022 June',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -197,7 +205,8 @@ class StudyFeeYear2022 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2022 May'),
+                  child: Text('2022 May',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -212,7 +221,8 @@ class StudyFeeYear2022 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2022 Apr'),
+                  child: Text('2022 Apr',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -227,7 +237,8 @@ class StudyFeeYear2022 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2022 Mar'),
+                  child: Text('2022 Mar',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -242,7 +253,8 @@ class StudyFeeYear2022 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2022 Feb'),
+                  child: Text('2022 Feb',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,
@@ -257,7 +269,8 @@ class StudyFeeYear2022 extends StatelessWidget
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2022 Jan'),
+                  child: Text('2022 Jan',
+                      style: GoogleFonts.ovo(color: Colors.black)),
                   onPressed: () {
                     // Navigator.push(
                     //   context,

@@ -9,16 +9,16 @@ import 'package:kinder_joy_1/teachers/teacherPreferences/current_user.dart';
 class DashboardOfFragments extends StatelessWidget{
   // DashboardOfFragments({super.key});
 
-  CurrentTeacher _rememberCurrentTeacher = Get.put(CurrentTeacher());
+  final CurrentTeacher _rememberCurrentTeacher = Get.put(CurrentTeacher());
 
-  List<Widget> _fragmentsScreens =
+  final List<Widget> _fragmentsScreens =
   [
     HomeFragementScreen(),
     OrderFragementScreen(),
     ProfileFragementScreen(),
   ];
 
-  List _navigationButtonProperties =
+  final List _navigationButtonProperties =
       [
         {
           "active_icon": Icons.home,
@@ -37,7 +37,7 @@ class DashboardOfFragments extends StatelessWidget{
         },
       ];
 
-  RxInt _indexnumber = 0.obs;
+  final RxInt _indexnumber = 0.obs;
 
   @override
   Widget build(BuildContext context){

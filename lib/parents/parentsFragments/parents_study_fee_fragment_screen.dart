@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:kinder_joy_1/authentication/roles_op.dart';
 import 'package:kinder_joy_1/parents/parentsPreferences/current_parents.dart';
 import 'package:kinder_joy_1/parents/parentsPreferences/parents_preferences.dart';
@@ -10,14 +11,12 @@ import 'package:kinder_joy_1/parents/studyFee/2022.dart';
 import '../../api_connection/api_connection.dart';
 import '../studyFee/2023.dart';
 
-
-class StudyFeeYearList extends StatelessWidget
-{
+class StudyFeeYearList extends StatelessWidget {
   final CurrentParents _currentParents = Get.put(CurrentParents());
 
-  Widget parentsInfoItemProfile(IconData iconData, String parentsData)
-  {
-    return Container(   //reusable code
+  Widget parentsInfoItemProfile(IconData iconData, String parentsData) {
+    return Container(
+      //reusable code
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: Colors.grey,
@@ -33,7 +32,9 @@ class StudyFeeYearList extends StatelessWidget
             size: 30,
             color: Colors.black,
           ),
-          const SizedBox(width: 16,),
+          const SizedBox(
+            width: 16,
+          ),
           Text(
             parentsData,
             style: const TextStyle(
@@ -53,7 +54,7 @@ class StudyFeeYearList extends StatelessWidget
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image:  NetworkImage(
+                image: NetworkImage(
                   "https://i.pinimg.com/564x/16/9a/88/169a88947fe29fb44d8f24d8d31b82ee.jpg",
                 ),
                 fit: BoxFit.cover,
@@ -69,18 +70,18 @@ class StudyFeeYearList extends StatelessWidget
                       left: 175.0, right: 175.0, top: 200, bottom: 0),
                   child: Image.asset('lib/images/kindergarten.png'),
                 ),
-                const Text(
+                Text(
                   'KinderJoy',
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontWeight: FontWeight.w500,
+                  style: GoogleFonts.ovo(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
                     fontSize: 30,
                   ),
                 ),
-                const Text(
+                Text(
                   'Check study fee for year of : ',
-                  style: TextStyle(
-                    color: Colors.blue,
+                  style: GoogleFonts.ovo(
+                    color: Colors.black,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
                   ),
@@ -88,26 +89,36 @@ class StudyFeeYearList extends StatelessWidget
                 const SizedBox(height: 20),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white, // Set the button color to white
+                    backgroundColor:
+                        Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2023'),
+                  child: Text(
+                    '2023',
+                    style: GoogleFonts.ovo(color: Colors.black),
+                  ),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => StudyFeeYear2023()),
+                      MaterialPageRoute(
+                          builder: (context) => StudyFeeYear2023()),
                     );
                   },
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white, // Set the button color to white
+                    backgroundColor:
+                        Colors.white, // Set the button color to white
                   ),
-                  child: const Text('2022'),
+                  child: Text(
+                    '2022',
+                    style: GoogleFonts.ovo(color: Colors.black),
+                  ),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => StudyFeeYear2022()),
+                      MaterialPageRoute(
+                          builder: (context) => StudyFeeYear2022()),
                     );
                     //teacher sign up page
                   },
