@@ -5,11 +5,7 @@ import 'package:kinder_joy_1/components/day_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kinder_joy_1/meal_selection/meal_w1_thurs.dart';
 import 'package:kinder_joy_1/meal_selection/meal_w1_wed.dart';
-import 'package:kinder_joy_1/notused/menu_page_1.dart';
-import 'package:kinder_joy_1/notused/menu_page_2.dart';
-import 'package:kinder_joy_1/notused/menu_page_3.dart';
-import 'package:kinder_joy_1/notused/menu_page_4.dart';
-import 'package:kinder_joy_1/notused/menu_page_5.dart';
+// import 'package:route_detector/route_detector.dart';
 // import 'package:kinder_joy_1/meal_selection/meal_week1.dart';
 
 import 'package:kinder_joy_1/models/cart.dart';
@@ -23,19 +19,20 @@ import 'meal_w1_tues.dart';
 
 class MealDay extends StatelessWidget {
   const MealDay({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
-    //get the menu from cart
-    // final cart = context.read<Cart>(); //?must use provider
-    // final mealMenu = cart.mealMenu;
+    bool _isDayButtonTapped = false;
 
-    void popUpMessage(String text) {
+    
+
+    void popUpMessage() {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
           content: Text(
-            "You have selected your child's meal on "+text,
+            "You have already selected the meal for you child. Please select for another day.",
             style: GoogleFonts.ovo(fontSize: 20),
           ),
           actions: [
@@ -44,8 +41,6 @@ class MealDay extends StatelessWidget {
               onPressed: () {
                 // pop once to remove dialog box
                 Navigator.pop(context);
-                // Navigator.pop(context);
-                // Navigator.pop(context);
               },
               child: const Text(
                 'Done',
@@ -57,6 +52,13 @@ class MealDay extends StatelessWidget {
         ),
       );
     }
+    //get the menu from cart
+    // final cart = context.read<CartListScreen>(); //?must use provider
+    // final mealMenu = cart.mealMenu;
+
+    //get the menu from cart
+    // final cart = context.read<Cart>(); //?must use provider
+    // final mealMenu = cart.days;
 
     return Scaffold(
       appBar: AppBar(
@@ -112,24 +114,38 @@ class MealDay extends StatelessWidget {
 
               //Monday
               DayButton(
-                  text: "Monday",
-                  onTap: () {
-                    Get.to(MealsWeek1());
+                text: "Monday",
+                onTap: () {
+                  Get.to(MealsWeek1());
 
-                    // if (!mealMenu[0].isSelected &&
-                    //     !mealMenu[1].isSelected &&
-                    //     !mealMenu[2].isSelected) {
-                    //   MaterialPageRoute route =
-                    //   MaterialPageRoute(builder: (context) => MenuPage_1());
-                    //   Navigator.push(context, route);
-                    //   mealMenu[0].isSelected = true;
-                    //   return;
-                    // }
-                    //
-                    // if (mealMenu[0].isSelected) {
-                    //   popUpMessage("Monday");
-                    // }
-                  }),
+                  // if (remark.mon) {
+                  //   popUpMessage();
+                  // }
+
+                  // if (!mealMenu[0].isSelected &&
+                  //     !mealMenu[1].isSelected &&
+                  //     !mealMenu[2].isSelected) {
+                  //   MaterialPageRoute route =
+                  //   MaterialPageRoute(builder: (context) => MenuPage_1());
+                  //   Navigator.push(context, route);
+                  //   mealMenu[0].isSelected = true;
+                  //   return;
+                  // }
+                  //
+                  // if (mealMenu[0].isSelected) {
+                  //   popUpMessage();
+                  // }
+                }
+                // onTap: () {
+                //   if (!_isDayButtonTapped) {
+                //     _isDayButtonTapped = true;
+                //     Get.to(MealsWeek1());
+                //     // Additional logic as needed
+                //   } else {
+                //     popUpMessage();
+                //   }
+                // },
+              ),
 
               //Tuesday
               DayButton(

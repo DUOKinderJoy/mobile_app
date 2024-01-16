@@ -5,22 +5,19 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:kinder_joy_1/admin/admin_get_all_orders.dart';
 import 'package:kinder_joy_1/admin/admin_login.dart';
 import 'package:http/http.dart' as http;
 import '../api_connection/api_connection.dart';
 
-
-
-class AdminUploadItemsScreen extends StatefulWidget
-{
+class AdminUploadItemsScreen extends StatefulWidget {
   @override
   State<AdminUploadItemsScreen> createState() => _AdminUploadItemsScreenState();
 }
 
-class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
-{
+class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen> {
   final ImagePicker _picker = ImagePicker();
   XFile? pickedImageXFile;
 
@@ -35,36 +32,31 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
   var descriptionController = TextEditingController();
   var imageLink = "";
 
-
   //defaultScreen methods
-  captureImageWithPhoneCamera() async
-  {
+  captureImageWithPhoneCamera() async {
     pickedImageXFile = await _picker.pickImage(source: ImageSource.camera);
 
     Get.back();
 
-    setState(()=> pickedImageXFile);
+    setState(() => pickedImageXFile);
   }
 
-  pickImageFromPhoneGallery() async
-  {
+  pickImageFromPhoneGallery() async {
     pickedImageXFile = await _picker.pickImage(source: ImageSource.gallery);
 
     Get.back();
 
-    setState(()=> pickedImageXFile);
+    setState(() => pickedImageXFile);
   }
 
-  showDialogBoxForImagePickingAndCapturing()
-  {
+  showDialogBoxForImagePickingAndCapturing() {
     return showDialog(
         context: context,
-        builder: (context)
-        {
+        builder: (context) {
           return SimpleDialog(
             // backgroundColor: Colors.black,
             title: const Text(
-              "Item Image",
+              "Event Image",
               style: TextStyle(
                 color: Colors.deepPurple,
                 fontWeight: FontWeight.bold,
@@ -72,8 +64,7 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
             ),
             children: [
               SimpleDialogOption(
-                onPressed: ()
-                {
+                onPressed: () {
                   captureImageWithPhoneCamera();
                 },
                 child: const Text(
@@ -84,8 +75,7 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
                 ),
               ),
               SimpleDialogOption(
-                onPressed: ()
-                {
+                onPressed: () {
                   pickImageFromPhoneGallery();
                 },
                 child: const Text(
@@ -96,8 +86,7 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
                 ),
               ),
               SimpleDialogOption(
-                onPressed: ()
-                {
+                onPressed: () {
                   Get.back();
                 },
                 child: const Text(
@@ -109,29 +98,25 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
               ),
             ],
           );
-        }
-    );
+        });
   }
   //defaultScreen methods ends here
 
-  Widget defaultScreen()
-  {
+  Widget defaultScreen() {
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Colors.white,
-                Colors.purpleAccent,
+                Colors.deepPurpleAccent,
+                Colors.deepPurple,
               ],
             ),
           ),
         ),
         automaticallyImplyLeading: false,
-        title: const Text(
-          "Upload Dashboard Form"
-        ),
+        title: const Text("Upload Dashboard Form"),
         centerTitle: true,
       ),
       // body: Container(
@@ -158,7 +143,6 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
             ],
           ),
         ),
-
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -174,20 +158,20 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(30),
                 child: InkWell(
-                  onTap: ()
-                  {
+                  onTap: () {
                     showDialogBoxForImagePickingAndCapturing();
                   },
                   borderRadius: BorderRadius.circular(30),
-                  child: const Padding(
+                  child: Padding(
                     padding: EdgeInsets.symmetric(
                       vertical: 10,
                       horizontal: 28,
                     ),
                     child: Text(
-                      "Add New Item",
-                      style: TextStyle(
+                      "Add Event",
+                      style: GoogleFonts.ovo(
                         color: Colors.deepPurple,
+                        fontWeight: FontWeight.bold,
                         fontSize: 16,
                       ),
                     ),
@@ -201,14 +185,10 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
     );
   }
 
-
   //uploadItemFormScreen methods
-  uploadItemImage() async
-  {
+  uploadItemImage() async {
     var requestImgurApi = http.MultipartRequest(
-        "POST",
-        Uri.parse("https://api.imgur.com/3/image")
-    );
+        "POST", Uri.parse("https://api.imgur.com/3/image"));
 
     String imageName = DateTime.now().millisecondsSinceEpoch.toString();
     requestImgurApi.fields['title'] = imageName;
@@ -233,18 +213,15 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
     saveItemInfoToDatabase();
   }
 
-  saveItemInfoToDatabase() async
-  {
+  saveItemInfoToDatabase() async {
     List<String> tagsList = tagsController.text.split(',');
     // List<String> sizesList = sizesController.text.split(',');
     // List<String> colorsList = colorsController.text.split(',');
 
-    try
-    {
+    try {
       var response = await http.post(
         Uri.parse(API.uploadNewItem),
-        body:
-        {
+        body: {
           'item_id': '1',
           'name': nameController.text.trim().toString(),
           // 'rating': ratingController.text.trim().toString(),
@@ -258,16 +235,14 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
         },
       );
 
-      if(response.statusCode == 200)
-      {
+      if (response.statusCode == 200) {
         var resBodyOfUploadItem = jsonDecode(response.body);
 
-        if(resBodyOfUploadItem['success'] == true)
-        {
+        if (resBodyOfUploadItem['success'] == true) {
           Fluttertoast.showToast(msg: "New item uploaded successfully");
 
           setState(() {
-            pickedImageXFile=null;
+            pickedImageXFile = null;
             nameController.clear();
             // ratingController.clear();
             dateController.clear();
@@ -279,26 +254,19 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
           });
 
           Get.to(AdminUploadItemsScreen());
-        }
-        else
-        {
+        } else {
           Fluttertoast.showToast(msg: "Item not uploaded. Error, Try Again.");
         }
-      }
-      else
-      {
+      } else {
         Fluttertoast.showToast(msg: "Status is not 200");
       }
-    }
-    catch(errorMsg)
-    {
+    } catch (errorMsg) {
       print("Error:: " + errorMsg.toString());
     }
   }
   //uploadItemFormScreen methods ends here
 
-  Widget uploadItemFormScreen()
-  {
+  Widget uploadItemFormScreen() {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -321,10 +289,9 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
         ),
         centerTitle: true,
         leading: IconButton(
-          onPressed: ()
-          {
+          onPressed: () {
             setState(() {
-              pickedImageXFile=null;
+              pickedImageXFile = null;
               nameController.clear();
               // ratingController.clear();
               dateController.clear();
@@ -343,8 +310,7 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
         ),
         actions: [
           TextButton(
-            onPressed: ()
-            {
+            onPressed: () {
               Fluttertoast.showToast(msg: "Uploading now...");
 
               uploadItemImage();
@@ -352,7 +318,7 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
             child: const Text(
               "Done",
               style: TextStyle(
-                color: Colors.green,
+                color: Colors.white,
               ),
             ),
           ),
@@ -360,10 +326,10 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
       ),
       body: ListView(
         children: [
-
           //image
           Container(
-            height: MediaQuery.of(context).size.height * 0.3,  //follow phone size
+            height:
+                MediaQuery.of(context).size.height * 0.5, //follow phone size
             width: MediaQuery.of(context).size.width * 0.8,
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -379,12 +345,12 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Container(
-              decoration: const BoxDecoration(
-                color: Colors.white24,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(60),
+              decoration: BoxDecoration(
+                color: Colors.deepPurple[200],
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(30),
                 ),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     blurRadius: 8,
                     color: Colors.blueAccent,
@@ -396,23 +362,22 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
                 padding: const EdgeInsets.fromLTRB(30, 30, 30, 8),
                 child: Column(
                   children: [
-
                     //email-password-login button
                     Form(
                       key: formKey,
                       child: Column(
                         children: [
-
                           //item name
                           TextFormField(
                             controller: nameController,
-                            validator: (val) => val == "" ? "Please write item name" : null,
+                            validator: (val) =>
+                                val == "" ? "Please write event name" : null,
                             decoration: InputDecoration(
                               prefixIcon: const Icon(
                                 Icons.title,
                                 color: Colors.black,
                               ),
-                              hintText: "item name...",
+                              hintText: "Event Name",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30),
                                 borderSide: const BorderSide(
@@ -441,23 +406,26 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
                                 horizontal: 14,
                                 vertical: 6,
                               ),
-                              fillColor: Colors.white,
+                              fillColor: Colors.purple[20],
                               filled: true,
                             ),
                           ),
 
-                          const SizedBox(height: 18,),
+                          const SizedBox(
+                            height: 20,
+                          ),
 
-                          // item ratings
+                          // // item ratings
                           TextFormField(
                             controller: dateController,
-                            validator: (val) => val == "" ? "Please give event date" : null,
+                            validator: (val) =>
+                                val == "" ? "Please give Event Date" : null,
                             decoration: InputDecoration(
                               prefixIcon: const Icon(
                                 Icons.rate_review,
                                 color: Colors.black,
                               ),
-                              hintText: "item date...",
+                              hintText: "Event Date",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30),
                                 borderSide: const BorderSide(
@@ -486,23 +454,26 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
                                 horizontal: 14,
                                 vertical: 6,
                               ),
-                              fillColor: Colors.white,
+                              fillColor: Colors.purple[20],
                               filled: true,
                             ),
                           ),
 
-                          const SizedBox(height: 18,),
+                          const SizedBox(
+                            height: 18,
+                          ),
 
                           //item tags
                           TextFormField(
                             controller: tagsController,
-                            validator: (val) => val == "" ? "Please write item tags" : null,
+                            validator: (val) =>
+                                val == "" ? "Please write event tags" : null,
                             decoration: InputDecoration(
                               prefixIcon: const Icon(
                                 Icons.tag,
                                 color: Colors.black,
                               ),
-                              hintText: "item tags...",
+                              hintText: "Event tags",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30),
                                 borderSide: const BorderSide(
@@ -531,12 +502,14 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
                                 horizontal: 14,
                                 vertical: 6,
                               ),
-                              fillColor: Colors.white,
+                              fillColor: Colors.purple[20],
                               filled: true,
                             ),
                           ),
 
-                          const SizedBox(height: 18,),
+                          const SizedBox(
+                            height: 18,
+                          ),
 
                           //item price
                           // TextFormField(
@@ -667,17 +640,18 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
                           //   ),
                           // ),
 
-
                           //item description
                           TextFormField(
                             controller: descriptionController,
-                            validator: (val) => val == "" ? "Please write item description" : null,
+                            validator: (val) => val == ""
+                                ? "Please write event description"
+                                : null,
                             decoration: InputDecoration(
                               prefixIcon: const Icon(
                                 Icons.description,
                                 color: Colors.black,
                               ),
-                              hintText: "item description...",
+                              hintText: "Event Description...",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30),
                                 borderSide: const BorderSide(
@@ -706,23 +680,24 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
                                 horizontal: 14,
                                 vertical: 6,
                               ),
-                              fillColor: Colors.white,
+                              fillColor: Colors.purple[20],
                               filled: true,
                             ),
                           ),
 
-                          const SizedBox(height: 18,),
+                          const SizedBox(
+                            height: 18,
+                          ),
 
                           //button
                           Material(
-                            color: Colors.black,
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(30),
                             child: InkWell(
-                              onTap: ()
-                              {
-                                if(formKey.currentState!.validate())
-                                {
-                                  Fluttertoast.showToast(msg: "Uploading now...");
+                              onTap: () {
+                                if (formKey.currentState!.validate()) {
+                                  Fluttertoast.showToast(
+                                      msg: "Uploading now...");
 
                                   uploadItemImage();
                                 }
@@ -736,7 +711,7 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
                                 child: Text(
                                   "Upload Now",
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: Colors.deepPurple,
                                     fontSize: 16,
                                   ),
                                 ),
@@ -747,25 +722,21 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen>
                       ),
                     ),
 
-                    const SizedBox(height: 16,),
+                    const SizedBox(
+                      height: 16,
+                    ),
                   ],
                 ),
               ),
             ),
           ),
-
         ],
       ),
     );
   }
 
-
-
-
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return pickedImageXFile == null ? defaultScreen() : uploadItemFormScreen();
   }
 }
-

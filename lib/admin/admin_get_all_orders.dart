@@ -10,137 +10,115 @@ import 'package:kinder_joy_1/parents/parentsPreferences/current_parents.dart';
 import '../../api_connection/api_connection.dart';
 import '../models/order.dart';
 
-
-class AdminGetAllOrdersScreen extends StatelessWidget
-{
+class AdminGetAllOrdersScreen extends StatelessWidget {
   final currentOnlineUser = Get.put(CurrentParents());
 
-
-  Future<List<Order>> getAllOrdersList() async
-  {
+  Future<List<Order>> getAllOrdersList() async {
     List<Order> ordersList = [];
 
-    try
-    {
-      var res = await http.post(
-          Uri.parse(API.adminGetAllOrders),
-          body:
-          {
+    try {
+      var res = await http.post(Uri.parse(API.adminGetAllOrders), body: {});
 
-          }
-      );
-
-      if (res.statusCode == 200)
-      {
+      if (res.statusCode == 200) {
         var responseBodyOfCurrentUserOrdersList = jsonDecode(res.body);
 
-        if (responseBodyOfCurrentUserOrdersList['success'] == true)
-        {
-          (responseBodyOfCurrentUserOrdersList['allOrdersData'] as List).forEach((eachOrderData)
-          {
+        if (responseBodyOfCurrentUserOrdersList['success'] == true) {
+          (responseBodyOfCurrentUserOrdersList['allOrdersData'] as List)
+              .forEach((eachOrderData) {
             ordersList.add(Order.fromJson(eachOrderData));
           });
         }
-      }
-      else
-      {
+      } else {
         Fluttertoast.showToast(msg: "Status Code is not 200");
       }
-    }
-    catch(errorMsg)
-    {
+    } catch (errorMsg) {
       Fluttertoast.showToast(msg: "Error:: " + errorMsg.toString());
     }
 
     return ordersList;
   }
 
-
   @override
   Widget build(BuildContext context) {
-    return  Container(
-        decoration: BoxDecoration(
+    return Container(
+      decoration: BoxDecoration(
         image: DecorationImage(
-        image: NetworkImage(
-        "https://i.pinimg.com/564x/16/9a/88/169a88947fe29fb44d8f24d8d31b82ee.jpg",
-    ),
-    fit: BoxFit.cover,
-    ),
-    ),
-    child: Scaffold(
-    backgroundColor: Colors.transparent,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-
-          //Order image       //history image
-          //myOrder title     //history title
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 24, 8, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-
-                //order icon image
-                // my orders
-                Column(
-                  children: [
-                    Image.asset(
-                      "assets/people.png",
-                      width: 140,
-                    ),
-                    const Text(
-                      "All New Orders",
-                      style: TextStyle(
-                        color: Colors.purpleAccent,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
+          image: NetworkImage(
+            "https://i.pinimg.com/564x/16/9a/88/169a88947fe29fb44d8f24d8d31b82ee.jpg",
+          ),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            //Order image       //history image
+            //myOrder title     //history title
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 24, 8, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  //order icon image
+                  // my orders
+                  Column(
+                    children: [
+                      Image.asset(
+                        "assets/people.png",
+                        width: 140,
                       ),
-                    ),
-                    //some info
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 30.0),
-                      child: Text(
-                        "The meals order from the parents.",
+                      const Text(
+                        "All New Orders",
                         style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w400,
+                          color: Colors.purpleAccent,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                      //some info
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 30.0),
+                        child: Text(
+                          "The meals order from the parents.",
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
 
-          //displaying the user orderList
-          Expanded(
-            child: displayOrdersList(context),
-          ),
-
-        ],
+            //displaying the user orderList
+            Expanded(
+              child: displayOrdersList(context),
+            ),
+          ],
+        ),
       ),
-    ),
     );
   }
 
-  Widget displayOrdersList(context)
-  {
+  Widget displayOrdersList(context) {
     return FutureBuilder(
       future: getAllOrdersList(),
-      builder: (context, AsyncSnapshot<List<Order>> dataSnapshot)
-      {
-        if(dataSnapshot.connectionState == ConnectionState.waiting)
-        {
+      builder: (context, AsyncSnapshot<List<Order>> dataSnapshot) {
+        if (dataSnapshot.connectionState == ConnectionState.waiting) {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: const [
               Center(
                 child: Text(
                   "Connection Waiting...",
-                  style: TextStyle(color: Colors.grey,),
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
                 ),
               ),
               Center(
@@ -149,15 +127,16 @@ class AdminGetAllOrdersScreen extends StatelessWidget
             ],
           );
         }
-        if(dataSnapshot.data == null)
-        {
+        if (dataSnapshot.data == null) {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: const [
               Center(
                 child: Text(
                   "No orders found yet...",
-                  style: TextStyle(color: Colors.grey,),
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
                 ),
               ),
               Center(
@@ -166,22 +145,19 @@ class AdminGetAllOrdersScreen extends StatelessWidget
             ],
           );
         }
-        if(dataSnapshot.data!.length > 0)
-        {
+        if (dataSnapshot.data!.length > 0) {
           List<Order> orderList = dataSnapshot.data!;
 
           return ListView.separated(
             padding: const EdgeInsets.all(16),
-            separatorBuilder: (context, index)
-            {
+            separatorBuilder: (context, index) {
               return const Divider(
                 height: 1,
                 thickness: 1,
               );
             },
             itemCount: orderList.length,
-            itemBuilder: (context, index)
-            {
+            itemBuilder: (context, index) {
               Order eachOrderData = orderList[index];
 
               return Card(
@@ -189,8 +165,7 @@ class AdminGetAllOrdersScreen extends StatelessWidget
                 child: Padding(
                   padding: const EdgeInsets.all(18),
                   child: ListTile(
-                    onTap: ()
-                    {
+                    onTap: () {
                       // Get.to(OrderDetailsScreen(
                       //   clickedOrderInfo: eachOrderData,
                       // ));
@@ -202,7 +177,16 @@ class AdminGetAllOrdersScreen extends StatelessWidget
                           "Order ID # " + eachOrderData.order_id.toString(),
                           style: const TextStyle(
                             fontSize: 16,
-                            color: Colors.black54,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "Children ID: " +
+                              eachOrderData.children_id.toString(),
+                          style: const TextStyle(
+                            fontSize: 16,
+                            color: Colors.white54,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -219,14 +203,12 @@ class AdminGetAllOrdersScreen extends StatelessWidget
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-
                         //date
                         //time
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-
                             //date
                             // Text(
                             //   DateFormat(
@@ -248,17 +230,15 @@ class AdminGetAllOrdersScreen extends StatelessWidget
                             //     color: Colors.grey,
                             //   ),
                             // ),
-
                           ],
                         ),
 
                         const SizedBox(width: 6),
 
-                        const Icon(
-                          Icons.navigate_next,
-                          color: Colors.purpleAccent,
-                        ),
-
+                        // const Icon(
+                        //   Icons.navigate_next,
+                        //   color: Colors.purpleAccent,
+                        // ),
                       ],
                     ),
                   ),
@@ -266,16 +246,16 @@ class AdminGetAllOrdersScreen extends StatelessWidget
               );
             },
           );
-        }
-        else
-        {
+        } else {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: const [
               Center(
                 child: Text(
                   "Nothing to show...",
-                  style: TextStyle(color: Colors.grey,),
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
                 ),
               ),
               Center(

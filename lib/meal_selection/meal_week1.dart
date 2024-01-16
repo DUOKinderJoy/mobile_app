@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
+import 'package:kinder_joy_1/components/day_button.dart';
+// import 'package:kinder_joy_1/components/priceTag.dart';
 import 'package:kinder_joy_1/meal_selection/meal_details_screen.dart';
 import '../../api_connection/api_connection.dart';
 import '../models/meal.dart';
 import 'cart/cart_list_screen.dart';
 
-class MealsWeek1 extends StatelessWidget
-{
-  Future<List<Meals>> getMealItems() async
-  {
+class MealsWeek1 extends StatelessWidget {
+  Future<List<Meals>> getMealItems() async {
     List<Meals> allMealItemsList = [];
 
-    try
-    {
+    try {
       var res = await http.post(
         Uri.parse(API.getMealWeek1),
         body: {
@@ -24,25 +24,18 @@ class MealsWeek1 extends StatelessWidget
         },
       );
 
-      if(res.statusCode == 200)
-      {
+      if (res.statusCode == 200) {
         var responseBodyOfAllMeals = jsonDecode(res.body);
-        if(responseBodyOfAllMeals["success"] == true)
-        {
-          (responseBodyOfAllMeals["mealData"] as List).forEach((eachRecord)
-          {
+        if (responseBodyOfAllMeals["success"] == true) {
+          (responseBodyOfAllMeals["mealData"] as List).forEach((eachRecord) {
             allMealItemsList.add(Meals.fromJson(eachRecord));
             // Fluttertoast.showToast(msg: "Status code is 200");
           });
         }
-      }
-      else
-      {
+      } else {
         Fluttertoast.showToast(msg: "Error, status code is not 200");
       }
-    }
-    catch(errorMsg)
-    {
+    } catch (errorMsg) {
       print("Error:: " + errorMsg.toString());
     }
 
@@ -50,70 +43,116 @@ class MealsWeek1 extends StatelessWidget
   }
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
-        image: NetworkImage(
-        "https://i.pinimg.com/564x/16/9a/88/169a88947fe29fb44d8f24d8d31b82ee.jpg",
-    ),
-    fit: BoxFit.cover,
-    ),
-    ),
-    child: Scaffold(
-    backgroundColor: Colors.transparent, // Set scaffold background to transparent
-    body:
-    SingleChildScrollView(
-        child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(height: 16,),
-
-          //search bar widget
-          showCartWidget(),
-
-          const SizedBox(height: 24,),
-
-          //all new collections/items
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 18),
-            child: Text(
-              "Meals Week 1 Monday",
-              style: TextStyle(
-                color: Colors.purpleAccent,
-                fontWeight: FontWeight.bold,
-                fontSize: 24,
-              ),
-            ),
+          image: NetworkImage(
+            "https://i.pinimg.com/564x/16/9a/88/169a88947fe29fb44d8f24d8d31b82ee.jpg",
           ),
-          allMealWidget(context),
-        ],
+          fit: BoxFit.cover,
         ),
-    ),
-    ),
+      ),
+      child: Scaffold(
+        backgroundColor:
+            Colors.transparent, // Set scaffold background to transparent
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: 16,
+              ),
 
+              //search bar widget
+              showCartWidget(),
+
+              const SizedBox(
+                height: 24,
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'KinderJoy',
+                    style: GoogleFonts.ovo(
+                        color: Colors.black,
+                        fontSize: 35,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Menu',
+                    style: GoogleFonts.ovo(
+                        color: Colors.black,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+
+              DayButton(text: "Monday", onTap: () {}),
+
+              const SizedBox(
+                height: 16,
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Week 1',
+                    style: GoogleFonts.ovo(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+
+              //all new collections/items
+              // const Padding(
+              //   padding: EdgeInsets.symmetric(horizontal: 18),
+              //   child: Text(
+              //     "Meals Week 1 Monday",
+              //     style: TextStyle(
+              //       color: Colors.purpleAccent,
+              //       fontWeight: FontWeight.bold,
+              //       fontSize: 24,
+              //     ),
+              //   ),
+              // ),
+              allMealWidget(context),
+            ],
+          ),
+        ),
+      ),
     );
   }
 
-  Widget showCartWidget()
-  {
+  Widget showCartWidget() {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 18),
+      padding: const EdgeInsets.symmetric(horizontal: 18),
       child: AppBar(
         title: const Text(""),
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         foregroundColor: const Color.fromARGB(255, 222, 134, 163),
         actions: [
           IconButton(
-              onPressed: ()
-              {
+              onPressed: () {
                 Get.to(CartListScreen());
               },
               icon: const Icon(
                 Icons.shopping_cart,
                 color: Colors.purple,
-              )
-          ),
+              )),
           //cart button
           // IconButton(
           //   onPressed: () {
@@ -126,41 +165,36 @@ class MealsWeek1 extends StatelessWidget
     );
   }
 
-  allMealWidget(context)
-  {
+  allMealWidget(context) {
     return FutureBuilder(
         future: getMealItems(),
-        builder: (context, AsyncSnapshot<List<Meals>> dataSnapShot)
-        {
-          if(dataSnapShot.connectionState == ConnectionState.waiting)
-          {
+        builder: (context, AsyncSnapshot<List<Meals>> dataSnapShot) {
+          if (dataSnapShot.connectionState == ConnectionState.waiting) {
             return const Center(
               child: CircularProgressIndicator(),
             );
           }
-          if(dataSnapShot.data == null)
-          {
+          if (dataSnapShot.data == null) {
             return const Center(
               child: Text(
                 "No Meals found",
               ),
             );
           }
-          if(dataSnapShot.data!.length > 0)
-          {
+          if (dataSnapShot.data!.length > 0) {
             return ListView.builder(
               itemCount: dataSnapShot.data!.length,
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               scrollDirection: Axis.vertical,
-              itemBuilder: (context, index)
-              {
+              itemBuilder: (context, index) {
                 Meals eachMealItemRecord = dataSnapShot.data![index];
 
                 return GestureDetector(
-                  onTap: ()
-                  {
-                    Get.to(MealDetailsScreen(mealInfo: eachMealItemRecord,));
+                  onTap: () {
+                    Get.to(MealDetailsScreen(
+                      mealInfo: eachMealItemRecord,
+                    ));
                     // Get.to(ItemDetailsScreen(itemInfo: eachClothItemRecord));
                   },
                   child: Container(
@@ -173,10 +207,9 @@ class MealsWeek1 extends StatelessWidget
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white,
-                      boxShadow:
-                      const [
+                      boxShadow: const [
                         BoxShadow(
-                          offset: Offset(0,0),
+                          offset: Offset(0, 0),
                           blurRadius: 6,
                           color: Colors.white,
                         ),
@@ -184,7 +217,6 @@ class MealsWeek1 extends StatelessWidget
                     ),
                     child: Row(
                       children: [
-
                         //name + price
                         //tags
                         Expanded(
@@ -193,66 +225,80 @@ class MealsWeek1 extends StatelessWidget
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-
                                 //name and price
                                 Row(
                                   children: [
-
                                     //name
                                     Expanded(
-                                      child: Text(
-                                        eachMealItemRecord.name!,
-                                        maxLines: 2,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: const TextStyle(
-                                          fontSize: 18,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 12, right: 12),
+                                        child: Text(
+                                          eachMealItemRecord.name!,
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: GoogleFonts.dmSerifDisplay(
+                                            fontSize: 20,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w500,
+                                          ),
                                         ),
                                       ),
                                     ),
 
-                                    //price
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 12, right: 12),
-                                      child: Text(
-                                        "\RM " + eachMealItemRecord.price.toString(),
-                                        maxLines: 2,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: const TextStyle(
-                                          fontSize: 18,
-                                          color: Colors.purpleAccent,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
+                                    const SizedBox(
+                                      height: 10,
                                     ),
-
                                   ],
                                 ),
 
-                                const SizedBox(height: 16,),
+                                const SizedBox(
+                                  height: 16,
+                                ),
 
-                                Text(
-                                  "Day: " + eachMealItemRecord.days!,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black54,
+                                //price
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 12, right: 12),
+                                  child: Text(
+                                    "RM " +
+                                        eachMealItemRecord.price.toString() +
+                                        "0",
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: const TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
-                                const SizedBox(height: 16,),
 
-                                //week
-                                Text(
-                                  eachMealItemRecord.month! + " Week: " + eachMealItemRecord.week!,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black54,
-                                  ),
-                                ),
+                                // Text(
+                                //   "Day: " + eachMealItemRecord.days!,
+                                //   maxLines: 2,
+                                //   overflow: TextOverflow.ellipsis,
+                                //   style: const TextStyle(
+                                //     fontSize: 12,
+                                //     color: Colors.black54,
+                                //   ),
+                                // ),
+                                // const SizedBox(
+                                //   height: 16,
+                                // ),
+
+                                // //week
+                                // Text(
+                                //   eachMealItemRecord.month! +
+                                //       " Week: " +
+                                //       eachMealItemRecord.week!,
+                                //   maxLines: 2,
+                                //   overflow: TextOverflow.ellipsis,
+                                //   style: const TextStyle(
+                                //     fontSize: 12,
+                                //     color: Colors.black54,
+                                //   ),
+                                // ),
                               ],
                             ),
                           ),
@@ -268,12 +314,13 @@ class MealsWeek1 extends StatelessWidget
                             height: 130,
                             width: 130,
                             fit: BoxFit.cover,
-                            placeholder: const AssetImage("images/place_holder.png"),
+                            placeholder:
+                                const AssetImage("images/place_holder.png"),
                             image: NetworkImage(
                               eachMealItemRecord.image!,
                             ),
-                            imageErrorBuilder: (context, error, stackTraceError)
-                            {
+                            imageErrorBuilder:
+                                (context, error, stackTraceError) {
                               return const Center(
                                 child: Icon(
                                   Icons.broken_image_outlined,
@@ -282,22 +329,17 @@ class MealsWeek1 extends StatelessWidget
                             },
                           ),
                         ),
-
                       ],
                     ),
                   ),
                 );
               },
             );
-          }
-          else
-          {
+          } else {
             return const Center(
               child: Text("Empty, No Data."),
             );
           }
-        }
-    );
+        });
   }
 }
-

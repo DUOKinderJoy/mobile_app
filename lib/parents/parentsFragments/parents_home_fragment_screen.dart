@@ -2,16 +2,14 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:kinder_joy_1/parents/item/item_details_screen.dart';
 import '../../api_connection/api_connection.dart';
 import '../parentsModel/dashboard.dart';
 
-
-class ParentsHomeFragementScreen extends StatelessWidget
-{
+class ParentsHomeFragementScreen extends StatelessWidget {
   TextEditingController searchController = TextEditingController();
-
 
   // Future<List<Clothes>> getTrendingClothItems() async
   // {
@@ -47,34 +45,24 @@ class ParentsHomeFragementScreen extends StatelessWidget
   //   return trendingClothItemsList;
   // }
 
-  Future<List<Clothes>> getAllClothItems() async
-  {
+  Future<List<Clothes>> getAllClothItems() async {
     List<Clothes> allClothItemsList = [];
 
-    try
-    {
-      var res = await http.post(
-          Uri.parse(API.getAllClothes)
-      );
+    try {
+      var res = await http.post(Uri.parse(API.getAllClothes));
 
-      if(res.statusCode == 200)
-      {
+      if (res.statusCode == 200) {
         var responseBodyOfAllClothes = jsonDecode(res.body);
-        if(responseBodyOfAllClothes["success"] == true)
-        {
-          (responseBodyOfAllClothes["clothItemsData"] as List).forEach((eachRecord)
-          {
+        if (responseBodyOfAllClothes["success"] == true) {
+          (responseBodyOfAllClothes["clothItemsData"] as List)
+              .forEach((eachRecord) {
             allClothItemsList.add(Clothes.fromJson(eachRecord));
           });
         }
-      }
-      else
-      {
+      } else {
         Fluttertoast.showToast(msg: "Error, status code is not 200");
       }
-    }
-    catch(errorMsg)
-    {
+    } catch (errorMsg) {
       print("Error:: " + errorMsg.toString());
     }
 
@@ -84,7 +72,7 @@ class ParentsHomeFragementScreen extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       body: Container(
+      body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             image: NetworkImage(
@@ -94,56 +82,60 @@ class ParentsHomeFragementScreen extends StatelessWidget
           ),
         ),
         child: SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-
-          const SizedBox(height: 16,),
-
-          //search bar widget
-          showSearchBarWidget(),
-
-          const SizedBox(height: 24,),
-
-          //trending-popular items
-          // const Padding(
-          //   padding: EdgeInsets.symmetric(horizontal: 18),
-          //   child: Text(
-          //     "Trending",
-          //     style: TextStyle(
-          //       color: Colors.purpleAccent,
-          //       fontWeight: FontWeight.bold,
-          //       fontSize: 24,
-          //     ),
-          //   ),
-          // ),
-          // trendingMostPopularClothItemWidget(context),
-
-          const SizedBox(height: 24,),
-
-          //all new collections/items
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 18),
-            child: Text(
-              "New Collections",
-              style: TextStyle(
-                color: Colors.purpleAccent,
-                fontWeight: FontWeight.bold,
-                fontSize: 24,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 16,
               ),
-            ),
+
+              //search bar widget
+              showSearchBarWidget(),
+
+              const SizedBox(
+                height: 24,
+              ),
+
+              //trending-popular items
+              // const Padding(
+              //   padding: EdgeInsets.symmetric(horizontal: 18),
+              //   child: Text(
+              //     "Trending",
+              //     style: TextStyle(
+              //       color: Colors.purpleAccent,
+              //       fontWeight: FontWeight.bold,
+              //       fontSize: 24,
+              //     ),
+              //   ),
+              // ),
+              // trendingMostPopularClothItemWidget(context),
+
+              const SizedBox(
+                height: 24,
+              ),
+
+              //all new collections/items
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 18),
+                child: Text(
+                  "Upcoming Event",
+                  style: GoogleFonts.ovo(
+                    color: Colors.deepPurple,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
+                ),
+              ),
+
+              allItemWidget(context),
+            ],
           ),
-
-          allItemWidget(context),
-
-        ],
+        ),
       ),
-    ),),
     );
   }
 
-    Widget showSearchBarWidget()
-  {
+  Widget showSearchBarWidget() {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 18),
       child: TextField(
@@ -151,18 +143,14 @@ class ParentsHomeFragementScreen extends StatelessWidget
         controller: searchController,
         decoration: InputDecoration(
           prefixIcon: IconButton(
-            onPressed: ()
-            {
-
-            },
-            icon: const Icon(
-              Icons.search,
-              color: Colors.purple,
-            )
-          ),
+              onPressed: () {},
+              icon: const Icon(
+                Icons.search,
+                color: Colors.deepPurple,
+              )),
           hintText: "Search here...",
           hintStyle: const TextStyle(
-            color: Colors.grey,
+            color: Colors.deepPurple,
             fontSize: 12,
           ),
           // suffixIcon: IconButton(
@@ -176,23 +164,20 @@ class ParentsHomeFragementScreen extends StatelessWidget
           //     )
           // ),
           border: const OutlineInputBorder(
-            borderSide: BorderSide(
-              width: 2,
-              color: Colors.purpleAccent,
-            )
-          ),
+              borderSide: BorderSide(
+            width: 2,
+            color: Colors.deepPurple,
+          )),
           enabledBorder: const OutlineInputBorder(
               borderSide: BorderSide(
-                width: 2,
-                color: Colors.purpleAccent,
-              )
-          ),
+            width: 2,
+            color: Colors.deepPurple,
+          )),
           focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(
-                width: 2,
-                color: Colors.blueAccent,
-              )
-          ),
+            width: 2,
+            color: Colors.purple,
+          )),
           contentPadding: const EdgeInsets.symmetric(
             horizontal: 16,
             vertical: 8,
@@ -378,40 +363,33 @@ class ParentsHomeFragementScreen extends StatelessWidget
   //   );
   // }
 
-  allItemWidget(context)
-  {
+  allItemWidget(context) {
     return FutureBuilder(
         future: getAllClothItems(),
-        builder: (context, AsyncSnapshot<List<Clothes>> dataSnapShot)
-        {
-          if(dataSnapShot.connectionState == ConnectionState.waiting)
-          {
+        builder: (context, AsyncSnapshot<List<Clothes>> dataSnapShot) {
+          if (dataSnapShot.connectionState == ConnectionState.waiting) {
             return const Center(
               child: CircularProgressIndicator(),
             );
           }
-          if(dataSnapShot.data == null)
-          {
+          if (dataSnapShot.data == null) {
             return const Center(
               child: Text(
                 "No Trending item found",
               ),
             );
           }
-          if(dataSnapShot.data!.length > 0)
-          {
+          if (dataSnapShot.data!.length > 0) {
             return ListView.builder(
               itemCount: dataSnapShot.data!.length,
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               scrollDirection: Axis.vertical,
-              itemBuilder: (context, index)
-              {
+              itemBuilder: (context, index) {
                 Clothes eachClothItemRecord = dataSnapShot.data![index];
 
                 return GestureDetector(
-                  onTap: ()
-                  {
+                  onTap: () {
                     Get.to(ItemDetailsScreen(itemInfo: eachClothItemRecord));
                   },
                   child: Container(
@@ -424,10 +402,9 @@ class ParentsHomeFragementScreen extends StatelessWidget
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white,
-                      boxShadow:
-                      const [
+                      boxShadow: const [
                         BoxShadow(
-                          offset: Offset(0,0),
+                          offset: Offset(0, 0),
                           blurRadius: 6,
                           color: Colors.white,
                         ),
@@ -435,7 +412,6 @@ class ParentsHomeFragementScreen extends StatelessWidget
                     ),
                     child: Row(
                       children: [
-
                         //name + price
                         //tags
                         Expanded(
@@ -444,26 +420,22 @@ class ParentsHomeFragementScreen extends StatelessWidget
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-
                                 //name and price
                                 Row(
                                   children: [
-
                                     //name
                                     Expanded(
                                       child: Text(
                                         eachClothItemRecord.name!,
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
-                                        style: const TextStyle(
+                                        style: GoogleFonts.ovo(
                                           fontSize: 18,
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
                                     ),
-
-
 
                                     //price
                                     // Padding(
@@ -479,32 +451,36 @@ class ParentsHomeFragementScreen extends StatelessWidget
                                     //     ),
                                     //   ),
                                     // ),
-
                                   ],
                                 ),
 
-                                const SizedBox(height: 16,),
+                                const SizedBox(
+                                  height: 16,
+                                ),
                                 Text(
-                                  "Date: \n" + eachClothItemRecord.date!,
+                                  "Date: \t" + eachClothItemRecord.date!,
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(
-                                    fontSize: 18,
+                                  style: GoogleFonts.ovo(
+                                    fontSize: 14,
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 //tags
                                 Text(
-                                  "Tags: \n" + eachClothItemRecord.tags.toString().replaceAll("[", "").replaceAll("]", ""),
+                                  "Tags: \t" +
+                                      eachClothItemRecord.tags
+                                          .toString()
+                                          .replaceAll("[", "")
+                                          .replaceAll("]", ""),
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(
+                                  style: GoogleFonts.ovo(
                                     fontSize: 12,
                                     color: Colors.black,
                                   ),
                                 ),
-
                               ],
                             ),
                           ),
@@ -520,12 +496,13 @@ class ParentsHomeFragementScreen extends StatelessWidget
                             height: 130,
                             width: 130,
                             fit: BoxFit.cover,
-                            placeholder: const AssetImage("images/background.jpg"),
+                            placeholder:
+                                const AssetImage("images/background.jpg"),
                             image: NetworkImage(
                               eachClothItemRecord.image!,
                             ),
-                            imageErrorBuilder: (context, error, stackTraceError)
-                            {
+                            imageErrorBuilder:
+                                (context, error, stackTraceError) {
                               return const Center(
                                 child: Icon(
                                   Icons.broken_image_outlined,
@@ -534,22 +511,18 @@ class ParentsHomeFragementScreen extends StatelessWidget
                             },
                           ),
                         ),
-
                       ],
                     ),
                   ),
                 );
               },
             );
-          }
-          else
-          {
+          } else {
             return const Center(
               child: Text("Empty, No Data."),
             );
           }
-        }
-    );
+        });
   }
 }
 

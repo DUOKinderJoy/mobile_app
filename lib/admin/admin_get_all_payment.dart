@@ -263,10 +263,10 @@ class AdminGetAllPaymentScreen extends StatelessWidget
 
                         const SizedBox(width: 6),
 
-                        const Icon(
-                          Icons.navigate_next,
-                          color: Colors.purpleAccent,
-                        ),
+                        // const Icon(
+                        //   Icons.navigate_next,
+                        //   color: Colors.purpleAccent,
+                        // ),
 
                       ],
                     ),

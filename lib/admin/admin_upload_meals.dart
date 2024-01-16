@@ -9,16 +9,12 @@ import 'package:kinder_joy_1/admin/admin_get_all_orders.dart';
 import 'package:http/http.dart' as http;
 import '../api_connection/api_connection.dart';
 
-
-
-class AdminUploadMealsScreen extends StatefulWidget
-{
+class AdminUploadMealsScreen extends StatefulWidget {
   @override
   State<AdminUploadMealsScreen> createState() => _AdminUploadMealsScreenState();
 }
 
-class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
-{
+class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen> {
   final ImagePicker _picker = ImagePicker();
   XFile? pickedImageXFile;
 
@@ -32,36 +28,31 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
   var descriptionController = TextEditingController();
   var imageLink = "";
 
-
   //defaultScreen methods
-  captureImageWithPhoneCamera() async
-  {
+  captureImageWithPhoneCamera() async {
     pickedImageXFile = await _picker.pickImage(source: ImageSource.camera);
 
     Get.back();
 
-    setState(()=> pickedImageXFile);
+    setState(() => pickedImageXFile);
   }
 
-  pickImageFromPhoneGallery() async
-  {
+  pickImageFromPhoneGallery() async {
     pickedImageXFile = await _picker.pickImage(source: ImageSource.gallery);
 
     Get.back();
 
-    setState(()=> pickedImageXFile);
+    setState(() => pickedImageXFile);
   }
 
-  showDialogBoxForImagePickingAndCapturing()
-  {
+  showDialogBoxForImagePickingAndCapturing() {
     return showDialog(
         context: context,
-        builder: (context)
-        {
+        builder: (context) {
           return SimpleDialog(
             // backgroundColor: Colors.black,
             title: const Text(
-              "Item Image",
+              "Meal Image",
               style: TextStyle(
                 color: Colors.deepPurple,
                 fontWeight: FontWeight.bold,
@@ -69,8 +60,7 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
             ),
             children: [
               SimpleDialogOption(
-                onPressed: ()
-                {
+                onPressed: () {
                   captureImageWithPhoneCamera();
                 },
                 child: const Text(
@@ -81,8 +71,7 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
                 ),
               ),
               SimpleDialogOption(
-                onPressed: ()
-                {
+                onPressed: () {
                   pickImageFromPhoneGallery();
                 },
                 child: const Text(
@@ -93,8 +82,7 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
                 ),
               ),
               SimpleDialogOption(
-                onPressed: ()
-                {
+                onPressed: () {
                   Get.back();
                 },
                 child: const Text(
@@ -106,13 +94,11 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
               ),
             ],
           );
-        }
-    );
+        });
   }
   //defaultScreen methods ends here
 
-  Widget defaultScreen()
-  {
+  Widget defaultScreen() {
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: Container(
@@ -158,7 +144,6 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
             ],
           ),
         ),
-
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -174,8 +159,7 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(30),
                 child: InkWell(
-                  onTap: ()
-                  {
+                  onTap: () {
                     showDialogBoxForImagePickingAndCapturing();
                   },
                   borderRadius: BorderRadius.circular(30),
@@ -201,14 +185,10 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
     );
   }
 
-
   //uploadItemFormScreen methods
-  uploadItemImage() async
-  {
+  uploadItemImage() async {
     var requestImgurApi = http.MultipartRequest(
-        "POST",
-        Uri.parse("https://api.imgur.com/3/image")
-    );
+        "POST", Uri.parse("https://api.imgur.com/3/image"));
 
     String imageName = DateTime.now().millisecondsSinceEpoch.toString();
     requestImgurApi.fields['title'] = imageName;
@@ -233,18 +213,15 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
     saveItemInfoToDatabase();
   }
 
-  saveItemInfoToDatabase() async
-  {
+  saveItemInfoToDatabase() async {
     // List<String> tagsList = monthController.text.split(',');
     // List<String> sizesList = sizesController.text.split(',');
     List<String> optionsList = optionsController.text.split(',');
 
-    try
-    {
+    try {
       var response = await http.post(
         Uri.parse(API.uploadNewMeals),
-        body:
-        {
+        body: {
           'item_id': '1',
           'name': nameController.text.trim().toString(),
           'week': weekController.text.trim().toString(),
@@ -257,16 +234,14 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
         },
       );
 
-      if(response.statusCode == 200)
-      {
+      if (response.statusCode == 200) {
         var resBodyOfUploadItem = jsonDecode(response.body);
 
-        if(resBodyOfUploadItem['success'] == true)
-        {
+        if (resBodyOfUploadItem['success'] == true) {
           Fluttertoast.showToast(msg: "New item uploaded successfully");
 
           setState(() {
-            pickedImageXFile=null;
+            pickedImageXFile = null;
             nameController.clear();
             weekController.clear();
             monthController.clear();
@@ -277,26 +252,19 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
           });
 
           Get.to(AdminUploadMealsScreen());
-        }
-        else
-        {
+        } else {
           Fluttertoast.showToast(msg: "Meals not uploaded. Error, Try Again.");
         }
-      }
-      else
-      {
+      } else {
         Fluttertoast.showToast(msg: "Status is not 200");
       }
-    }
-    catch(errorMsg)
-    {
+    } catch (errorMsg) {
       print("Error:: " + errorMsg.toString());
     }
   }
   //uploadItemFormScreen methods ends here
 
-  Widget uploadItemFormScreen()
-  {
+  Widget uploadItemFormScreen() {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -311,18 +279,17 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
           ),
         ),
         automaticallyImplyLeading: false,
-        title: const Text(
+        title: Text(
           "Upload Form",
           style: TextStyle(
-            color: Colors.white24,
+            color: Colors.black54,
           ),
         ),
         centerTitle: true,
         leading: IconButton(
-          onPressed: ()
-          {
+          onPressed: () {
             setState(() {
-              pickedImageXFile=null;
+              pickedImageXFile = null;
               nameController.clear();
               weekController.clear();
               monthController.clear();
@@ -340,8 +307,7 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
         ),
         actions: [
           TextButton(
-            onPressed: ()
-            {
+            onPressed: () {
               Fluttertoast.showToast(msg: "Uploading now...");
 
               uploadItemImage();
@@ -349,7 +315,7 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
             child: const Text(
               "Done",
               style: TextStyle(
-                color: Colors.green,
+                color: Colors.white,
               ),
             ),
           ),
@@ -357,10 +323,10 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
       ),
       body: ListView(
         children: [
-
           //image
           Container(
-            height: MediaQuery.of(context).size.height * 0.3,  //follow phone size
+            height:
+                MediaQuery.of(context).size.height * 0.4, //follow phone size
             width: MediaQuery.of(context).size.width * 0.8,
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -384,7 +350,7 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
                 boxShadow: [
                   BoxShadow(
                     blurRadius: 8,
-                    color: Colors.blueAccent,
+                    color: Color.fromARGB(255, 172, 145, 218),
                     offset: Offset(0, -3),
                   ),
                 ],
@@ -393,17 +359,16 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
                 padding: const EdgeInsets.fromLTRB(30, 30, 30, 8),
                 child: Column(
                   children: [
-
                     //email-password-login button
                     Form(
                       key: formKey,
                       child: Column(
                         children: [
-
                           //meals name
                           TextFormField(
                             controller: nameController,
-                            validator: (val) => val == "" ? "Please write meals name" : null,
+                            validator: (val) =>
+                                val == "" ? "Please write meals name" : null,
                             decoration: InputDecoration(
                               prefixIcon: const Icon(
                                 Icons.title,
@@ -443,12 +408,15 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
                             ),
                           ),
 
-                          const SizedBox(height: 18,),
+                          const SizedBox(
+                            height: 18,
+                          ),
 
                           // weeks
                           TextFormField(
                             controller: weekController,
-                            validator: (val) => val == "" ? "Please give weeks " : null,
+                            validator: (val) =>
+                                val == "" ? "Please give weeks " : null,
                             decoration: InputDecoration(
                               prefixIcon: const Icon(
                                 Icons.rate_review,
@@ -488,12 +456,16 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
                             ),
                           ),
 
-                          const SizedBox(height: 18,),
+                          const SizedBox(
+                            height: 18,
+                          ),
 
                           // Meals month
                           TextFormField(
                             controller: monthController,
-                            validator: (val) => val == "" ? "Please write month for this meal" : null,
+                            validator: (val) => val == ""
+                                ? "Please write month for this meal"
+                                : null,
                             decoration: InputDecoration(
                               prefixIcon: const Icon(
                                 Icons.tag,
@@ -533,12 +505,15 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
                             ),
                           ),
 
-                          const SizedBox(height: 18,),
+                          const SizedBox(
+                            height: 18,
+                          ),
 
                           //Meals price
                           TextFormField(
                             controller: priceController,
-                            validator: (val) => val == "" ? "Please write meal price" : null,
+                            validator: (val) =>
+                                val == "" ? "Please write meal price" : null,
                             decoration: InputDecoration(
                               prefixIcon: const Icon(
                                 Icons.price_change_outlined,
@@ -578,18 +553,22 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
                             ),
                           ),
 
-                          const SizedBox(height: 18,),
+                          const SizedBox(
+                            height: 18,
+                          ),
 
                           //item sizes
                           TextFormField(
                             controller: daysController,
-                            validator: (val) => val == "" ? "Please write which day is this meal for" : null,
+                            validator: (val) => val == ""
+                                ? "Please write which day is this meal for"
+                                : null,
                             decoration: InputDecoration(
                               prefixIcon: const Icon(
                                 Icons.picture_in_picture,
                                 color: Colors.black,
                               ),
-                              hintText: "Mon, Tues, Wed,...",
+                              hintText: "Mon, Tues, Wednes,...",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30),
                                 borderSide: const BorderSide(
@@ -623,57 +602,64 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
                             ),
                           ),
 
-                          const SizedBox(height: 18,),
+                          const SizedBox(
+                            height: 18,
+                          ),
 
                           //meals options
-                          TextFormField(
-                            controller: optionsController,
-                            validator: (val) => val == "" ? "Please write meals options" : null,
-                            decoration: InputDecoration(
-                              prefixIcon: const Icon(
-                                Icons.color_lens,
-                                color: Colors.black,
-                              ),
-                              hintText: "No onion,...",
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                                borderSide: const BorderSide(
-                                  color: Colors.white60,
-                                ),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                                borderSide: const BorderSide(
-                                  color: Colors.white60,
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                                borderSide: const BorderSide(
-                                  color: Colors.white60,
-                                ),
-                              ),
-                              disabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                                borderSide: const BorderSide(
-                                  color: Colors.white60,
-                                ),
-                              ),
-                              contentPadding: const EdgeInsets.symmetric(
-                                horizontal: 14,
-                                vertical: 6,
-                              ),
-                              fillColor: Colors.white,
-                              filled: true,
-                            ),
-                          ),
+                          // TextFormField(
+                          //   controller: optionsController,
+                          //   validator: (val) =>
+                          //       val == "" ? "Please write meals options" : null,
+                          //   decoration: InputDecoration(
+                          //     prefixIcon: const Icon(
+                          //       Icons.color_lens,
+                          //       color: Colors.black,
+                          //     ),
+                          //     hintText: "No onion,...",
+                          //     border: OutlineInputBorder(
+                          //       borderRadius: BorderRadius.circular(30),
+                          //       borderSide: const BorderSide(
+                          //         color: Colors.white60,
+                          //       ),
+                          //     ),
+                          //     enabledBorder: OutlineInputBorder(
+                          //       borderRadius: BorderRadius.circular(30),
+                          //       borderSide: const BorderSide(
+                          //         color: Colors.white60,
+                          //       ),
+                          //     ),
+                          //     focusedBorder: OutlineInputBorder(
+                          //       borderRadius: BorderRadius.circular(30),
+                          //       borderSide: const BorderSide(
+                          //         color: Colors.white60,
+                          //       ),
+                          //     ),
+                          //     disabledBorder: OutlineInputBorder(
+                          //       borderRadius: BorderRadius.circular(30),
+                          //       borderSide: const BorderSide(
+                          //         color: Colors.white60,
+                          //       ),
+                          //     ),
+                          //     contentPadding: const EdgeInsets.symmetric(
+                          //       horizontal: 14,
+                          //       vertical: 6,
+                          //     ),
+                          //     fillColor: Colors.white,
+                          //     filled: true,
+                          //   ),
+                          // ),
 
-                          const SizedBox(height: 18,),
+                          // const SizedBox(
+                          //   height: 18,
+                          // ),
 
                           //item description
                           TextFormField(
                             controller: descriptionController,
-                            validator: (val) => val == "" ? "Please write meals description" : null,
+                            validator: (val) => val == ""
+                                ? "Please write meals description"
+                                : null,
                             decoration: InputDecoration(
                               prefixIcon: const Icon(
                                 Icons.description,
@@ -713,18 +699,19 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
                             ),
                           ),
 
-                          const SizedBox(height: 18,),
+                          const SizedBox(
+                            height: 18,
+                          ),
 
                           //button
                           Material(
-                            color: Colors.black,
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(30),
                             child: InkWell(
-                              onTap: ()
-                              {
-                                if(formKey.currentState!.validate())
-                                {
-                                  Fluttertoast.showToast(msg: "Uploading now...");
+                              onTap: () {
+                                if (formKey.currentState!.validate()) {
+                                  Fluttertoast.showToast(
+                                      msg: "Uploading now...");
 
                                   uploadItemImage();
                                 }
@@ -738,7 +725,7 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
                                 child: Text(
                                   "Upload Now",
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: Colors.deepPurple,
                                     fontSize: 16,
                                   ),
                                 ),
@@ -749,25 +736,21 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen>
                       ),
                     ),
 
-                    const SizedBox(height: 16,),
+                    const SizedBox(
+                      height: 16,
+                    ),
                   ],
                 ),
               ),
             ),
           ),
-
         ],
       ),
     );
   }
 
-
-
-
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return pickedImageXFile == null ? defaultScreen() : uploadItemFormScreen();
   }
 }
-

@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:kinder_joy_1/admin/admin_upload_items.dart';
 import 'package:kinder_joy_1/admin/options.dart';
@@ -14,25 +15,20 @@ import 'package:kinder_joy_1/teachers/teacher_sign_up.dart';
 import '../api_connection/api_connection.dart';
 import '../teachers/model/teacher.dart';
 
-class AdminLoginPage extends StatefulWidget
-{
+class AdminLoginPage extends StatefulWidget {
   @override
   State<AdminLoginPage> createState() => _AdminLoginPageState();
 }
 
-class _AdminLoginPageState extends State<AdminLoginPage>
-{
+class _AdminLoginPageState extends State<AdminLoginPage> {
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var formKey = GlobalKey<FormState>();
     var emailController = TextEditingController();
     var passwordController = TextEditingController();
 
-    loginAdminNow() async
-    {
-      try
-      {
+    loginAdminNow() async {
+      try {
         var res = await http.post(
           Uri.parse(API.loginAdmin),
           body: {
@@ -40,26 +36,23 @@ class _AdminLoginPageState extends State<AdminLoginPage>
             "admin_password": passwordController.text.trim(),
           },
         );
-        if(res.statusCode == 200)   //http 200 = success communicated with server (flutter with API to server)
-            {
+        if (res.statusCode ==
+            200) //http 200 = success communicated with server (flutter with API to server)
+        {
           var resBodyOfLogin = jsonDecode(res.body);
-          if(resBodyOfLogin['success'] == true)
-          {
+          if (resBodyOfLogin['success'] == true) {
             Fluttertoast.showToast(msg: "Admin Login successfully.");
 
-            Future.delayed(const Duration(milliseconds: 2000), ()
-            {
+            Future.delayed(const Duration(milliseconds: 2000), () {
               Get.to(AdminOp());
             });
-          }
-          else
-          {
-            Fluttertoast.showToast(msg: "Login unsuccessfully, incorrect name / contact no. Try again");
+          } else {
+            Fluttertoast.showToast(
+                msg:
+                    "Login unsuccessfully, incorrect name / contact no. Try again");
           }
         }
-      }
-      catch(errorMsg)
-      {
+      } catch (errorMsg) {
         print("Error::" + errorMsg.toString());
       }
     }
@@ -70,7 +63,7 @@ class _AdminLoginPageState extends State<AdminLoginPage>
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image:  NetworkImage(
+                image: NetworkImage(
                   "https://i.pinimg.com/564x/16/9a/88/169a88947fe29fb44d8f24d8d31b82ee.jpg",
                 ),
                 fit: BoxFit.cover,
@@ -84,11 +77,11 @@ class _AdminLoginPageState extends State<AdminLoginPage>
                 Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
-                  child: const Text(
+                  child: Text(
                     'KinderJoy',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w500,
+                    style: GoogleFonts.ovo(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
                       fontSize: 30,
                     ),
                   ),
@@ -96,9 +89,9 @@ class _AdminLoginPageState extends State<AdminLoginPage>
                 Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
-                  child: const Text(
+                  child: Text(
                     'Login',
-                    style: TextStyle(fontSize: 20),
+                    style: GoogleFonts.ovo(fontSize: 20),
                   ),
                 ),
                 Container(
@@ -112,22 +105,24 @@ class _AdminLoginPageState extends State<AdminLoginPage>
                               //name
                               TextFormField(
                                 controller: emailController,
-                                validator: (val) => val == "" ? "Please write your admin email" : null,
+                                validator: (val) => val == ""
+                                    ? "Please write your admin email"
+                                    : null,
                                 decoration: const InputDecoration(
                                   prefixIcon: Icon(
                                     Icons.people,
-                                    color: Colors.blueGrey,
-                                  ) ,
+                                    color: Colors.deepPurple,
+                                  ),
                                   border: OutlineInputBorder(
                                     // borderRadius: BorderRadius.circular(30),
                                     borderSide: BorderSide(
-                                      color:  Colors.white,
+                                      color: Colors.white,
                                     ),
                                   ),
                                   enabledBorder: OutlineInputBorder(
                                     // borderRadius: BorderRadius.circular(30),
                                     borderSide: BorderSide(
-                                      color:  Colors.white,
+                                      color: Colors.white,
                                     ),
                                   ),
                                   labelText: 'Admin email',
@@ -136,21 +131,23 @@ class _AdminLoginPageState extends State<AdminLoginPage>
                               const SizedBox(height: 18),
                               TextFormField(
                                 controller: passwordController,
-                                validator: (val) => val == "" ? "Please write your password" : null,
+                                validator: (val) => val == ""
+                                    ? "Please write your password"
+                                    : null,
                                 decoration: const InputDecoration(
                                   prefixIcon: Icon(
                                     Icons.phone,
-                                    color: Colors.blueGrey,
-                                  ) ,
+                                    color: Colors.deepPurple,
+                                  ),
                                   border: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                      color:  Colors.white,
+                                      color: Colors.white,
                                     ),
                                   ),
                                   enabledBorder: OutlineInputBorder(
                                     // borderRadius: BorderRadius.circular(30),
                                     borderSide: BorderSide(
-                                      color:  Colors.white,
+                                      color: Colors.white,
                                     ),
                                   ),
                                   labelText: 'Password',
@@ -161,16 +158,15 @@ class _AdminLoginPageState extends State<AdminLoginPage>
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(30),
                                 child: InkWell(
-                                  onTap: (){
-                                    if(formKey.currentState!.validate())
-                                    {
+                                  onTap: () {
+                                    if (formKey.currentState!.validate()) {
                                       loginAdminNow();
                                     }
-
                                   },
                                   borderRadius: BorderRadius.circular(30),
                                   child: const Padding(
-                                    padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
+                                    padding:
+                                        EdgeInsets.fromLTRB(25, 10, 25, 10),
                                     child: Text(
                                       "Login",
                                       style: TextStyle(
@@ -188,20 +184,22 @@ class _AdminLoginPageState extends State<AdminLoginPage>
                                   TextButton(
                                     child: const Text(
                                       'Click here',
-                                      style: TextStyle(fontSize: 15),
+                                      style: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.deepPurple),
                                     ),
                                     onPressed: () {
                                       Navigator.push(
                                         context,
-                                        MaterialPageRoute(builder: (context) => RolesOp()),
-                                      );//signup screen
+                                        MaterialPageRoute(
+                                            builder: (context) => RolesOp()),
+                                      ); //signup screen
                                     },
                                   ),
                                 ],
                               ),
                             ],
-                          )
-                      )
+                          ))
                     ],
                   ),
                 ),

@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kinder_joy_1/components/day_button.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kinder_joy_1/notused/menu_page_1.dart';
-import 'package:kinder_joy_1/notused/menu_page_2.dart';
-import 'package:kinder_joy_1/notused/menu_page_3.dart';
-import 'package:kinder_joy_1/notused/menu_page_4.dart';
-import 'package:kinder_joy_1/notused/menu_page_5.dart';
 
 import '../../components/week_button.dart';
 import '../../meal_selection/meal_week1.dart';

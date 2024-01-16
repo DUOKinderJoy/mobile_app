@@ -3,18 +3,52 @@ import 'package:google_fonts/google_fonts.dart';
 
 class DayButton extends StatelessWidget {
   final String text;
-  final void Function()? onTap;
+  final Function() onTap;
+  bool isTapped = false;
 
-  const DayButton({
+  DayButton({
     super.key,
     required this.text,
-    required this.onTap,
+    required this.onTap
   });
 
   @override
   Widget build(BuildContext context) {
+    void popUpMessage() {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          content: Text(
+            "You have already selected your child's meal. Please select for another day",
+            style: GoogleFonts.ovo(fontSize: 20),
+          ),
+          actions: [
+            // TextButton
+            TextButton(
+              onPressed: () {
+                // pop once to remove dialog box
+                Navigator.pop(context);
+              },
+              child: const Text(
+                'Done',
+                style: TextStyle(
+                    color: Colors.black), // You can customize the color
+              ),
+            )
+          ],
+        ),
+      );
+    }
     return GestureDetector(
-      onTap: onTap,
+      onTap: () {
+        if (!isTapped) {
+          isTapped = true;
+          onTap();
+        }
+        else {
+          popUpMessage();
+        }
+      },
       child: Container(
         decoration: BoxDecoration(
             color: Color.fromARGB(255, 82, 76, 76),

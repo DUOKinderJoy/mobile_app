@@ -33,4 +33,7 @@ class Meals
     description: json['description'],
     image: json['image'],
   );
+
+  //Getter methods
+  // List<Meals> get days => _days;
 }

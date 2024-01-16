@@ -7,7 +7,7 @@ import 'package:kinder_joy_1/teachers/teacherPreferences/teacher_preferences.dar
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
-import 'notused/cart_page.dart';
+// import 'notused/cart_page.dart';
 import 'models/cart.dart';
 
 void main()

@@ -2,37 +2,38 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:kinder_joy_1/meal_selection/meals_day.dart';
 import 'package:kinder_joy_1/parents/parentsModel/dashboard.dart';
 import 'package:kinder_joy_1/parents/parentsPreferences/current_parents.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'cart/cart_list_screen.dart';
 import 'controller/meal_details_controller.dart';
-
 import '../api_connection/api_connection.dart';
 import '../models/meal.dart';
 
-
-class MealDetailsScreen extends StatefulWidget
-{
+class MealDetailsScreen extends StatefulWidget {
   final Meals? mealInfo;
+  // final Remark? remark;
 
-  MealDetailsScreen({this.mealInfo,});
+  MealDetailsScreen({
+    this.mealInfo,
+    // this.remark,
+  });
 
   @override
   State<MealDetailsScreen> createState() => _MealDetailsScreenState();
 }
 
-class _MealDetailsScreenState extends State<MealDetailsScreen>
-{
+class _MealDetailsScreenState extends State<MealDetailsScreen> {
   final mealDetailsController = Get.put(MealDetailsController());
   // final mealDetailsController = Get.put(mealDetailsController());
   final currentOnlineUser = Get.put(CurrentParents());
+  bool _mealSelected = false;
 
-  addMealToCart() async
-  {
-    try
-    {
+  addMealToCart() async {
+    try {
       var res = await http.post(
         Uri.parse(API.addToCart),
         body: {
@@ -45,38 +46,31 @@ class _MealDetailsScreenState extends State<MealDetailsScreen>
         },
       );
 
-      if(res.statusCode == 200) //from flutter app the connection with api to server - success
-          {
-        var resBodyOfAddCart = jsonDecode(res.body);
-        if(resBodyOfAddCart['success'] == true)
-        {
-          Fluttertoast.showToast(msg: "Meal saved to Cart Successfully.");
-        }
-        else
-        {
-          Fluttertoast.showToast(msg: "Error Occur. Meal not saved to Cart and Try Again.");
-        }
-      }
-      else
+      if (res.statusCode ==
+          200) //from flutter app the connection with api to server - success
       {
+        var resBodyOfAddCart = jsonDecode(res.body);
+        if (resBodyOfAddCart['success'] == true) {
+          Fluttertoast.showToast(msg: "Meal saved to Cart Successfully.");
+        } else {
+          Fluttertoast.showToast(
+              msg: "Error Occur. Meal not saved to Cart and Try Again.");
+        }
+      } else {
         Fluttertoast.showToast(msg: "Status is not 200");
       }
-    }
-    catch(errorMsg)
-    {
+    } catch (errorMsg) {
       print("Error :: " + errorMsg.toString());
     }
   }
 
-
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-
           //Meals image
           FadeInImage(
             height: MediaQuery.of(context).size.height * 0.5,
@@ -86,8 +80,7 @@ class _MealDetailsScreenState extends State<MealDetailsScreen>
             image: NetworkImage(
               widget.mealInfo!.image!,
             ),
-            imageErrorBuilder: (context, error, stackTraceError)
-            {
+            imageErrorBuilder: (context, error, stackTraceError) {
               return const Center(
                 child: Icon(
                   Icons.broken_image_outlined,
@@ -111,16 +104,14 @@ class _MealDetailsScreenState extends State<MealDetailsScreen>
               color: Colors.transparent,
               child: Row(
                 children: [
-
                   //back
                   IconButton(
-                    onPressed: ()
-                    {
+                    onPressed: () {
                       Get.back();
                     },
                     icon: const Icon(
                       Icons.arrow_back,
-                      color: Colors.purpleAccent,
+                      color: Colors.deepPurple,
                     ),
                   ),
 
@@ -130,33 +121,30 @@ class _MealDetailsScreenState extends State<MealDetailsScreen>
 
                   //shopping cart icon
                   IconButton(
-                    onPressed: ()
-                    {
+                    onPressed: () {
                       Get.to(CartListScreen());
                     },
                     icon: const Icon(
                       Icons.shopping_cart,
-                      color: Colors.purpleAccent,
+                      color: Colors.deepPurple,
                     ),
                   ),
                 ],
               ),
             ),
           ),
-
         ],
       ),
     );
   }
 
-  mealInfoWidget()
-  {
+  mealInfoWidget() {
     return Container(
       height: MediaQuery.of(Get.context!).size.height * 0.6,
       width: MediaQuery.of(Get.context!).size.width,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image:  NetworkImage(
+          image: NetworkImage(
             "https://i.pinimg.com/564x/16/9a/88/169a88947fe29fb44d8f24d8d31b82ee.jpg",
           ),
           fit: BoxFit.cover,
@@ -170,7 +158,7 @@ class _MealDetailsScreenState extends State<MealDetailsScreen>
           BoxShadow(
             offset: Offset(0, -3),
             blurRadius: 6,
-            color: Colors.purpleAccent,
+            color: Colors.deepPurple,
           ),
         ],
       ),
@@ -179,35 +167,40 @@ class _MealDetailsScreenState extends State<MealDetailsScreen>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-
-            const SizedBox(height: 18,),
-
-            Center(
-              child: Container(
-                height: 8,
-                width: 140,
-                decoration: BoxDecoration(
-                  color: Colors.purpleAccent,
-                  borderRadius: BorderRadius.circular(30),
-                ),
-              ),
+            const SizedBox(
+              height: 18,
             ),
 
-            const SizedBox(height: 30,),
+            // Center(
+            //   child: Container(
+            //     height: 8,
+            //     width: 140,
+            //     decoration: BoxDecoration(
+            //       color: Colors.deepPurple,
+            //       borderRadius: BorderRadius.circular(30),
+            //     ),
+            //   ),
+            // ),
+
+            const SizedBox(
+              height: 30,
+            ),
 
             //name
             Text(
               widget.mealInfo!.name!,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
+              style: GoogleFonts.dmSerifDisplay(
                 fontSize: 30,
-                color: Colors.purpleAccent,
-                fontWeight: FontWeight.bold,
+                color: Colors.black,
+                fontWeight: FontWeight.w500,
               ),
             ),
 
-            const SizedBox(height: 5,),
+            const SizedBox(
+              height: 5,
+            ),
 
             //details
             //price
@@ -215,7 +208,6 @@ class _MealDetailsScreenState extends State<MealDetailsScreen>
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-
                 //rating + rating num
                 //tags
                 //price
@@ -225,7 +217,9 @@ class _MealDetailsScreenState extends State<MealDetailsScreen>
                     children: [
                       //month week
                       Text(
-                        widget.mealInfo!.month! + " Week " + widget.mealInfo!.week!,
+                        widget.mealInfo!.month! +
+                            " Week " +
+                            widget.mealInfo!.week!,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
@@ -236,7 +230,7 @@ class _MealDetailsScreenState extends State<MealDetailsScreen>
                       const SizedBox(height: 5),
 
                       Text(
-                        widget.mealInfo!.days! + "day" ,
+                        widget.mealInfo!.days! + "day",
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
@@ -246,17 +240,6 @@ class _MealDetailsScreenState extends State<MealDetailsScreen>
                       ),
 
                       const SizedBox(height: 16),
-
-                      //price
-                      Text(
-                        "Price: \RM" + widget.mealInfo!.price.toString(),
-                        style: const TextStyle(
-                          fontSize: 24,
-                          color: Colors.purpleAccent,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-
                     ],
                   ),
                 ),
@@ -307,62 +290,63 @@ class _MealDetailsScreenState extends State<MealDetailsScreen>
             const SizedBox(height: 30),
 
             //sizes
-            const Text(
-              "Options:",
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.purpleAccent,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            // Text(
+            //   "Options:",
+            //   style: GoogleFonts.ovo(
+            //     fontSize: 18,
+            //     color: Colors.black,
+            //     fontWeight: FontWeight.bold,
+            //   ),
+            // ),
             const SizedBox(height: 8),
-            Wrap(
-              runSpacing: 8,
-              spacing: 8,
-              children: List.generate(widget.mealInfo!.options!.length, (index)
-              {
-                return Obx(
-                      ()=> GestureDetector(
-                    onTap: ()
-                    {
-                      mealDetailsController.setOptionMeal(index);
-                    },
-                    child: Container(
-                      height: 35,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          width: 2,
-                          color: mealDetailsController.size == index
-                              ? Colors.transparent
-                              : Colors.grey,
-                        ),
-                        color: mealDetailsController.size == index
-                            ? Colors.purpleAccent.withOpacity(0.4)
-                            : Colors.amberAccent,
-                      ),
-                      alignment: Alignment.center,
-                      child: Text(
-                        widget.mealInfo!.options![index].replaceAll("[", "").replaceAll("]", ""),
-                        style: TextStyle(
-                          fontSize: 10,
-                          color: Colors.grey[700],
-                        ),
-                      ),
-                    ),
-                  ),
-                );
-              }),
-            ),
+            // Wrap(
+            //   runSpacing: 8,
+            //   spacing: 8,
+            //   children:
+            //       List.generate(widget.mealInfo!.options!.length, (index) {
+            //     return Obx(
+            //       () => GestureDetector(
+            //         onTap: () {
+            //           mealDetailsController.setOptionMeal(index);
+            //         },
+            //         child: Container(
+            //           height: 35,
+            //           width: 60,
+            //           decoration: BoxDecoration(
+            //             border: Border.all(
+            //               width: 2,
+            //               color: mealDetailsController.size == index
+            //                   ? Colors.transparent
+            //                   : Colors.grey,
+            //             ),
+            //             color: mealDetailsController.size == index
+            //                 ? Colors.purpleAccent.withOpacity(0.4)
+            //                 : Colors.amberAccent,
+            //           ),
+            //           alignment: Alignment.center,
+            //           child: Text(
+            //             widget.mealInfo!.options![index]
+            //                 .replaceAll("[", "")
+            //                 .replaceAll("]", ""),
+            //             style: TextStyle(
+            //               fontSize: 10,
+            //               color: Colors.grey[700],
+            //             ),
+            //           ),
+            //         ),
+            //       ),
+            //     );
+            //   }),
+            // ),
 
-            const SizedBox(height: 20),
+            const SizedBox(height: 30),
 
             //description
-            const Text(
+            Text(
               "Description:",
-              style: TextStyle(
+              style: GoogleFonts.ovo(
                 fontSize: 18,
-                color: Colors.purpleAccent,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -375,34 +359,81 @@ class _MealDetailsScreenState extends State<MealDetailsScreen>
               ),
             ),
 
-            const SizedBox(height: 30),
+            const SizedBox(height: 120),
 
             //add to cart button
             Material(
               elevation: 4,
-              color: Colors.purpleAccent,
+              color: Color.fromARGB(255, 82, 76, 76),
               borderRadius: BorderRadius.circular(10),
               child: InkWell(
-                onTap: ()
-                {
+                onTap: () {
+                  // if (!widget.m) {
+                  //   addMealToCart();
+                  //   setState(() {
+                  //     _mealSelected = true;
+                  //   });
+                  //   Get.to(() => MealDay());
+                  // }
+
                   addMealToCart();
+                  Get.to(() => MealDay());
+
+                  // // doing remarks
+                  // if (widget.mealInfo!.days! == "Mon") {
+                  //   widget.remark!.mon = true;
+                  // }
+                  // if (widget.mealInfo!.days! == "Tues") {
+                  //   widget.remark!.tues = true;
+                  // }
+                  // if (widget.mealInfo!.days! == "Wed") {
+                  //   widget.remark!.wed = true;
+                  // }
+                  // if (widget.mealInfo!.days! == "Thurs") {
+                  //   widget.remark!.thu = true;
+                  // }
+                  // if (widget.mealInfo!.days! == "Fri") {
+                  //   widget.remark!.fri = true;
+                  // }
                 },
                 borderRadius: BorderRadius.circular(10),
                 child: Container(
-                  alignment: Alignment.center,
+                  // alignment: Alignment.center,
                   height: 50,
-                  child: const Text(
-                    "Choose This Meal",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                    ),
+                  child: Row(
+                    children: [
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        "Select Meal",
+                        style: GoogleFonts.ovo(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 235, 182, 182),
+                        ),
+                      ),
+
+                      const SizedBox(
+                        width: 140,
+                      ),
+
+                      //price
+                      Text(
+                        "RM " + widget.mealInfo!.price.toString() + "0",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Color.fromARGB(255, 235, 182, 182),
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
             ),
 
-            const SizedBox(height: 30),
+            const SizedBox(height: 5),
           ],
         ),
       ),
