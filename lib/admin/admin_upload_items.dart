@@ -10,6 +10,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:kinder_joy_1/admin/admin_get_all_orders.dart';
 import 'package:kinder_joy_1/admin/admin_login.dart';
 import 'package:http/http.dart' as http;
+import 'package:kinder_joy_1/admin/uploaded_event_screen.dart';
+import 'package:kinder_joy_1/admin/uploaded_item_details_screen.dart';
 import '../api_connection/api_connection.dart';
 
 class AdminUploadItemsScreen extends StatefulWidget {
@@ -109,8 +111,8 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen> {
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Colors.deepPurpleAccent,
-                Colors.deepPurple,
+                Colors.white,
+                Colors.purpleAccent,
               ],
             ),
           ),
@@ -169,6 +171,42 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen> {
                     ),
                     child: Text(
                       "Add Event",
+                      style: GoogleFonts.ovo(
+                        color: Colors.deepPurple,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 18,
+              ),
+
+              const Icon(
+                Icons.checklist,
+                color: Colors.purple,
+                size: 100,
+              ),
+
+              //button
+              Material(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(30),
+                child: InkWell(
+                  onTap: () {
+                    Get.to(UploadedEventScreen());
+                    // showDialogBoxForImagePickingAndCapturing();
+                  },
+                  borderRadius: BorderRadius.circular(30),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 28,
+                    ),
+                    child: Text(
+                      "Review / Modify Uploaded Event",
                       style: GoogleFonts.ovo(
                         color: Colors.deepPurple,
                         fontWeight: FontWeight.bold,
