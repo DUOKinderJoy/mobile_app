@@ -26,6 +26,8 @@ class _AdminLoginPageState extends State<AdminLoginPage> {
     var formKey = GlobalKey<FormState>();
     var emailController = TextEditingController();
     var passwordController = TextEditingController();
+    var isObsecure = true.obs;
+
 
     loginAdminNow() async {
       try {
@@ -129,30 +131,69 @@ class _AdminLoginPageState extends State<AdminLoginPage> {
                                 ),
                               ),
                               const SizedBox(height: 18),
-                              TextFormField(
-                                controller: passwordController,
-                                validator: (val) => val == ""
-                                    ? "Please write your password"
-                                    : null,
-                                decoration: const InputDecoration(
-                                  prefixIcon: Icon(
-                                    Icons.phone,
-                                    color: Colors.deepPurple,
-                                  ),
-                                  border: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Colors.white,
+                              Obx(
+                                    ()=> TextFormField(
+                                  controller: passwordController,
+                                  obscureText: isObsecure.value,
+                                  validator: (val) => val == "" ? "Please write password" : null,
+                                  decoration: InputDecoration(
+                                    prefixIcon: const Icon(
+                                      Icons.vpn_key_sharp,
+                                      color: Colors.deepPurple,
                                     ),
-                                  ),
-                                  enabledBorder: OutlineInputBorder(
-                                    // borderRadius: BorderRadius.circular(30),
-                                    borderSide: BorderSide(
-                                      color: Colors.white,
+                                    suffixIcon: Obx(
+                                          ()=> GestureDetector(
+                                        onTap: ()
+                                        {
+                                          isObsecure.value = !isObsecure.value;
+                                        },
+                                        child: Icon(
+                                          isObsecure.value ? Icons.visibility_off : Icons.visibility,
+                                          color: Colors.deepPurple,
+                                        ),
+                                      ),
                                     ),
+                                    hintText: "password...",
+                                    border: OutlineInputBorder(
+                                      // borderRadius: BorderRadius.circular(30),
+                                      borderSide: const BorderSide(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    enabledBorder: OutlineInputBorder(
+                                      // borderRadius: BorderRadius.circular(30),
+                                      borderSide: const BorderSide(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                             
                                   ),
-                                  labelText: 'Password',
                                 ),
                               ),
+                              // TextFormField(
+                              //   controller: passwordController,
+                              //   validator: (val) => val == ""
+                              //       ? "Please write your password"
+                              //       : null,
+                              //   decoration: const InputDecoration(
+                              //     prefixIcon: Icon(
+                              //       Icons.phone,
+                              //       color: Colors.deepPurple,
+                              //     ),
+                              //     border: OutlineInputBorder(
+                              //       borderSide: BorderSide(
+                              //         color: Colors.white,
+                              //       ),
+                              //     ),
+                              //     enabledBorder: OutlineInputBorder(
+                              //       // borderRadius: BorderRadius.circular(30),
+                              //       borderSide: BorderSide(
+                              //         color: Colors.white,
+                              //       ),
+                              //     ),
+                              //     labelText: 'Password',
+                              //   ),
+                              // ),
                               const SizedBox(height: 18),
                               Material(
                                 color: Colors.white,

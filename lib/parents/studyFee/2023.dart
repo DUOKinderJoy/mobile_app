@@ -115,7 +115,7 @@ class StudyFeeYear2023 extends StatelessWidget
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => PaymentScreen()),
+                      MaterialPageRoute(builder: (context) => MealOrderPage()),
                     );
                   },
                 ),

@@ -10,6 +10,7 @@ import 'package:kinder_joy_1/teachers/fragments/dashboard_of_fragments.dart';
 import 'package:kinder_joy_1/teachers/teacherPreferences/teacher_preferences.dart';
 import 'package:kinder_joy_1/teachers/teacher_sign_up.dart';
 
+import '../admin/signup.dart';
 import '../api_connection/api_connection.dart';
 import '../teachers/model/teacher.dart';
 
@@ -197,7 +198,7 @@ class _LoginPageState extends State<LoginPage> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                TSignUpPage()),
+                                                SignUpScreen()),
                                       ); //signup screen
                                     },
                                   ),

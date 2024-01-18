@@ -156,7 +156,7 @@ class _CartListScreenState extends State<CartListScreen> {
                     ? Icons.check_box
                     : Icons.check_box_outline_blank,
                 color: cartListController.isSelectedAll
-                    ? Colors.white
+                    ? Colors.black54
                     : Colors.grey,
               ),
             ),

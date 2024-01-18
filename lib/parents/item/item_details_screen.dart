@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kinder_joy_1/parents/parentsModel/dashboard.dart';
+import 'package:kinder_joy_1/models/item.dart';
 
 class ItemDetailsScreen extends StatefulWidget {
   final Clothes? itemInfo;

@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kinder_joy_1/meal_selection/meals_day.dart';
-import 'package:kinder_joy_1/parents/parentsModel/dashboard.dart';
+import 'package:kinder_joy_1/models/item.dart';
 import 'package:kinder_joy_1/parents/parentsPreferences/current_parents.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -359,7 +359,7 @@ class _MealDetailsScreenState extends State<MealDetailsScreen> {
               ),
             ),
 
-            const SizedBox(height: 190),
+            const SizedBox(height: 120),
 
             //add to cart button
             Material(
@@ -415,7 +415,7 @@ class _MealDetailsScreenState extends State<MealDetailsScreen> {
                       ),
 
                       const SizedBox(
-                        width: 170,
+                        width: 140,
                       ),
 
                       //price

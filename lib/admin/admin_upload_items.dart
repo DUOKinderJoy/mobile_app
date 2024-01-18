@@ -10,6 +10,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:kinder_joy_1/admin/admin_get_all_orders.dart';
 import 'package:kinder_joy_1/admin/admin_login.dart';
 import 'package:http/http.dart' as http;
+import 'package:kinder_joy_1/admin/uploaded_event_screen.dart';
+import 'package:kinder_joy_1/admin/uploaded_item_details_screen.dart';
 import '../api_connection/api_connection.dart';
 
 class AdminUploadItemsScreen extends StatefulWidget {
@@ -109,8 +111,8 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen> {
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Colors.deepPurpleAccent,
-                Colors.deepPurple,
+                Colors.white,
+                Colors.purpleAccent,
               ],
             ),
           ),
@@ -169,6 +171,42 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen> {
                     ),
                     child: Text(
                       "Add Event",
+                      style: GoogleFonts.ovo(
+                        color: Colors.deepPurple,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 18,
+              ),
+
+              const Icon(
+                Icons.checklist,
+                color: Colors.purple,
+                size: 100,
+              ),
+
+              //button
+              Material(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(30),
+                child: InkWell(
+                  onTap: () {
+                    Get.to(UploadedEventScreen());
+                    // showDialogBoxForImagePickingAndCapturing();
+                  },
+                  borderRadius: BorderRadius.circular(30),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 28,
+                    ),
+                    child: Text(
+                      "Review / Modify Uploaded Event",
                       style: GoogleFonts.ovo(
                         color: Colors.deepPurple,
                         fontWeight: FontWeight.bold,
@@ -416,64 +454,64 @@ class _AdminUploadItemsScreenState extends State<AdminUploadItemsScreen> {
                           ),
 
                           // // item ratings
-                          // TextFormField(
-                          //   controller: dateController,
-                          //   validator: (val) =>
-                          //       val == "" ? "Please give Event Date" : null,
-                          //   decoration: InputDecoration(
-                          //     prefixIcon: const Icon(
-                          //       Icons.rate_review,
-                          //       color: Colors.black,
-                          //     ),
-                          //     hintText: "Event Date",
-                          //     border: OutlineInputBorder(
-                          //       borderRadius: BorderRadius.circular(30),
-                          //       borderSide: const BorderSide(
-                          //         color: Colors.white60,
-                          //       ),
-                          //     ),
-                          //     enabledBorder: OutlineInputBorder(
-                          //       borderRadius: BorderRadius.circular(30),
-                          //       borderSide: const BorderSide(
-                          //         color: Colors.white60,
-                          //       ),
-                          //     ),
-                          //     focusedBorder: OutlineInputBorder(
-                          //       borderRadius: BorderRadius.circular(30),
-                          //       borderSide: const BorderSide(
-                          //         color: Colors.white60,
-                          //       ),
-                          //     ),
-                          //     disabledBorder: OutlineInputBorder(
-                          //       borderRadius: BorderRadius.circular(30),
-                          //       borderSide: const BorderSide(
-                          //         color: Colors.white60,
-                          //       ),
-                          //     ),
-                          //     contentPadding: const EdgeInsets.symmetric(
-                          //       horizontal: 14,
-                          //       vertical: 6,
-                          //     ),
-                          //     fillColor: Colors.purple[20],
-                          //     filled: true,
-                          //   ),
-                          // ),
+                          TextFormField(
+                            controller: dateController,
+                            validator: (val) =>
+                                val == "" ? "Please give Event Date" : null,
+                            decoration: InputDecoration(
+                              prefixIcon: const Icon(
+                                Icons.rate_review,
+                                color: Colors.black,
+                              ),
+                              hintText: "Event Date",
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                                borderSide: const BorderSide(
+                                  color: Colors.white60,
+                                ),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                                borderSide: const BorderSide(
+                                  color: Colors.white60,
+                                ),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                                borderSide: const BorderSide(
+                                  color: Colors.white60,
+                                ),
+                              ),
+                              disabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                                borderSide: const BorderSide(
+                                  color: Colors.white60,
+                                ),
+                              ),
+                              contentPadding: const EdgeInsets.symmetric(
+                                horizontal: 14,
+                                vertical: 6,
+                              ),
+                              fillColor: Colors.purple[20],
+                              filled: true,
+                            ),
+                          ),
 
-                          // const SizedBox(
-                          //   height: 18,
-                          // ),
+                          const SizedBox(
+                            height: 18,
+                          ),
 
                           //item tags
                           TextFormField(
                             controller: tagsController,
                             validator: (val) =>
-                                val == "" ? "Please write event date" : null,
+                                val == "" ? "Please write event tags" : null,
                             decoration: InputDecoration(
                               prefixIcon: const Icon(
                                 Icons.tag,
                                 color: Colors.black,
                               ),
-                              hintText: "Event Date",
+                              hintText: "Event tags",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30),
                                 borderSide: const BorderSide(

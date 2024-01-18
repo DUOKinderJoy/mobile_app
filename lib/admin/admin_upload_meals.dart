@@ -568,7 +568,7 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen> {
                                 Icons.picture_in_picture,
                                 color: Colors.black,
                               ),
-                              hintText: "Mon, Tues, Wed,...",
+                              hintText: "Mon, Tues, Wednes,...",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30),
                                 borderSide: const BorderSide(
@@ -607,52 +607,52 @@ class _AdminUploadMealsScreenState extends State<AdminUploadMealsScreen> {
                           ),
 
                           //meals options
-                          TextFormField(
-                            controller: optionsController,
-                            validator: (val) =>
-                                val == "" ? "Please write meals options" : null,
-                            decoration: InputDecoration(
-                              prefixIcon: const Icon(
-                                Icons.color_lens,
-                                color: Colors.black,
-                              ),
-                              hintText: "No onion,...",
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                                borderSide: const BorderSide(
-                                  color: Colors.white60,
-                                ),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                                borderSide: const BorderSide(
-                                  color: Colors.white60,
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                                borderSide: const BorderSide(
-                                  color: Colors.white60,
-                                ),
-                              ),
-                              disabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                                borderSide: const BorderSide(
-                                  color: Colors.white60,
-                                ),
-                              ),
-                              contentPadding: const EdgeInsets.symmetric(
-                                horizontal: 14,
-                                vertical: 6,
-                              ),
-                              fillColor: Colors.white,
-                              filled: true,
-                            ),
-                          ),
+                          // TextFormField(
+                          //   controller: optionsController,
+                          //   validator: (val) =>
+                          //       val == "" ? "Please write meals options" : null,
+                          //   decoration: InputDecoration(
+                          //     prefixIcon: const Icon(
+                          //       Icons.color_lens,
+                          //       color: Colors.black,
+                          //     ),
+                          //     hintText: "No onion,...",
+                          //     border: OutlineInputBorder(
+                          //       borderRadius: BorderRadius.circular(30),
+                          //       borderSide: const BorderSide(
+                          //         color: Colors.white60,
+                          //       ),
+                          //     ),
+                          //     enabledBorder: OutlineInputBorder(
+                          //       borderRadius: BorderRadius.circular(30),
+                          //       borderSide: const BorderSide(
+                          //         color: Colors.white60,
+                          //       ),
+                          //     ),
+                          //     focusedBorder: OutlineInputBorder(
+                          //       borderRadius: BorderRadius.circular(30),
+                          //       borderSide: const BorderSide(
+                          //         color: Colors.white60,
+                          //       ),
+                          //     ),
+                          //     disabledBorder: OutlineInputBorder(
+                          //       borderRadius: BorderRadius.circular(30),
+                          //       borderSide: const BorderSide(
+                          //         color: Colors.white60,
+                          //       ),
+                          //     ),
+                          //     contentPadding: const EdgeInsets.symmetric(
+                          //       horizontal: 14,
+                          //       vertical: 6,
+                          //     ),
+                          //     fillColor: Colors.white,
+                          //     filled: true,
+                          //   ),
+                          // ),
 
-                          const SizedBox(
-                            height: 18,
-                          ),
+                          // const SizedBox(
+                          //   height: 18,
+                          // ),
 
                           //item description
                           TextFormField(

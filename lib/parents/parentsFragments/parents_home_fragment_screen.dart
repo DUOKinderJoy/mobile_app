@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:kinder_joy_1/parents/item/item_details_screen.dart';
 import '../../api_connection/api_connection.dart';
-import '../parentsModel/dashboard.dart';
+import '../../models/item.dart';
 
 class ParentsHomeFragementScreen extends StatelessWidget {
   TextEditingController searchController = TextEditingController();

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 class API
 {
-  static const hostConnect = "http://192.168.188.29/api_kinderjoy";
+  static const hostConnect = "http://192.168.0.110/api_kinderjoy";
   static const hostConnectTeacher = "$hostConnect/teacher";
   static const hostConnectParents = "$hostConnect/parents";
   static const hostConnectAdmin = "$hostConnect/admin";
@@ -32,10 +32,13 @@ class API
   static const loginAdmin = "$hostConnectAdmin/login.php";    //hostConnectAdmin = api folder里面的那个admin folder
   static const adminGetAllOrders = "$hostConnectAdmin/read_orders.php";    //hostConnectAdmin = api folder里面的那个admin folder
   static const adminGetAllPayments = "$hostConnectAdmin/read_payment.php";
+  static const signUpAdmin = "$hostConnectAdmin/signup.php";
 
   //upload-save new items
   static const uploadNewItem = "$hostUploadItem/upload.php";
   static const uploadNewMeals = "$hostUploadItem/upload_meals.php";
+  static const deleteItem = "$hostUploadItem/delete.php";
+  static const updateItem = "$hostUploadItem/update.php";
 
   //add meal to cart
   static const createMeal = "$hostConnect/meal/create_meal.php";

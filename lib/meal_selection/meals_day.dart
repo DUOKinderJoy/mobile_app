@@ -5,7 +5,7 @@ import 'package:kinder_joy_1/components/day_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kinder_joy_1/meal_selection/meal_w1_thurs.dart';
 import 'package:kinder_joy_1/meal_selection/meal_w1_wed.dart';
-import 'package:route_detector/route_detector.dart';
+// import 'package:route_detector/route_detector.dart';
 // import 'package:kinder_joy_1/meal_selection/meal_week1.dart';
 
 import 'package:kinder_joy_1/models/cart.dart';

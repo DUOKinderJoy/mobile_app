@@ -41,7 +41,7 @@ class OrderConfirmationScreen extends StatelessWidget {
       totalAmount: totalAmount,
       status: "new",
       week: 1,
-      month: "Sep",
+      month: "Dec",
     );
 
     try {
@@ -55,9 +55,15 @@ class OrderConfirmationScreen extends StatelessWidget {
 
         if (responseBodyOfAddNewOrder["success"] == true) {
           //delete selected items from user cart
+          Fluttertoast.showToast(msg: "your new order has been placed Successfully.");
+
           selectedCartIDs!.forEach((eachSelectedItemCartID) {
             deleteSelectedMealsFromUserCartList(eachSelectedItemCartID);
           });
+
+          Get.to(MealDay());
+
+
         } else {
           Fluttertoast.showToast(
               msg: "Error:: \nyour new order do NOT placed.");
@@ -79,10 +85,9 @@ class OrderConfirmationScreen extends StatelessWidget {
         var responseBodyFromDeleteCart = jsonDecode(res.body);
 
         if (responseBodyFromDeleteCart["success"] == true) {
-          Fluttertoast.showToast(
-              msg: "your new order has been placed Successfully.");
+          // Fluttertoast.showToast(msg: "your new order has been placed Successfully.");
 
-          Get.to(MealHomePage());
+          Get.to(MealDay());
         }
       } else {
         Fluttertoast.showToast(msg: "Error, Status Code is not 200");

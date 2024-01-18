@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:kinder_joy_1/authentication/roles_op.dart';
-import 'package:kinder_joy_1/pages/dashboard.dart';
 import 'package:kinder_joy_1/teachers/fragments/dashboard_of_fragments.dart';
 import 'package:kinder_joy_1/teachers/teacherPreferences/teacher_preferences.dart';
 import 'package:get/get.dart';
@@ -46,14 +45,6 @@ class MyApp extends StatelessWidget {
           }
         },
       ),
-
-      routes: {
-        //'/loginpage': (context) => LoginPage(),
-        '/dashboard': (context) => const Dashboard(),
-        // '/cartpage': (context) => const CartPage(),
-        //'/mealDetailsPage':(context) => const MealDetailsPage(meal: meal[index]),
-        // '/meal':(context) => const MealHomePage(),
-      },
     );
   }
 }
