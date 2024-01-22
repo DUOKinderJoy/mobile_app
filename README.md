@@ -1,5 +1,5 @@
 # kinder_joy_1
-https://luyan.atlassian.net/jira/software/projects/DUOS/boards/2/timeline?selectedIssue=DUOS-44
+**Kindly checkout our project progress @https://luyan.atlassian.net/jira/software/projects/DUOS/boards/2/timeline?selectedIssue=DUOS-44**
 ![image](https://github.com/DUOKinderJoy/mobile_app/assets/102236116/a056dc96-b5f8-437d-8293-0b0eac4316af)
 
 # mobile app
