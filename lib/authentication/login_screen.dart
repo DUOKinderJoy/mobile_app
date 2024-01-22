@@ -198,7 +198,7 @@ class _LoginPageState extends State<LoginPage> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                SignUpScreen()),
+                                                TSignUpPage()),
                                       ); //signup screen
                                     },
                                   ),

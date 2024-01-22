@@ -186,7 +186,7 @@ class AdminGetAllOrdersScreen extends StatelessWidget {
                               eachOrderData.children_id.toString(),
                           style: const TextStyle(
                             fontSize: 16,
-                            color: Colors.white54,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -194,7 +194,7 @@ class AdminGetAllOrdersScreen extends StatelessWidget {
                           "Amount: \RM " + eachOrderData.totalAmount.toString(),
                           style: const TextStyle(
                             fontSize: 16,
-                            color: Colors.purpleAccent,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

@@ -203,7 +203,7 @@ class AdminGetAllPaymentScreen extends StatelessWidget
                           "Month: " + eachFeeData.months.toString(),
                           style: const TextStyle(
                             fontSize: 16,
-                            color: Colors.black54,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -211,7 +211,7 @@ class AdminGetAllPaymentScreen extends StatelessWidget
                           "Children ID: " + eachFeeData.children_id.toString(),
                           style: const TextStyle(
                             fontSize: 16,
-                            color: Colors.purpleAccent,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -219,7 +219,7 @@ class AdminGetAllPaymentScreen extends StatelessWidget
                           "Amount: \RM " + eachFeeData.total_amount.toString(),
                           style: const TextStyle(
                             fontSize: 16,
-                            color: Colors.purpleAccent,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
