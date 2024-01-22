@@ -1,5 +1,5 @@
 # kinder_joy_1
-kindly checkout our jira at https://luyan.atlassian.net/jira/software/projects/DUOS/boards/2/timeline?selectedIssue=DUOS-44
+**Kindly checkout our jira at https://luyan.atlassian.net/jira/software/projects/DUOS/boards/2/timeline?selectedIssue=DUOS-44**
 # mobile app
 A new Flutter project.
 
