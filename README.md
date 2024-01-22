@@ -1,5 +1,7 @@
 # kinder_joy_1
 **Kindly checkout our jira at https://luyan.atlassian.net/jira/software/projects/DUOS/boards/2/timeline?selectedIssue=DUOS-44**
+<img width="956" alt="image" src="https://github.com/DUOKinderJoy/mobile_app/assets/102236116/9ab52fee-38a7-4c3d-ba5f-54f66274db1b">
+
 # mobile app
 A new Flutter project.
 
